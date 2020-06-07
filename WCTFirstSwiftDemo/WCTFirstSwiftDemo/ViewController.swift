@@ -23,8 +23,467 @@ class ViewController: UIViewController {
 //        dictLearn()
 //        funcLearn()
 //        blockLearn()
-        typeLearn()
+//        typeLearn()
+//        structLearn()
+//        classLearn()
+//        propertyLearn()
+        funcTwoLearn()
+    }
+    func funcTwoLearn() {
+        // 方法
+        /*
+         Swift 方法是与某些特定类型相关联的函数
+         在 Objective-C 中，类是唯一能定义方法的类型。但在 Swift 中，你不仅能选择是否要定义一个类/结构体/枚举，还能灵活的在你创建的类型（类/结构体/枚举）上定义方法。
+         */
         
+        // 1、实例方法
+        /*
+         在 Swift 语言中，实例方法是属于某个特定类、结构体或者枚举类型实例的方法。
+         实例方法提供以下方法：
+            【1】可以访问和修改实例属性
+            【2】提供与实例目的相关的功能
+         实例方法要写在它所属的类型的前后大括号({})之间。
+         实例方法能够隐式访问它所属类型的所有的其他实例方法和属性。
+         实例方法只能被它所属的类的某个特定实例调用。
+         实例方法不能脱离于现存的实例而被调用。
+         
+         语法：
+         func funcname(Parameters) -> returntype
+         {
+             Statement1
+             Statement2
+             ……
+             Statement N
+             return parameters
+         }
+         */
+        
+        // 2、实例
+        class Counter {
+            var count = 0
+            func increment() {
+                count += 1
+            }
+            func incrementBy(amount: Int) {
+                count += amount
+            }
+            func reset() {
+                count = 0
+            }
+        }
+        // 初始计数值是0
+        let counter = Counter()
+
+        // 计数值现在是1
+        counter.increment()
+        // 计数值现在是6
+        counter.incrementBy(amount: 5)
+        print(counter.count)
+        // 计数值现在是0
+        counter.reset()
+        print(counter.count)
+        
+        
+    }
+    
+    func propertyLearn() {
+        // 属性
+        
+        /*
+         Swift 属性将值跟特定的类、结构或枚举关联。
+         */
+        
+        // 1、存储属性
+        /*
+         简单来说，一个存储属性就是存储在特定类或结构体的实例里的一个常量或变量。
+         存储属性可以是变量存储属性（用关键字var定义），也可以是常量存储属性（用关键字let定义）。
+         【1】可以在定义存储属性的时候指定默认值
+         【2】也可以在构造过程中设置或修改存储属性的值，甚至修改常量存储属性的值
+         */
+        struct Number {
+           var digits: Int
+           let numbers = 3.1415
+        }
+        
+        var n = Number(digits: 12345)
+        n.digits = 67
+        
+        print("\(n.digits)")
+        print("\(n.numbers)")
+        
+        /*
+         代码中 pi 在定义存储属性的时候指定默认值（pi = 3.1415），所以不管你什么时候实例化结构体，它都不会改变。
+         如果你定义的是一个常量存储属性，如果尝试修改它就会报错，如下所示：
+         */
+//        n.numbers = 8.7 // 编译不过：常量不能修改
+        
+        // 2、延迟存储属性
+        /*
+         延迟存储属性是指当第一次被调用的时候才会计算其初始值的属性。
+         在属性声明前使用 lazy 来标示一个延迟存储属性。
+         
+         注意：
+            必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
+         
+         延迟存储属性一般用于：
+            延迟对象的创建。
+            当属性的值依赖于其他未知类
+         */
+        class sample {
+            lazy var no = number() // `var` 关键字是必须的
+        }
+
+        class number {
+            var name = "Runoob Swift 教程"
+        }
+
+        let firstsample = sample()
+        print(firstsample.no.name)
+        
+        
+        // 3、实例化变量
+        /*
+         如果您有过 Objective-C 经验，应该知道Objective-C 为类实例存储值和引用提供两种方法。对于属性来说，也可以使用实例变量作为属性值的后端存储。
+         Swift 编程语言中把这些理论统一用属性来实现。Swift 中的属性没有对应的实例变量，属性的后端存储也无法直接访问。这就避免了不同场景下访问方式的困扰，同时也将属性的定义简化成一个语句。
+         一个类型中属性的全部信息——包括命名、类型和内存管理特征——都在唯一一个地方（类型定义中）定义。
+         */
+        
+        // 4、计算属性
+        /*
+         除存储属性外，类、结构体和枚举可以定义计算属性，计算属性不直接存储值，而是提供一个 getter 来获取值，一个可选的 setter 来间接设置其他属性或变量的值。
+         */
+        print("计算属性")
+        class sample2 {
+            var no1 = 0.0, no2 = 0.0
+            var length = 300.0, breadth = 150.0
+            
+            var middle: (Double, Double) {
+                get{
+                    return (length / 2, breadth / 2)
+                }
+                // 这里的axis 只是代表一个集合
+                set(axis){
+                    no1 = axis.0 - (length / 2)
+                    no2 = axis.1 - (breadth / 2)
+                }
+            }
+        }
+
+        let result = sample2()
+        print(result.middle)
+        print(result.no1)
+        print(result.no2)
+        
+        result.middle = (0.0, 10.0)
+        print(result.no1)
+        print(result.no2)
+        
+        
+        // 4、只读计算属性
+        /*
+            只有 getter 没有 setter 的计算属性就是只读计算属性。
+            只读计算属性总是返回一个值，可以通过点(.)运算符访问，但不能设置新的值。
+            
+            下问的metaInfo就是只读
+         */
+        print("只读计算属性")
+        class film {
+            var head = ""
+            var duration = 0.0
+            var metaInfo: [String:String] {
+                return [
+                    "head": self.head,
+                    "duration":"\(self.duration)"
+                ]
+            }
+        }
+
+        let movie = film()
+        movie.head = "Swift 属性"
+        movie.duration = 3.09
+        print(movie.metaInfo["head"]!)
+        print(movie.metaInfo["duration"]!)
+        
+        // Ps : 必须使用var关键字定义计算属性，包括只读计算属性，因为它们的值不是固定的。let关键字只用来声明常量属性，表示初始化后再也无法修改的值。
+        
+        // 5、属性观察器
+        /*
+         性观察器监控和响应属性值的变化，每次属性被设置值的时候都会调用属性观察器，甚至新的值和现在的值相同的时候也不例外。
+         可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重载属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。
+         
+         注意：
+            不需要为无法重载的计算属性添加属性观察器，因为可以通过 setter 直接监控和响应值的变化。
+         
+         可以为属性添加如下的一个或全部观察器：
+            willSet在设置新的值之前调用
+            didSet在新的值被设置之后立即调用
+            willSet和didSet观察器在属性初始化过程中不会被调用
+         */
+        print("属性观察器")
+        class Samplepgm {
+            var counter: Int = 0{
+                willSet(newTotal){
+                    print("计数器: \(newTotal)")
+                }
+                didSet{
+                    if counter > oldValue {
+                        print("新增数 \(counter - oldValue)")
+                    }
+                }
+            }
+        }
+        let NewCounter = Samplepgm()
+        NewCounter.counter = 100
+        NewCounter.counter = 800
+        
+        // 6、全局变量和局部变量
+        
+        // 7、类型属性
+        /*
+         类型属性是作为类型定义的一部分写在类型最外层的花括号（{}）内。
+         使用关键字 static 来定义值类型的类型属性，关键字 class 来为类定义类型属性。
+         
+         struct Structname {
+            static var storedTypeProperty = " "
+            static var computedTypeProperty: Int {
+               // 这里返回一个 Int 值
+            }
+         }
+
+         enum Enumname {
+            static var storedTypeProperty = " "
+            static var computedTypeProperty: Int {
+               // 这里返回一个 Int 值
+            }
+         }
+
+         class Classname {
+            class var computedTypeProperty: Int {
+               // 这里返回一个 Int 值
+            }
+         }
+         
+         注意：
+            例子中的计算型类型属性是只读的，但也可以定义可读可写的计算型类型属性，跟实例计算属性的语法类似。
+         */
+        
+        
+        // 8、获取和设置类型属性的值
+        /*
+         类似于实例的属性，类型属性的访问也是通过点运算符(.)来进行。但是，类型属性是通过类型本身来获取和设置，而不是通过实例。实例如下：
+         */
+        struct StudMarks {
+           static let markCount = 97
+           static var totalCount = 0
+           var InternalMarks: Int = 0 {
+              didSet {
+                 if InternalMarks > StudMarks.markCount {
+                    InternalMarks = StudMarks.markCount
+                 }
+                 if InternalMarks > StudMarks.totalCount {
+                    StudMarks.totalCount = InternalMarks
+                 }
+              }
+           }
+        }
+
+        var stud1Mark1 = StudMarks()
+        var stud1Mark2 = StudMarks()
+
+        stud1Mark1.InternalMarks = 98
+        print(stud1Mark1.InternalMarks)
+
+        stud1Mark2.InternalMarks = 87
+        print(stud1Mark2.InternalMarks)
+    }
+    
+    func classLearn() {
+        // swift 类
+
+        /* 1、类介绍
+         Swift 类是构建代码所用的一种通用且灵活的构造体。
+         我们可以为类定义属性（常量、变量）和方法。
+         与其他编程语言所不同的是，Swift 并不要求你为自定义类去创建独立的接口和实现文件。你所要做的是在一个单一文件中定义一个类，系统会自动生成面向其它代码的外部接口。
+         */
+        
+        /* 2、类和结构体共同点、额外功能
+         【1】Swift 中类和结构体有很多共同点。共同处在于：
+            定义属性用于存储值
+            定义方法用于提供功能
+            定义附属脚本用于访问值
+            定义构造器用于生成初始化值
+            通过扩展以增加默认实现的功能
+            符合协议以对某类提供标准功能
+         【2】与结构体相比，类还有如下的附加功能：
+            继承允许一个类继承另一个类的特征
+            类型转换允许在运行时检查和解释一个类实例的类型
+            解构器允许一个类实例释放任何其所被分配的资源
+            引用计数允许对一个类的多次引用
+         */
+        
+        /* 3、语法:
+         class classname {
+            Definition 1
+            Definition 2
+            ……
+            Definition N
+         }
+         */
+        
+        // 4、基础案例
+        // 类定义：（现在版本 swift 需要先初始化）
+        class student{
+            var studname: String = ""
+            var mark: Int = 0
+            var mark2: Int = 0
+        }
+        let studrecord = student()
+        
+        // 5、案例
+        // 5.1 模范结构体
+//        class studentMarks {
+//            var mark: Int
+//            init(mark: Int) {
+//                self.mark = mark
+//            }
+//        }
+//        let marks = studentMarks(mark: 500)
+//        print("成绩为 \(marks.mark)")
+        
+        // 5.2 正常类初始化
+        class studentMarks {
+            var mark = 300
+        }
+        
+        // 6、作为引用类型访问类属性
+        let marks = studentMarks()
+        print("成绩为 \(marks.mark)")
+        
+        // 7、恒等运算符
+        /*
+         因为类是引用类型，有可能有多个常量和变量在后台同时引用某一个类实例。
+         为了能够判定两个常量或者变量是否引用同一个类实例，Swift 内建了两个恒等运算符：
+         
+         恒等运算符                                      不恒等运算符
+         运算符为：===                                   运算符为：!==
+         如果两个常量或者变量引用同一个类实例则返回 true       如果两个常量或者变量引用不同一个类实例则返回 true
+         */
+        class SampleClass {
+           var mark: String
+            init(mark: String) {
+                self.mark = mark
+            }
+        }
+        let spClass1 = SampleClass(mark: "Hello")
+        let spClass2 = SampleClass(mark: "Hello")
+        if spClass1 === spClass2 {// false
+            print("引用相同的类实例")
+        }
+        if spClass1 !== spClass2 {// true
+            print("引用不相同的类实例")
+        }
+    }
+    
+    func structLearn() {
+        // 1、结构体
+        /*
+         Swift 结构体是构建代码所用的一种通用且灵活的构造体。
+         我们可以为结构体定义属性（常量、变量）和添加方法，从而扩展结构体的功能。
+         与 C 和 Objective C 不同的是：
+         【1】结构体不需要包含实现文件和接口。
+         【2】结构体允许我们创建一个单一文件，且系统会自动生成面向其它代码的外部接口。
+         结构体总是通过被复制的方式在代码中传递，因此它的值是不可修改的。
+         
+         语法
+         我们通过关键字 struct 来定义结构体：
+         struct nameStruct {
+            Definition 1
+            Definition 2
+            ……
+            Definition N
+         }
+         */
+        
+        // 实例：基本案例
+        // 我们定义一个名为 MarkStruct 的结构体 ，结构体的属性为学生三个科目的分数，数据类型为 Int：
+//        struct MarkStruct{
+//           var mark1: Int
+//           var mark2: Int
+//           var mark3: Int
+//        }
+        
+        // 我们可以通过结构体名来访问结构体成员。
+        // 结构体实例化使用 let 关键字：
+        struct studentMarks {
+           var mark1 = 100
+           var mark2 = 78
+           var mark3 = 98
+        }
+        let marks = studentMarks()
+        print("Mark1 是 \(marks.mark1)")
+        print("Mark2 是 \(marks.mark2)")
+        print("Mark3 是 \(marks.mark3)")
+        /*
+         实例中，我们通过结构体名 'studentMarks' 访问学生的成绩。结构体成员初始化为mark1, mark2, mark3，数据类型为整型。
+         然后我们通过使用 let 关键字将结构体 studentMarks() 实例化并传递给 marks。
+         最后我们就通过 . 号来访问结构体成员的值。
+         以下实例化通过结构体实例化时传值并克隆一个结构体：
+         */
+        struct MarksStruct {
+           var mark: Int
+           init(mark: Int) {
+              self.mark = mark
+           }
+        }
+        let aStruct = MarksStruct(mark: 98)
+        var bStruct = aStruct // aStruct 和 bStruct 是使用相同值的结构体！
+        bStruct.mark = 97
+        print(aStruct.mark) // 98
+        print(bStruct.mark) // 97
+        
+        /*
+         在你的代码中，你可以使用结构体来定义你的自定义数据类型。
+         结构体实例总是通过值传递来定义你的自定义数据类型。
+         按照通用的准则，当符合一条或多条以下条件时，请考虑构建结构体：
+         结构体的主要目的是用来封装少量相关简单数据值。
+         有理由预计一个结构体实例在赋值或传递时，封装的数据将会被拷贝而不是被引用。
+         任何在结构体中储存的值类型属性，也将会被拷贝，而不是被引用。
+         结构体不需要去继承另一个已存在类型的属性或者行为。
+         举例来说，以下情境中适合使用结构体：
+         几何形状的大小，封装一个width属性和height属性，两者均为Double类型。
+         一定范围内的路径，封装一个start属性和length属性，两者均为Int类型。
+         三维坐标系内一点，封装x，y和z属性，三者均为Double类型。
+         结构体实例是通过值传递而不是通过引用传递。
+         */
+        
+        struct markStruct{
+            var mark1: Int
+            var mark2: Int
+            var mark3: Int
+            
+            // 构造函数，初始化时直接设置
+            init(mark1: Int, mark2: Int, mark3: Int){
+                self.mark1 = mark1
+                self.mark2 = mark2
+                self.mark3 = mark3
+            }
+        }
+        print("优异成绩:")
+        let marks2 = markStruct(mark1: 98, mark2: 96, mark3:100)
+        print(marks2.mark1)
+        print(marks2.mark2)
+        print(marks2.mark3)
+
+        print("糟糕成绩:")
+        let fail = markStruct(mark1: 34, mark2: 42, mark3: 13)
+        print(fail.mark1)
+        print(fail.mark2)
+        print(fail.mark3)
+        
+        /*
+         以上实例中我们定义了结构体 markStruct，三个成员属性：mark1, mark2 和 mark3。结构体内使用成员属性使用 self 关键字。
+         从实例中我们可以很好的理解到结构体实例是通过值传递的。
+         */
     }
     
     func typeLearn() {

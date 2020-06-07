@@ -27,8 +27,316 @@ class ViewController: UIViewController {
 //        structLearn()
 //        classLearn()
 //        propertyLearn()
-        funcTwoLearn()
+//        funcTwoLearn()
+//        indexScriptLearn()
+//        successionLearn()
+        initLearn()
+        
     }
+    
+    func initLearn() {
+        // Swift 构造过程
+    }
+    
+    func successionLearn() {
+        // 继承
+
+        /*
+         继承我们可以理解为一个类获取了另外一个类的方法和属性。
+         当一个类继承其它类时，继承类叫子类，被继承类叫超类（或父类)
+         在 Swift 中，类可以调用和访问超类的方法，属性和下标脚本，并且可以重写它们。
+         我们也可以为类中继承来的属性添加属性观察器。
+         */
+        
+        // 1、基类
+        /*
+         没有继承其它类的类，称之为基类（Base Class）。
+         以下实例中我们定义了基类 StudDetails ，描述了学生（stname）及其各科成绩的分数(mark1、mark2、mark3)：
+         */
+        print("1、基类")
+        class StudDetails {
+            var stname: String!
+            var mark1: Int!
+            var mark2: Int!
+            var mark3: Int!
+            init(stname: String, mark1: Int, mark2: Int, mark3: Int) {
+                self.stname = stname
+                self.mark1 = mark1
+                self.mark2 = mark2
+                self.mark3 = mark3
+            }
+        }
+        let stname = "swift"
+        let mark1 = 98
+        let mark2 = 89
+        let mark3 = 76
+        let sds = StudDetails(stname:stname, mark1:mark1, mark2:mark2, mark3:mark3);
+        print(sds.stname)
+        print(sds.mark1)
+        print(sds.mark2)
+        print(sds.mark3)
+        
+        
+        // 2、子类
+        /*
+         子类指的是在一个已有类的基础上创建一个新的类。
+         为了指明某个类的超类，将超类名写在子类名的后面，用冒号(:)分隔,语法格式如下
+         
+         class SomeClass: SomeSuperclass {
+             // 类的定义
+         }
+         */
+        // 实例
+        // 以下实例中我们定义了超类 StudDetails，然后使用子类 Tom 继承它：
+        print("2、子类")
+        class LearnDetail {
+            var mark1: Int;
+            var mark2: Int;
+            
+            init(stm1:Int, results stm2:Int) {
+                mark1 = stm1;
+                mark2 = stm2;
+            }
+            
+            func show() {
+                print("Mark1:\(self.mark1), Mark2:\(self.mark2)")
+            }
+        }
+
+        class Tom : LearnDetail {
+            init() {
+                super.init(stm1: 93, results: 89)
+            }
+        }
+
+        let tom = Tom()
+        tom.show()
+        
+        
+        // 3、重写（Overriding）
+        /*
+         子类可以通过继承来的实例方法，类方法，实例属性，或下标脚本来实现自己的定制功能，我们把这种行为叫重写（overriding）。
+         我们可以使用 override 关键字来实现重写。
+         
+         重写         访问方法，属性，下标脚本
+         方法         super.somemethod()
+         属性         super.someProperty()
+         下标脚本      super[someIndex]
+         */
+        
+        // 3.1 重写方法
+        /*
+         在我们的子类中我们可以使用 override 关键字来重写超类的方法。
+         以下实例中我们重写了 show() 方法：
+        */
+        print("3.1 重写方法")
+        class SuperClass {
+            func show() {
+                print("这是超类 SuperClass")
+            }
+        }
+
+        class SubClass: SuperClass  {
+            override func show() {
+                print("这是子类 SubClass")
+            }
+        }
+
+        let superClass = SuperClass()
+        superClass.show()
+
+        let subClass = SubClass()
+        subClass.show()
+        
+        
+        // 3.2 重写属性
+        /*
+         你可以提供定制的 getter（或 setter）来重写任意继承来的属性，无论继承来的属性是存储型的还是计算型的属性。
+         子类并不知道继承来的属性是存储型的还是计算型的，它只知道继承来的属性会有一个名字和类型。所以你在重写一个属性时，必需将它的名字和类型都写出来。
+         注意点：
+         【1】如果你在重写属性中提供了 setter，那么你也一定要提供 getter。
+         【2】如果你不想在重写版本中的 getter 里修改继承来的属性值，你可以直接通过super.someProperty来返回继承来的值，其中someProperty是你要重写的属性的名字。
+         */
+        // 以下实例我们定义了超类 Circle 及子类 Rectangle, 在 Rectangle 类中我们重写属性 area：
+        print("3.2重写属性")
+        class Circle {
+            var radius = 12.5
+            var area: String {
+                return "矩形半径 \(radius) "
+            }
+        }
+
+        // 继承超类 Circle
+        class Rectangle: Circle {
+            var show = 7
+            override var area: String {
+                return super.area + " ，但现在被重写为 \(show)"
+            }
+        }
+
+        let rect = Rectangle()
+        rect.radius = 25.0
+        rect.show = 3
+        print("Radius \(rect.area)")
+        
+        
+        // 3.3 重写属性观察器
+        /*
+         你可以在属性重写中为一个继承来的属性添加属性观察器。这样一来，当继承来的属性值发生改变时，你就会监测到。
+         注意：你不可以为继承来的常量存储型属性或继承来的只读计算型属性添加属性观察器。
+         */
+        print("3.3重写属性观察器")
+        class Square: Rectangle {
+            override var radius: Double {
+                didSet {
+                    show = Int(radius/5.0)+1
+                }
+            }
+        }
+        let sq = Square()
+        sq.radius = 100.0
+        print("半径: \(sq.area)")
+        
+        
+        // 3.4 防止重写
+        /*
+         我们可以使用 final 关键字防止它们被重写。
+         如果你重写了final方法，属性或下标脚本，在编译时会报错。
+         你可以通过在关键字class前添加final特性（final class）来将整个类标记为 final 的，这样的类是不可被继承的，否则会报编译错误
+         */
+        print("防止重写 : 加上 final ，所有都不可背重写，会直接提示错误")
+        final class CircleNew {
+            final var radius = 12.5
+            var area: String {
+                return "矩形半径为 \(radius) "
+            }
+        }
+        
+    }
+    
+    func indexScriptLearn() {
+        
+        // Swift 下标脚本
+       /*
+         下标脚本 可以定义在类（Class）、结构体（structure）和枚举（enumeration）这些目标中，可以认为是访问对象、集合或序列的快捷方式，不需要再调用实例的特定的赋值和访问方法。
+         举例来说，用下标脚本访问一个数组(Array)实例中的元素可以这样写 someArray[index] ，访问字典(Dictionary)实例中的元素可以这样写 someDictionary[key]。
+         对于同一个目标可以定义多个下标脚本，通过索引值类型的不同来进行重载，而且索引值的个数可以是多个。
+         */
+        
+        // 1、下标脚本语法及应用
+        /*
+         语法:
+         下标脚本允许你通过在实例后面的方括号中传入一个或者多个的索引值来对实例进行访问和赋值。
+         语法类似于实例方法和计算型属性的混合。
+         与定义实例方法类似，定义下标脚本使用 subscript 关键字，显式声明入参（一个或多个）和返回类型。
+         与实例方法不同的是下标脚本可以设定为读写或只读。这种方式又有点像计算型属性的getter和setter：
+         
+         subscript(index: Int) -> Int {
+            get {
+                // 用于下标脚本值的声明
+            }
+            set(newValue) {
+                // 执行赋值操作
+            }
+         }
+         */
+        
+        
+        // 2、实例 1
+        print("下标脚本语法及应用")
+        struct subexample {
+            let decrementer: Int
+            subscript(index: Int) -> Int {
+                return decrementer / index
+            }
+        }
+        let division = subexample(decrementer: 100)
+        print("100 除以 9 等于 \(division[9])")
+        print("100 除以 2 等于 \(division[2])")
+        print("100 除以 3 等于 \(division[3])")
+        print("100 除以 5 等于 \(division[5])")
+        print("100 除以 7 等于 \(division[7])")
+        /*
+         在上例中，通过 subexample 结构体创建了一个除法运算的实例。数值 100 作为结构体构造函数传入参数初始化实例成员 decrementer。
+         你可以通过下标脚本来得到结果，比如 division[2] 即为 100 除以 2。
+         */
+        
+        // 3、实例2
+        class daysofaweek {
+            private var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                "Thursday", "Friday", "saturday"]
+            subscript(index: Int) -> String {
+                get {
+                    return days[index]   // 声明下标脚本的值
+                }
+                set(newValue) {
+                    self.days[index] = newValue   // 执行赋值操作
+                }
+            }
+        }
+        let p = daysofaweek()
+        print(p[0])
+        print(p[1])
+        print(p[2])
+        print(p[3])
+        
+        
+        // 4、用法
+        /*
+         根据使用场景不同下标脚本也具有不同的含义。
+         通常下标脚本是用来访问集合（collection），列表（list）或序列（sequence）中元素的快捷方式。
+         你可以在你自己特定的类或结构体中自由的实现下标脚本来提供合适的功能。
+         例如，Swift 的字典（Dictionary）实现了通过下标脚本对其实例中存放的值进行存取操作。在下标脚本中使用和字典索引相同类型的值，并且把一个字典值类型的值赋值给这个下标脚来为字典设值：
+         */
+        var numberOfLegs = ["spider": 8, "ant": 6, "cat": 4]
+        numberOfLegs["bird"] = 2
+        print(numberOfLegs)
+        
+        // 5、下标脚本选项
+        /*
+         下标脚本允许任意数量的入参索引，并且每个入参类型也没有限制。
+         下标脚本的返回值也可以是任何类型。
+         下标脚本可以使用变量参数和可变参数。
+         一个类或结构体可以根据自身需要提供多个下标脚本实现，在定义下标脚本时通过传入参数的类型进行区分，使用下标脚本时会自动匹配合适的下标脚本实现运行，这就是下标脚本的重载。
+         */
+        print("下标脚本选项")
+        struct Matrix {
+            let rows: Int, columns: Int
+            var showData: [Double]
+            init(rows: Int, columns: Int) {
+                self.rows = rows
+                self.columns = columns
+                showData = Array(repeating: 0.0, count: rows * columns)
+            }
+            subscript(row: Int, column: Int) -> Double {
+                get {
+                    return showData[(row * columns) + column]
+                }
+                set {
+                    showData[(row * columns) + column] = newValue
+                }
+            }
+        }
+        // 创建了一个新的 3 行 3 列的Matrix实例
+        var mat = Matrix(rows: 3, columns: 3)
+
+        // 通过下标脚本设置值
+        mat[0,0] = 1.0
+        mat[0,1] = 2.0
+        mat[1,0] = 3.0
+        mat[1,1] = 5.0
+
+        // 通过下标脚本获取值
+        print("\(mat[0,0])")
+        print("\(mat[0,1])")
+        print("\(mat[1,0])")
+        print("\(mat[1,1])")
+        /*
+         Matrix 结构体提供了一个两个传入参数的构造方法，两个参数分别是rows和columns，创建了一个足够容纳rows * columns个数的Double类型数组。为了存储，将数组的大小和数组每个元素初始值0.0。
+         你可以通过传入合适的row和column的数量来构造一个新的Matrix实例。
+         */
+    }
+    
     func funcTwoLearn() {
         // 方法
         /*
@@ -58,7 +366,7 @@ class ViewController: UIViewController {
          }
          */
         
-        // 2、实例
+        // 2、实例（类似一个对象的作用）
         class Counter {
             var count = 0
             func increment() {
@@ -82,8 +390,167 @@ class ViewController: UIViewController {
         // 计数值现在是0
         counter.reset()
         print(counter.count)
+        /*
+         Counter类定义了三个实例方法：
+         【1】increment 让计数器按 1 递增；
+         【2】incrementBy(amount: Int) 让计数器按一个指定的整数值递增；
+         【3】reset 将计数器重置为0。
+         Counter 这个类还声明了一个可变属性 count，用它来保持对当前计数器值的追踪。
+         */
+        
+        // 3、方法的局部参数名称和外部参数名称
+        print("方法的局部参数名称和外部参数名称")
+        class division {
+            var count: Int = 0
+            func incrementBy(no1: Int, no2: Int) {
+                count = no1 / no2
+                print(count)
+            }
+        }
+
+        let counter2 = division()
+        counter2.incrementBy(no1: 1800, no2: 3)
+        counter2.incrementBy(no1: 1600, no2: 5)
+        counter2.incrementBy(no1: 11000, no2: 3)
         
         
+        // 4、是否提供外部名称设置
+        /*
+         我们强制在第一个参数添加外部名称把这个局部名称当作外部名称使用（Swift 2.0前是使用 # 号）。
+         相反，我们呢也可以使用下划线（_）设置第二个及后续的参数不提供一个外部名称。
+         */
+        
+        class multiplication {
+            var count: Int = 0
+            func incrementBy(first no1: Int, no2: Int) {
+                count = no1 * no2
+                print(count)
+            }
+        }
+        let counter3 = multiplication()
+        counter3.incrementBy(first: 800, no2: 3)
+        counter3.incrementBy(first: 100, no2: 5)
+        counter3.incrementBy(first: 15000, no2: 3)
+        
+        
+        // 5、self 属性
+        /*
+         类型的每一个实例都有一个隐含属性叫做self，self 完全等同于该实例本身。
+         你可以在一个实例的实例方法中使用这个隐含的self属性来引用当前实例。
+         */
+        print("self 属性")
+        class calculations {
+            let a: Int
+            let b: Int
+            let res: Int
+            
+            init(a: Int, b: Int) {
+                self.a = a
+                self.b = b
+                res = a + b
+                print("Self 内: \(res)")
+            }
+            
+            func tot(c: Int) -> Int {
+                return res - c
+            }
+            
+            func result() {
+                print("结果为: \(tot(c: 20))")
+                print("结果为: \(tot(c: 50))")
+            }
+        }
+
+        let pri = calculations(a: 600, b: 300)
+        let sum = calculations(a: 1200, b: 300)
+
+        pri.result()
+        sum.result()
+        
+        // 6、在实例方法中修改值类型
+        /*
+         Swift 语言中结构体和枚举是值类型。一般情况下，值类型的属性不能在它的实例方法中被修改。
+         但是，如果你确实需要在某个具体的方法中修改结构体或者枚举的属性，你可以选择变异(mutating)这个方法，然后方法就可以从方法内部改变它的属性；并且它做的任何改变在方法结束时还会保留在原始结构中。
+         方法还可以给它隐含的self属性赋值一个全新的实例，这个新实例在方法结束后将替换原来的实例。
+         */
+        print("在实例方法中修改值类型")
+        struct area {
+            var length = 1
+            var breadth = 1
+            
+            func area() -> Int {
+                return length * breadth
+            }
+            
+            mutating func scaleBy(res: Int) {
+                length *= res
+                breadth *= res
+                print(length)
+                print(breadth)
+            }
+        }
+
+        var val = area(length: 3, breadth: 5)
+        val.scaleBy(res: 3)
+        val.scaleBy(res: 30)
+        val.scaleBy(res: 300)
+        
+        
+        
+        // 7、在可变方法中给 self 赋值
+        // 可变方法能够赋给隐含属性 self 一个全新的实例。
+        print("在可变方法中给 self 赋值")
+        struct areaNew {
+            var length = 1
+            var breadth = 1
+            
+            func area() -> Int {
+                return length * breadth
+            }
+            
+            mutating func scaleBy(res: Int) {
+                self.length *= res
+                self.breadth *= res
+                print(length)
+                print(breadth)
+            }
+        }
+        var valNew = area(length: 3, breadth: 5)
+        valNew.scaleBy(res: 13)
+        
+        
+        // 8、类型方法
+        /*
+         实例方法是被类型的某个实例调用的方法，你也可以定义类型本身调用的方法，这种方法就叫做类型方法。
+         声明结构体和枚举的类型方法，在方法的func关键字之前加上关键字static。类可能会用关键字class来允许子类重写父类的实现方法。
+         类型方法和实例方法一样用点号(.)语法调用。
+         */
+        print("类型方法")
+        class Math {
+            class func abs(number: Int) -> Int {
+                if number < 0 {
+                    return (-number)
+                } else {
+                    return number
+                }
+            }
+        }
+
+        struct absno {
+            static func abs(number: Int) -> Int {
+                if number < 0 {
+                    return (-number)
+                } else {
+                    return number
+                }
+            }
+        }
+
+        let no = Math.abs(number: -35)
+        let num = absno.abs(number: -5)
+
+        print(no)
+        print(num)
     }
     
     func propertyLearn() {

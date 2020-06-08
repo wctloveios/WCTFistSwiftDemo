@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    /// <#Description#>
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,6 +37,311 @@ class ViewController: UIViewController {
     
     func initLearn() {
         // Swift 构造过程
+        
+        /*
+         构造过程是为了使用某个类、结构体或枚举类型的实例而进行的准备过程。这个过程包含了为实例中的每个属性设置初始值和为其执行必要的准备和初始化任务。
+         Swift 构造函数使用 init() 方法。
+         与 Objective-C 中的构造器不同，Swift 的构造器无需返回值，它们的主要任务是保证新实例在第一次使用前完成正确的初始化。
+         类实例也可以通过定义析构器（deinitializer）在类实例释放之前执行清理内存的工作。
+         */
+        
+        // 1.1、swift 的构造器无需返回值
+        
+        // 1.2、存储型属性的初始赋值
+        /*
+         类和结构体在实例创建时，必须为所有存储型属性设置合适的初始值。
+         存储属性在构造器中赋值时，它们的值是被直接设置的，不会触发任何属性观测器。
+         存储属性在构造器中赋值流程：
+            [1]创建初始值。
+            [2]在属性定义中指定默认属性值。
+            [3]初始化实例，并调用 init() 方法。
+         */
+        
+        // 1.3、构造器
+        /*
+         构造器在创建某特定类型的新实例时调用。它的最简形式类似于一个不带任何参数的实例方法，以关键字init命名。
+         语法
+         init()
+         {
+         // 实例化后执行的代码
+         }
+         */
+        
+        
+        // 1.4、实例
+        // 以下结构体定义了一个不带参数的构造器 init，并在里面将存储型属性 length 和 breadth 的值初始化为 6 和 12：
+        print("1.4、实例")
+        struct rectangle {
+            var length: Double
+            var breadth: Double
+            init() {
+                length = 6
+                breadth = 12
+            }
+        }
+        let area = rectangle()
+        print("矩形面积为 \(area.length*area.breadth)")
+        
+        
+        // 1.5、默认属性值
+        /*
+         我们可以在构造器中为存储型属性设置初始值；同样，也可以在属性声明时为其设置默认值。
+         使用默认值能让你的构造器更简洁、更清晰，且能通过默认值自动推导出属性的类型。
+         以下实例我们在属性声明时为其设置默认值：
+         */
+        print("1.5、默认属性值")
+        struct rectangle1 {
+            // 设置默认值
+            var length1 = 6
+            var breadth1 = 12
+        }
+        let area1 = rectangle1()
+        print("矩形的面积为 \(area1.length1*area1.breadth1)")
+        
+        
+        // 1.6、构造参数
+        // 你可以在定义构造器 init() 时提供构造参数，如下所示：
+        print("1.6、构造参数")
+        struct Rectangle {
+            var length: Double
+            var breadth: Double
+            var area: Double
+            
+            init(fromLength length: Double, fromBreadth breadth: Double) {
+                self.length = length
+                self.breadth = breadth
+                area = length * breadth
+            }
+            
+            init(fromLeng leng: Double, fromBread bread: Double) {
+                self.length = leng
+                self.breadth = bread
+                area = leng * bread
+            }
+        }
+
+        let ar = Rectangle(fromLength: 6, fromBreadth: 12)
+        print("面积为: \(ar.area)")
+
+        let are = Rectangle(fromLeng: 36, fromBread: 12)
+        print("面积为: \(are.area)")
+        
+        
+        // 1.7、内部和外部参数名
+        /*
+         跟函数和方法参数相同，构造参数也存在一个在构造器内部使用的参数名字和一个在调用构造器时使用的外部参数名字。
+         然而，构造器并不像函数和方法那样在括号前有一个可辨别的名字。所以在调用构造器时，主要通过构造器中的参数名和类型来确定需要调用的构造器。
+         如果你在定义构造器时没有提供参数的外部名字，Swift 会为每个构造器的参数自动生成一个跟内部名字相同的外部名。
+         */
+        print("1.7、内部和外部参数名")
+        struct Color {
+            let red, green, blue: Double
+            init(red: Double, green: Double, blue: Double) {
+                self.red   = red
+                self.green = green
+                self.blue  = blue
+            }
+            init(white: Double) {
+                red   = white
+                green = white
+                blue  = white
+            }
+        }
+
+        // 创建一个新的Color实例，通过三种颜色的外部参数名来传值，并调用构造器
+        let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
+
+        print("red 值为: \(magenta.red)")
+        print("green 值为: \(magenta.green)")
+        print("blue 值为: \(magenta.blue)")
+
+        // 创建一个新的Color实例，通过三种颜色的外部参数名来传值，并调用构造器
+        let halfGray = Color(white: 0.5)
+        print("red 值为: \(halfGray.red)")
+        print("green 值为: \(halfGray.green)")
+        print("blue 值为: \(halfGray.blue)")
+        
+        
+        // 1.8、没有外部名称参数
+        // 如果你不希望为构造器的某个参数提供外部名字，你可以使用下划线_来显示描述它的外部名。
+        print("1.8、没有外部名称参数")
+        struct Rectangle2 {
+            var length: Double
+            
+            init(frombreadth breadth: Double) {
+                length = breadth * 10
+            }
+            
+            init(frombre bre: Double) {
+                length = bre * 30
+            }
+            //不提供外部名字
+            init(_ area: Double) {
+                length = area
+            }
+        }
+        // 调用不提供外部名字
+        let rectarea = Rectangle2(180.0)
+        print("面积为: \(rectarea.length)")
+        // 调用不提供外部名字
+        let rearea = Rectangle2(370.0)
+        print("面积为: \(rearea.length)")
+        // 调用不提供外部名字
+        let recarea = Rectangle2(110.0)
+        print("面积为: \(recarea.length)")
+        
+        
+        // 1.9、可选属性类型
+        /*
+         如果你定制的类型包含一个逻辑上允许取值为空的存储型属性，你都需要将它定义为可选类型optional type（可选属性类型）。
+         当存储属性声明为可选时，将自动初始化为空 nil。
+         */
+        print("1.9、可选属性类型")
+        struct Rectangle3 {
+            var length: Double?
+            
+            init(frombreadth breadth: Double) {
+                length = breadth * 10
+            }
+            
+            init(frombre bre: Double) {
+                length = bre * 30
+            }
+            
+            init(_ area: Double) {
+                length = area
+            }
+        }
+        _ = Rectangle3(180.0)
+        print("面积为：\(rectarea.length)")
+        _ = Rectangle3(370.0)
+        print("面积为：\(rearea.length)")
+        let recarea1 = Rectangle3(110.0)
+        print("面积为：\(recarea.length)")
+        
+        
+        // 1.10、构造过程中修改常量属性
+        /*
+         只要在构造过程结束前常量的值能确定，你可以在构造过程中的任意时间点修改常量属性的值。
+         对某个类实例来说，它的常量属性只能在定义它的类的构造过程中修改；不能在子类中修改。
+         尽管 length 属性现在是常量，我们仍然可以在其类的构造器中设置它的值：
+         */
+        print("1.10、构造过程中修改常量属性")
+        struct Rectangle4 {
+            let length: Double?
+            
+            init(frombreadth breadth: Double) {
+                length = breadth * 10
+            }
+            
+            init(frombre bre: Double) {
+                length = bre * 30
+            }
+            
+            init(_ area: Double) {
+                length = area
+            }
+        }
+
+        _ = Rectangle4(180.0)
+        print("面积为：\(rectarea.length)")
+        let rearea4 = Rectangle4(370.0)
+        print("面积为：\(rearea.length)")
+        let recarea4 = Rectangle4(110.0)
+        print("面积为：\(recarea.length)")
+//        recarea.length = 2000   编译报错：不在构造内，常量不可更改
+        
+        
+        // 1.11、默认构造器
+        /*
+         默认构造器将简单的创建一个所有属性值都设置为默认值的实例:
+         以下实例中，ShoppingListItem类中的所有属性都有默认值，且它是没有父类的基类，它将自动获得一个可以为所有属性设置默认值的默认构造器
+         */
+        print("1.11、默认构造器")
+        class ShoppingListItem {
+            var name: String?
+            var quantity = 1
+            var purchased = false
+        }
+        let item = ShoppingListItem()
+        print("名字为: \(String(describing: item.name))")
+        print("数理为: \(item.quantity)")
+        print("是否付款: \(item.purchased)")
+        
+        
+        // 1.12、结构体的逐一成员构造器
+        /*
+         如果结构体对所有存储型属性提供了默认值且自身没有提供定制的构造器，它们能自动获得一个逐一成员构造器。
+         我们在调用逐一成员构造器时，通过与成员属性名相同的参数名进行传值来完成对成员属性的初始赋值。
+         下面例子中定义了一个结构体 Rectangle，它包含两个属性 length 和 breadth。Swift 可以根据这两个属性的初始赋值100.0 、200.0自动推导出它们的类型Double。
+         */
+        print("1.12、结构体的逐一成员构造器")
+        struct Rectangle5 {
+            var length = 100.0, breadth = 200.0
+        }
+        let area5 = Rectangle5(length: 24.0, breadth: 32.0)
+        print("矩形的面积: \(area5.length)")
+        print("矩形的面积: \(area5.breadth)")
+        // 由于这两个存储型属性都有默认值，结构体 Rectangle 自动获得了一个逐一成员构造器 init(width:height:)。 你可以用它来为 Rectangle 创建新的实例。
+        
+        // 1.13、值类型的构造器代理
+        /*
+         构造器可以通过调用其它构造器来完成实例的部分构造过程。这一过程称为构造器代理，它能减少多个构造器间的代码重复。
+         以下实例中，Rect 结构体调用了 Size 和 Point 的构造过程：
+         */
+        print("1.13、值类型的构造器代理")
+        struct Size {
+            var width = 0.0
+            var height = 0.0
+        }
+        struct Point {
+            var x = 0.0, y = 0.0
+        }
+
+        struct Rect {
+            var origin = Point()
+            var size = Size()
+            init() {}
+            init(origin: Point, size: Size) {
+                self.origin = origin
+                self.size = size
+            }
+            init(center: Point, size: Size) {
+                let originX = center.x - (size.width / 2)
+                let originY = center.y - (size.height / 2)
+                self.init(origin: Point(x: originX, y: originY), size: size)
+            }
+        }
+
+        // origin和size属性都使用定义时的默认值Point(x: 0.0, y: 0.0)和Size(width: 0.0, height: 0.0)：
+        let basicRect = Rect()
+        print("Size 结构体初始值: \(basicRect.size.width),\(basicRect.size.height) ")
+        print("Rect 结构体初始值: \(basicRect.origin.x),\(basicRect.origin.y) ")
+
+        // 将origin和size的参数值赋给对应的存储型属性
+        let originRect = Rect(origin: Point(x: 2.0, y: 2.0),
+            size: Size(width: 5.0, height: 5.0))
+
+        print("Size 结构体初始值: \(originRect.size.width),\(originRect.size.height) ")
+        print("Rect 结构体初始值: \(originRect.origin.x),\(originRect.origin.y) ")
+
+
+        //先通过center和size的值计算出origin的坐标。
+        //然后再调用（或代理给）init(origin:size:)构造器来将新的origin和size值赋值到对应的属性中
+        let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
+            size: Size(width: 3.0, height: 3.0))
+
+        print("Size 结构体初始值: \(centerRect.size.width),\(centerRect.size.height) ")
+        print("Rect 结构体初始值: \(centerRect.origin.x),\(centerRect.origin.y) ")
+        
+        
+        // 1.14、构造器代理规则
+        /*
+         【1】值类型:不支持继承，所以构造器代理的过程相对简单，因为它们只能代理给本身提供的其它构造器。
+         你可以使用self.init在自定义的构造器中引用其它的属于相同值类型的构造器。    【2】类类型:它可以继承自其它类,这意味着类有责任保证其所有继承的存储型属性在构造时也能正确的初始化。
+         */
+        
+        // 2、类的继承和构造过程
     }
     
     func successionLearn() {
@@ -1032,6 +1338,13 @@ class ViewController: UIViewController {
             print("学生的成绩是: \(Mark1),\(Mark2),\(Mark3)。")
         }
         
+        switch studDetails {
+        case .Name(let studName):
+            print("学生的名字是: \(studName)。")
+        case .Mark(let Mark1, let Mark2, let Mark3):
+            print("学生的成绩是: \(Mark1),\(Mark2),\(Mark3)。")
+        }
+        
         // 1.1.2 原始值
         /*
          原始值可以是字符串，字符，或者任何整型值或浮点型值。每个原始值在它的枚举声明中必须是唯一的。
@@ -1318,7 +1631,7 @@ class ViewController: UIViewController {
         another(addition: sum, a: 10, b: 20)
         
         
-        // 1.10 函数嵌套 todo:为啥加forDecrement
+        // 1.10 函数嵌套
         func calcDecrement(forDecrement total: Int) -> () -> Int {
            var overallDecrement = 0
            func decrementer() -> Int {

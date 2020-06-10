@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    /// <#Description#>
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -31,7 +30,910 @@ class ViewController: UIViewController {
 //        funcTwoLearn()
 //        indexScriptLearn()
 //        successionLearn()
-        initLearn()
+//        initLearn()
+//        dellocLearn()
+//        optionalChainingLearn()
+//        arcLearn()
+//        typeExchange()
+        extensionLearn()
+    }
+    
+    func extensionLearn() {
+        // 扩展
+        
+        /*
+         扩展就是向一个已有的类、结构体或枚举类型添加新功能。
+         扩展可以对一个类型添加新的功能，但是不能重写已有的功能。
+         
+         Swift 中的扩展可以：
+         【1】添加计算型属性和计算型静态属性
+         【2】定义实例方法和类型方法
+         【3】提供新的构造器
+         【4】定义下标
+         【5】定义和使用新的嵌套类型
+         【6】使一个已有类型符合某个协议
+         
+         语法：
+         扩展声明使用关键字 extension：
+         extension SomeType {
+             // 加到SomeType的新功能写到这里
+         }
+         
+         一个扩展可以扩展一个已有类型，使其能够适配一个或多个协议，语法格式如下：
+         extension SomeType: SomeProtocol, AnotherProctocol {
+             // 协议实现写到这里
+         }
+         */
+        
+        
+        // 1、计算型属性
+        /*
+         扩展可以向已有类型添加计算型实例属性和计算型类型属性。
+         
+         实例:
+         下面的例子向 Int 类型添加了 5 个计算型实例属性并扩展其功能：
+         */
+        print("1、计算型属性")
+//        extension Int {
+//           var add: Int {return self + 100 }
+//           var sub: Int { return self - 10 }
+//           var mul: Int { return self * 10 }
+//           var div: Int { return self / 5 }
+//        }
+//
+//        let addition = 3.add
+//        print("加法运算后的值：\(addition)")
+//
+//        let subtraction = 120.sub
+//        print("减法运算后的值：\(subtraction)")
+//
+//        let multiplication = 39.mul
+//        print("乘法运算后的值：\(multiplication)")
+//
+//        let division = 55.div
+//        print("除法运算后的值: \(division)")
+//
+//        let mix = 30.add + 34.sub
+//        print("混合运算结果：\(mix)")
+        
+        // 2、构造器
+        /*
+         扩展可以向已有类型添加新的构造器。
+         这可以让你扩展其它类型，将你自己的定制类型作为构造器参数，或者提供该类型的原始实现中没有包含的额外初始化选项。
+         扩展可以向类中添加新的便利构造器 init()，但是它们不能向类中添加新的指定构造器或析构函数 deinit() 。
+         */
+        print("2、构造器")
+//        struct sum {
+//            var num1 = 100, num2 = 200
+//        }
+//
+//        struct diff {
+//            var no1 = 200, no2 = 100
+//        }
+//
+//        struct mult {
+//            var a = sum()
+//            var b = diff()
+//        }
+//
+//        extension mult {
+//            init(x: sum, y: diff) {
+//                _ = x.num1 + x.num2
+//                _ = y.no1 + y.no2
+//            }
+//        }
+//
+//        let a = sum(num1: 100, num2: 200)
+//        let b = diff(no1: 200, no2: 100)
+//
+//        let getMult = mult(x: a, y: b)
+//        print("getMult sum\(getMult.a.num1, getMult.a.num2)")
+//        print("getMult diff\(getMult.b.no1, getMult.b.no2)")
+        /*
+         这个topics方法使用了一个() -> ()类型的单参数，表明函数没有参数而且没有返回值。
+         定义该扩展之后，你就可以对任意整数调用 topics 方法,实现的功能则是多次执行某任务：
+         */
+        
+        
+        // 3、可变实例方法
+        /*
+         通过扩展添加的实例方法也可以修改该实例本身。
+         结构体和枚举类型中修改self或其属性的方法必须将该实例方法标注为mutating，正如来自原始实现的修改方法一样。
+         
+         实例:
+         下面的例子向 Swift 的 Double 类型添加了一个新的名为 square 的修改方法，来实现一个原始值的平方计算：
+         */
+        print("3、可变实例方法")
+//        extension Double {
+//           mutating func square() {
+//              let pi = 3.1415
+//              self = pi * self * self
+//           }
+//        }
+//
+//        var Trial1 = 3.3
+//        Trial1.square()
+//        print("圆的面积为: \(Trial1)")
+//
+//
+//        var Trial2 = 5.8
+//        Trial2.square()
+//        print("圆的面积为: \(Trial2)")
+//
+//
+//        var Trial3 = 120.3
+//        Trial3.square()
+//        print("圆的面积为: \(Trial3)")
+        
+        
+        // 4、下标
+        /*
+         扩展可以向一个已有类型添加新下标。
+         
+         实例:
+         以下例子向 Swift 内建类型Int添加了一个整型下标。该下标[n]返回十进制数字
+         */
+//        extension Int {
+//           subscript(var multtable: Int) -> Int {
+//              var no1 = 1
+//              while multtable > 0 {
+//                 no1 *= 10
+//                 --multtable
+//              }
+//              return (self / no1) % 10
+//           }
+//        }
+//
+//        print(12[0])
+//        print(7869[1])
+//        print(786543[2])
+        
+        
+        // 5、嵌套类型
+        // 扩展可以向已有的类、结构体和枚举添加新的嵌套类型：
+//        extension Int {
+//           enum calc
+//           {
+//              case add
+//              case sub
+//              case mult
+//              case div
+//              case anything
+//           }
+//
+//           var print: calc {
+//              switch self
+//              {
+//                 case 0:
+//                    return .add
+//                 case 1:
+//                    return .sub
+//                 case 2:
+//                    return .mult
+//                 case 3:
+//                    return .div
+//                 default:
+//                    return .anything
+//               }
+//           }
+//        }
+//
+//        func result(numb: [Int]) {
+//           for i in numb {
+//              switch i.print {
+//                 case .add:
+//                    print(" 10 ")
+//                  case .sub:
+//                    print(" 20 ")
+//                 case .mult:
+//                 print(" 30 ")
+//                 case .div:
+//                 print(" 40 ")
+//                 default:
+//                 print(" 50 ")
+//
+//              }
+//           }
+//        }
+//
+//        result([0, 1, 2, 3, 4, 7])
+        
+        
+    }
+    
+    func typeExchange() {
+        // 类型转换
+        /*
+         Swift 语言类型转换可以判断实例的类型。也可以用于检测实例类型是否属于其父类或者子类的实例。
+         Swift 中类型转换使用 is 和 as 操作符实现，is 用于检测值的类型，as 用于转换类型。
+         类型转换也可以用来检查一个类是否实现了某个协议。
+         */
+        
+        // 1、定义一个类层次
+        // 以下定义了三个类：Subjects、Chemistry、Maths，Chemistry 和 Maths 继承了 Subjects。
+        class Subjects {
+            var physics: String
+            init(physics: String) {
+                self.physics = physics
+            }
+        }
+
+        class Chemistry: Subjects {
+            var equations: String
+            init(physics: String, equations: String) {
+                self.equations = equations
+                super.init(physics: physics)
+            }
+        }
+
+        class Maths: Subjects {
+            var formulae: String
+            init(physics: String, formulae: String) {
+                self.formulae = formulae
+                super.init(physics: physics)
+            }
+        }
+
+        let sa = [
+            Chemistry(physics: "固体物理", equations: "赫兹"),
+            Maths(physics: "流体动力学", formulae: "千兆赫"),
+            Chemistry(physics: "热物理学", equations: "分贝"),
+            Maths(physics: "天体物理学", formulae: "兆赫"),
+            Maths(physics: "微分方程", formulae: "余弦级数")]
+
+
+        let samplechem = Chemistry(physics: "固体物理", equations: "赫兹")
+        print("实例物理学是: \(samplechem.physics)")
+        print("实例方程式: \(samplechem.equations)")
+
+
+        let samplemaths = Maths(physics: "流体动力学", formulae: "千兆赫")
+        print("实例物理学是: \(samplemaths.physics)")
+        print("实例公式是: \(samplemaths.formulae)")
+        
+        
+        // 2、检查类型
+        /*
+         类型转换用于检测实例类型是否属于特定的实例类型。
+         你可以将它用在类和子类的层次结构上，检查特定类实例的类型并且转换这个类实例的类型成为这个层次结构中的其他类型。
+         类型检查使用 is 关键字。
+         操作符 is 来检查一个实例是否属于特定子类型。若实例属于那个子类型，类型检查操作符返回 true，否则返回 false。
+         */
+        print("2、检查类型")
+        var chemCount2 = 0
+        var mathsCount2 = 0
+        for item in sa {
+            // 如果是一个 Chemistry 类型的实例，返回 true，相反返回 false。
+            if item is Chemistry {
+                chemCount2 += 1
+            } else if item is Maths {
+                mathsCount2 += 1
+            }
+        }
+        print("化学科目包含 \(chemCount2) 个主题，数学包含 \(mathsCount2) 个主题")
+        
+        // 3、向下转型
+        /*
+         向下转型，用类型转换操作符(as? 或 as!)
+         当你不确定向下转型可以成功时，用类型转换的条件形式(as?)。条件形式的类型转换总是返回一个可选值（optional value），并且若下转是不可能的，可选值将是 nil。
+         只有你可以确定向下转型一定会成功时，才使用强制形式(as!)。当你试图向下转型为一个不正确的类型时，强制形式的类型转换会触发一个运行时错误。
+         */
+        print("3、向下转型")
+        for item in sa {
+            // 类型转换的条件形式
+            if let show = item as? Chemistry {
+                print("化学主题是: '\(show.physics)', \(show.equations)")
+                // 强制形式
+            } else if let example = item as? Maths {
+                print("数学主题是: '\(example.physics)',  \(example.formulae)")
+            }
+        }
+        
+        
+        // 4、Any和AnyObject的类型转换
+        /*
+         Swift为不确定类型提供了两种特殊类型别名：
+         【1】AnyObject可以代表任何class类型的实例。
+         【2】Any可以表示任何类型，包括方法类型（function types）。
+         注意：
+         只有当你明确的需要它的行为和功能时才使用Any和AnyObject。在你的代码里使用你期望的明确的类型总是更好的。
+         */
+
+        // 4.1 Any 实例
+        // 可以存储Any类型的数组 exampleany
+        print("4.1 Any 实例")
+        var exampleany = [Any]()
+
+        exampleany.append(12)
+        exampleany.append(3.14159)
+        exampleany.append("Any 实例")
+        exampleany.append(Chemistry(physics: "固体物理", equations: "兆赫"))
+
+        for item2 in exampleany {
+            switch item2 {
+            case let someInt as Int:
+                print("整型值为 \(someInt)")
+            case let someDouble as Double where someDouble > 0:
+                print("Pi 值为 \(someDouble)")
+            case let someString as String:
+                print("\(someString)")
+            case let phy as Chemistry:
+                print("主题 '\(phy.physics)', \(phy.equations)")
+            default:
+                print("None")
+            }
+        }
+        
+        // 4.2、AnyObject 实例
+        // [AnyObject] 类型的数组
+        print("4.2、AnyObject 实例")
+        let saprint: [AnyObject] = [
+            Chemistry(physics: "固体物理", equations: "赫兹"),
+            Maths(physics: "流体动力学", formulae: "千兆赫"),
+            Chemistry(physics: "热物理学", equations: "分贝"),
+            Maths(physics: "天体物理学", formulae: "兆赫"),
+            Maths(physics: "微分方程", formulae: "余弦级数")]
+       
+        for item in saprint {
+            // 类型转换的条件形式
+            if let show = item as? Chemistry {
+                print("化学主题是: '\(show.physics)', \(show.equations)")
+                // 强制形式
+            } else if let example = item as? Maths {
+                print("数学主题是: '\(example.physics)',  \(example.formulae)")
+            }
+        }
+    
+        for item2 in exampleany {
+            switch item2 {
+            case let someInt as Int:
+                print("整型值为 \(someInt)")
+            case let someDouble as Double where someDouble > 0:
+                print("Pi 值为 \(someDouble)")
+            case let someString as String:
+                print("\(someString)")
+            case let phy as Chemistry:
+                print("主题 '\(phy.physics)', \(phy.equations)")
+            default:
+                print("None")
+            }
+        }
+    }
+    
+    func arcLearn() {
+        // 自动引用计数
+        
+        /*
+         Swift 使用自动引用计数（ARC）这一机制来跟踪和管理应用程序的内存
+         通常情况下我们不需要去手动释放内存，因为 ARC 会在类的实例不再被使用时，自动释放其占用的内存。
+         但在有些时候我们还是需要在代码中实现内存管理。
+         */
+        
+        // 1、ARC 功能
+        /*
+         [1]当每次使用 init() 方法创建一个类的新的实例的时候，ARC 会分配一大块内存用来储存实例的信息。
+         [2]内存中会包含实例的类型信息，以及这个实例所有相关属性的值。
+         [3]当实例不再被使用时，ARC 释放实例所占用的内存，并让释放的内存能挪作他用。
+         [4]为了确保使用中的实例不会被销毁，ARC 会跟踪和计算每一个实例正在被多少属性，常量和变量所引用。
+         [5]实例赋值给属性、常量或变量，它们都会创建此实例的强引用，只要强引用还在，实例是不允许被销毁的。
+         */
+        
+        // 2、ARC 实例
+        class Person {
+            let name: String
+            var apartment: Apartment?
+            init(name: String) {
+                self.name = name
+                print("\(name) 开始初始化")
+            }
+            deinit {
+                print("\(name) 被析构")
+            }
+        }
+        
+        class Apartment {
+            let number: Int
+            init(number: Int) { self.number = number }
+            var tenant: Person?
+            deinit { print("Apartment #\(number) 被析构") }
+        }
+
+        // 值会被自动初始化为nil，目前还不会引用到Person类的实例
+        var reference1: Person?
+        var reference2: Person?
+        var reference3: Person?
+
+        // 创建Person类的新实例
+        reference1 = Person(name: "Runoob")
+
+
+        //赋值给其他两个变量，该实例又会多出两个强引用
+        reference2 = reference1
+        reference3 = reference1
+
+        //断开第一个强引用
+        reference1 = nil
+        //断开第二个强引用
+        reference2 = nil
+        //断开第三个强引用，并调用析构函数
+        reference3 = nil
+        
+        // 2、类实例之间的循环强引用
+        /*
+         在上面的例子中，ARC 会跟踪你所新创建的 Person 实例的引用数量，并且会在 Person 实例不再被需要时销毁它。
+         然而，我们可能会写出这样的代码，一个类永远不会有0个强引用。这种情况发生在两个类实例互相保持对方的强引用，并让对方不被销毁。这就是所谓的循环强引用。
+         实例：
+            下面展示了一个不经意产生循环强引用的例子。例子定义了两个类：Person和Apartment，用来建模公寓和它其中的居民:
+         */
+        // 两个变量都被初始化为nil
+        var runoob: Person?
+        var number73: Apartment?
+
+        // 赋值
+        runoob = Person(name: "Runoob")
+        number73 = Apartment(number: 73)
+
+        // 意感叹号是用来展开和访问可选变量 runoob 和 number73 中的实例
+        // 循环强引用被创建
+        runoob!.apartment = number73
+        number73!.tenant = runoob
+
+        // 断开 runoob 和 number73 变量所持有的强引用时，引用计数并不会降为 0，实例也不会被 ARC 销毁
+        // 注意，当你把这两个变量设为nil时，没有任何一个析构函数被调用。
+        // 强引用循环阻止了Person和Apartment类实例的销毁，并在你的应用程序中造成了内存泄漏
+        runoob = nil
+        number73 = nil
+        
+        // 3、解决实例之间的循环强引用
+        /*
+         Swift 提供了两种办法用来解决你在使用类的属性时所遇到的循环强引用问题：
+         【1】弱引用
+         【2】无主引用
+         弱引用和无主引用允许循环引用中的一个实例引用另外一个实例而不保持强引用。这样实例能够互相引用而不产生循环强引用。
+         对于生命周期中会变为nil的实例使用弱引用。相反的，对于初始化赋值后再也不会被赋值为nil的实例，使用无主引用。
+         */
+        
+        // 4、弱引用实例
+        class Module {
+            let name: String
+            init(name: String) { self.name = name }
+            var sub: SubModule?
+            deinit { print("\(name) 主模块") }
+        }
+
+        class SubModule {
+            let number: Int
+            
+            init(number: Int) { self.number = number }
+            
+            weak var topic: Module?
+            
+            deinit { print("子模块 topic 数为 \(number)") }
+        }
+
+        var toc: Module?
+        var list: SubModule?
+        toc = Module(name: "ARC")
+        list = SubModule(number: 4)
+        toc!.sub = list
+        list!.topic = toc
+
+        toc = nil
+        list = nil
+        
+        // 5、无主引用实例
+        class Student {
+            let name: String
+            var section: Marks?
+            
+            init(name: String) {
+                self.name = name
+            }
+            
+            deinit { print("\(name)") }
+        }
+        class Marks {
+            let marks: Int
+            unowned let stname: Student
+            
+            init(marks: Int, stname: Student) {
+                self.marks = marks
+                self.stname = stname
+            }
+            
+            deinit { print("学生的分数为 \(marks)") }
+        }
+
+        var module: Student?
+        module = Student(name: "ARC")
+        module!.section = Marks(marks: 98, stname: module!)
+        module = nil
+        
+        
+        // 6、闭包引起的循环强引用
+        /*
+         循环强引用还会发生在当你将一个闭包赋值给类实例的某个属性，并且这个闭包体中又使用了实例。这个闭包体中可能访问了实例的某个属性，例如self.someProperty，或者闭包中调用了实例的某个方法，例如self.someMethod。这两种情况都导致了闭包 "捕获" self，从而产生了循环强引用。
+         
+         实例:
+         下面的例子为你展示了当一个闭包引用了self后是如何产生一个循环强引用的。例子中定义了一个叫HTMLElement的类，用一种简单的模型表示 HTML 中的一个单独的元素：
+         */
+        class HTMLElement {
+            
+            let name: String
+            let text: String?
+            
+            lazy var asHTML: () -> String = {
+                if let text = self.text {
+                    return "<\(self.name)>\(text)</\(self.name)>"
+                } else {
+                    return "<\(self.name) />"
+                }
+            }
+            
+            init(name: String, text: String? = nil) {
+                self.name = name
+                self.text = text
+            }
+            
+            deinit {
+                print("\(name) is being deinitialized")
+            }
+        }
+        // 创建实例并打印信息
+        var paragraph: HTMLElement? = HTMLElement(name: "p", text: "hello, world")
+        print(paragraph!.asHTML())
+        /*
+         HTMLElement 类产生了类实例和 asHTML 默认值的闭包之间的循环强引用。
+         实例的 asHTML 属性持有闭包的强引用。但是，闭包在其闭包体内使用了self（引用了self.name和self.text），因此闭包捕获了self，这意味着闭包又反过来持有了HTMLElement实例的强引用。这样两个对象就产生了循环强引用。
+         解决闭包引起的循环强引用:在定义闭包时同时定义捕获列表作为闭包的一部分，通过这种方式可以解决闭包和类实例之间的循环强引用。
+         */
+        
+        
+        // 7、弱引用和无主引用
+        /*
+         当闭包和捕获的实例总是互相引用时并且总是同时销毁时，将闭包内的捕获定义为无主引用。
+         相反的，当捕获引用有时可能会是nil时，将闭包内的捕获定义为弱引用。
+         如果捕获的引用绝对不会置为nil，应该用无主引用，而不是弱引用。
+         实例:
+         前面的HTMLElement例子中，无主引用是正确的解决循环强引用的方法。这样编写HTMLElement类来避免循环强引用：
+         */
+        class HTMLElement2 {
+            
+            let name: String
+            let text: String?
+            
+            lazy var asHTML: () -> String = {
+                [unowned self] in
+                if let text = self.text {
+                    return "<\(self.name)>\(text)</\(self.name)>"
+                } else {
+                    return "<\(self.name) />"
+                }
+            }
+            
+            init(name: String, text: String? = nil) {
+                self.name = name
+                self.text = text
+            }
+            
+            deinit {
+                print("\(name) 被析构")
+            }
+            
+        }
+
+        //创建并打印HTMLElement实例
+        var paragraph2: HTMLElement2? = HTMLElement2(name: "p", text: "hello, world")
+        print(paragraph2!.asHTML())
+
+        // HTMLElement实例将会被销毁，并能看到它的析构函数打印出的消息
+        paragraph2 = nil
+    }
+    
+    func optionalChainingLearn() {
+        // 可选链
+        /*
+         可选链（Optional Chaining）是一种可以请求和调用属性、方法和子脚本的过程，用于请求或调用的目标可能为nil。
+         可选链返回两个值：
+         [1]如果目标有值，调用就会成功，返回该值
+         [2]如果目标为nil，调用将返回nil
+         
+         多次请求或调用可以被链接成一个链，如果任意一个节点为nil将导致整条链失效。
+         */
+        
+        // 1、可选链可替代强制解析
+        /*
+         通过在属性、方法、或下标脚本的可选值后面放一个问号(?)，即可定义一个可选链。
+         【1】可选
+         可选链 '?'
+         ? 放置于可选值后来调用方法，属性，下标脚本
+         当可选为 nil 输出比较友好的错误信息
+         【2】强制
+         感叹号（!）强制展开方法，属性，下标脚本可选链
+         ! 放置于可选值后来调用方法，属性，下标脚本来强制展开值
+         当可选为 nil 时强制展开执行错误
+         */
+        
+        // 2、使用感叹号(!)可选链实例
+        print("使用感叹号(!)可选链实例")
+        class Person {
+            var residence: Residence?
+        }
+
+        class Residence {
+            var numberOfRooms = 1
+        }
+        let john = Person()
+        //将导致运行时错误
+//        let roomCount = john.residence!.numberOfRooms     // 运行crash
+        // 想使用感叹号（!）强制解析获得这个人residence属性numberOfRooms属性值，将会引发运行时错误，因为这时没有可以供解析的residence值。
+        
+        // 3、使用问号(?)可选链实例
+        print("使用问号(?)可选链实例")
+        class Person1 {
+            var residence: Residence?
+        }
+
+        class Residence1 {
+            var numberOfRooms = 1
+        }
+
+        let john1 = Person1()
+        // 链接可选residence?属性，如果residence存在则取回numberOfRooms的值
+        if let roomCount = john1.residence?.numberOfRooms {
+            print("John 的房间号为 \(roomCount)。")
+        } else {
+            print("不能查看房间号")
+        }
+        /*
+         因为这种尝试获得numberOfRooms的操作有可能失败，可选链会返回Int?类型值，或者称作"可选Int"。当residence是空的时候（上例），选择Int将会为空，因此会出现无法访问numberOfRooms的情况。
+         要注意的是，即使numberOfRooms是非可选Int（Int?）时这一点也成立。只要是通过可选链的请求就意味着最后numberOfRooms总是返回一个Int?而不是Int。
+         */
+        
+        
+        // 4、为可选链定义模型类
+        /*
+         你可以使用可选链来多层调用属性，方法，和下标脚本。这让你可以利用它们之间的复杂模型来获取更底层的属性，并检查是否可以成功获取此类底层属性。
+         
+         实例:
+            定义了四个模型类，其中包括多层可选链：
+         */
+        print("4、为可选链定义模型类")
+        class Person2 {
+            var residence: Residence2?
+        }
+
+        // 定义了一个变量rooms，它被初始化为一个Room[]类型的空数组
+        class Residence2 {
+            var rooms = [Room2]()
+            var numberOfRooms: Int {
+                return rooms.count
+            }
+            subscript(i: Int) -> Room2 {
+                return rooms[i]
+            }
+            func printNumberOfRooms() {
+                print("房间号为 \(numberOfRooms)")
+            }
+            var address: Address2?
+        }
+
+        // Room 定义一个name属性和一个设定room名的初始化器
+        class Room2 {
+            let name: String
+            init(name: String) { self.name = name }
+        }
+
+        // 模型中的最终类叫做Address
+        class Address2 {
+            var buildingName: String?
+            var buildingNumber: String?
+            var street: String?
+            func buildingIdentifier() -> String? {
+                if (buildingName != nil) {
+                    return buildingName
+                } else if (buildingNumber != nil) {
+                    return buildingNumber
+                } else {
+                    return nil
+                }
+            }
+        }
+        
+        
+        // 5、通过可选链调用方法
+        // 你可以使用可选链的来调用可选值的方法并检查方法调用是否成功。即使这个方法没有返回值，你依然可以使用可选链来达成这一目的。
+        print("5、通过可选链调用方法")
+        let john5 = Person2()
+        if ((john5.residence?.printNumberOfRooms()) != nil) {
+            print("输出房间号")
+        } else {
+            print("无法输出房间号")
+        }
+        // 使用if语句来检查是否能成功调用printNumberOfRooms方法：如果方法通过可选链调用成功，printNumberOfRooms的隐式返回值将会是Void，如果没有成功，将返回nil。
+        
+        
+        // 6、使用可选链调用下标脚本
+        // 你可以使用可选链来尝试从下标脚本获取值并检查下标脚本的调用是否成功，然而，你不能通过可选链来设置下标脚本。
+        print("6、使用可选链调用下标脚本")
+        let john6 = Person2()
+        if let firstRoomName = john6.residence?[0].name {
+            print("第一个房间名 \(firstRoomName).")
+        } else {
+            print("无法检索到房间")
+        }
+        // 在下标脚本调用中可选链的问号直接跟在 circname.print 的后面，在下标脚本括号的前面，因为circname.print是可选链试图获得的可选值。
+        // 实例2
+        // 实例中创建一个Residence实例给john.residence，且在他的rooms数组中有一个或多个Room实例，那么你可以使用可选链通过Residence下标脚本来获取在rooms数组中的实例了：
+        let john7 = Person2()
+        let johnsHouse = Residence2()
+        johnsHouse.rooms.append(Room2(name: "客厅"))
+        johnsHouse.rooms.append(Room2(name: "厨房"))
+        john7.residence = johnsHouse
+
+        let johnsAddress = Address2()
+        johnsAddress.buildingName = "The Larches"
+        johnsAddress.street = "Laurel Street"
+        john7.residence!.address = johnsAddress
+
+        if let johnsStreet = john7.residence?.address?.street {
+            print("John 所在的街道是 \(johnsStreet)。")
+        } else {
+            print("无法检索到地址。 ")
+        }
+        
+        // 7、通过可选链接调用来访问下标
+        // 通过可选链接调用，我们可以用下标来对可选值进行读取或写入，并且判断下标调用是否成功。
+        let john8 = Person2()
+
+        let johnsHouse8 = Residence2()
+        johnsHouse8.rooms.append(Room2(name: "客厅"))
+        johnsHouse8.rooms.append(Room2(name: "厨房"))
+        john8.residence = johnsHouse8
+
+        if let firstRoomName = john8.residence?[0].name {
+            print("第一个房间名为\(firstRoomName)")
+        } else {
+            print("无法检索到房间")
+        }
+        
+        
+        // 8、访问可选类型的下标
+        // 如果下标返回可空类型值，比如Swift中Dictionary的key下标。可以在下标的闭合括号后面放一个问号来链接下标的可空返回值：
+        print(" 8、访问可选类型的下标")
+        var testScores = ["Dave": [86, 82, 84], "Bev": [79, 94, 81]]
+        testScores["Dave"]?[0] = 91
+        testScores["Bev"]?[0] += 1
+        testScores["Brian"]?[0] = 72
+        // the "Dave" array is now [91, 82, 84] and the "Bev" array is now [80, 94, 81]
+        /*
+         面的例子中定义了一个testScores数组，包含了两个键值对， 把String类型的key映射到一个整形数组。
+         这个例子用可选链接调用把"Dave"数组中第一个元素设为91，把"Bev"数组的第一个元素+1，然后尝试把"Brian"数组中的第一个元素设为72。
+         前两个调用是成功的，因为这两个key存在。但是key"Brian"在字典中不存在，所以第三个调用失败。
+         */
+        
+        // 9、连接多层链接
+        /*
+         你可以将多层可选链连接在一起，可以掘取模型内更下层的属性方法和下标脚本。然而多层可选链不能再添加比已经返回的可选值更多的层。
+         如果你试图通过可选链获得Int值，不论使用了多少层链接返回的总是Int?。 相似的，如果你试图通过可选链获得Int?值，不论使用了多少层链接返回的总是Int?。
+         
+         实例1:
+         下面的例子试图获取john的residence属性里的address的street属性。这里使用了两层可选链来联系residence和address属性，它们两者都是可选类型：
+         */
+        print("9、连接多层链接")
+        let john9 = Person2()
+
+        if let johnsStreet = john9.residence?.address?.street {
+            print("John 的地址为 \(johnsStreet).")
+        } else {
+            print("不能检索地址")
+        }
+        // 实例2
+        // 如果你为Address设定一个实例来作为john.residence.address的值，并为address的street属性设定一个实际值，你可以通过多层可选链来得到这个属性值。
+        class Person3 {
+           var residence: Residence3?
+        }
+
+        class Residence3 {
+            var rooms = [Room3]()
+            var numberOfRooms: Int {
+                return rooms.count
+            }
+            subscript(i: Int) -> Room3 {
+                get{
+                    return rooms[i]
+                }
+                set {
+                    rooms[i] = newValue
+                }
+            }
+            func printNumberOfRooms() {
+                print("房间号为 \(numberOfRooms)")
+            }
+            var address: Address3?
+        }
+
+        class Room3 {
+            let name: String
+            init(name: String) { self.name = name }
+        }
+
+        class Address3 {
+            var buildingName: String?
+            var buildingNumber: String?
+            var street: String?
+            func buildingIdentifier() -> String? {
+                if (buildingName != nil) {
+                    return buildingName
+                } else if (buildingNumber != nil) {
+                    return buildingNumber
+                } else {
+                    return nil
+                }
+            }
+        }
+        let john10 = Person3()
+        john10.residence?[0] = Room3(name: "浴室")
+
+        let johnsHouse10 = Residence3()
+        johnsHouse10.rooms.append(Room3(name: "客厅"))
+        johnsHouse10.rooms.append(Room3(name: "厨房"))
+        john10.residence = johnsHouse10
+
+        if let firstRoomName = john10.residence?[0].name {
+            print("第一个房间是\(firstRoomName)")
+        } else {
+            print("无法检索房间")
+        }
+        
+        
+        // 11、对返回可选值的函数进行链接
+        // 我们还可以通过可选链接来调用返回可空值的方法，并且可以继续对可选值进行链接。
+        let john11 = Person2()
+
+        if john11.residence?.printNumberOfRooms() != nil {
+            print("指定了房间号)")
+        }  else {
+            print("未指定房间号")
+        }
+    }
+    
+    func dellocLearn() {
+        // 析构过程
+        /*
+         在一个类的实例被释放之前，析构函数被立即调用。用关键字deinit来标示析构函数，类似于初始化函数用init来标示。析构函数只适用于类类型。
+         */
+        
+        // 1、析构过程原理
+        /*
+         Swift 会自动释放不再需要的实例以释放资源。
+         Swift 通过自动引用计数（ARC）处理实例的内存管理。
+         通常当你的实例被释放时不需要手动地去清理。但是，当使用自己的资源时，你可能需要进行一些额外的清理。
+         例如，如果创建了一个自定义的类来打开一个文件，并写入一些数据，你可能需要在类实例被释放之前关闭该文件。
+         
+         语法 ：
+            在类的定义中，每个类最多只能有一个析构函数。析构函数不带任何参数，在写法上不带括号：
+         deinit {
+             // 执行析构过程
+         }
+
+         */
+        
+        // 2、实例
+        var counter = 0;  // 引用计数器
+        class BaseClass {
+            init() {
+//                counter += 1;     // 验证请释放注释
+            }
+            deinit {
+//                counter -= 1;     // 验证请释放注释
+            }
+        }
+        
+        var show: BaseClass? = BaseClass()
+        print(counter)
+//        show = nil            // 会执行deinit
+        print(counter)
         
     }
     
@@ -342,6 +1244,276 @@ class ViewController: UIViewController {
          */
         
         // 2、类的继承和构造过程
+        /*
+         指定构造器
+         【1】类中最主要的构造器
+         【2】初始化类中提供的所有属性，并根据父类链往上调用父类的构造器来实现父类的初始化。
+         【3】每一个类都必须拥有至少一个指定构造器
+         Init(parameters) {
+         statements
+         }
+         便利构造器
+         【1】类中比较次要的、辅助型的构造器
+         【2】可以定义便利构造器来调用同一个类中的指定构造器，并为其参数提供默认值。你也可以定义便利构造器来创建一个特殊用途或特定输入的实例。
+         【3】只在必要的时候为类提供便利构造器
+         convenience init(parameters) {
+         statements
+         }
+         */
+        
+        
+        // 2.1 指定构造器实例
+        print("指定构造器实例")
+        class mainClass {
+            var no1 : Int // 局部存储变量
+            init(no1 : Int) {
+                self.no1 = no1 // 初始化
+            }
+        }
+        class subClass : mainClass {
+            var no2 : Int // 新的子类存储变量
+            init(no1 : Int, no2 : Int) {
+                self.no2 = no2 // 初始化
+                super.init(no1:no1) // 初始化超类
+            }
+        }
+        let res = mainClass(no1: 10)
+        let res2 = subClass(no1: 10, no2: 20)
+        print("res 为: \(res.no1)")
+        print("res2 为: \(res2.no1)")
+        print("res2 为: \(res2.no2)")
+        
+        
+        // 2.3 便利构造器实例
+        print("便利构造器实例")
+        class mainClass2 {
+            var no1 : Int // 局部存储变量
+            init(no1 : Int) {
+                self.no1 = no1 // 初始化
+            }
+        }
+        class subClass2 : mainClass {
+            var no2 : Int
+            init(no1 : Int, no2 : Int) {
+                self.no2 = no2
+                super.init(no1:no1)
+            }
+            // 便利方法只需要一个参数
+            override convenience init(no1: Int) {
+                self.init(no1:no1, no2:0)
+            }
+        }
+        let res3 = mainClass2(no1: 20)
+        let res33 = subClass2(no1: 30, no2: 50)
+        print("res 为: \(res3.no1)")
+        print("res2 为: \(res33.no1)")
+        print("res2 为: \(res33.no2)")
+        
+        
+        // 2.4 构造器的继承和重载
+        /*
+         Swift 中的子类不会默认继承父类的构造器。
+         父类的构造器仅在确定和安全的情况下被继承。
+         当你重写一个父类指定构造器时，你需要写override修饰符。
+         */
+        print("构造器的继承和重载")
+        class SuperClass3 {
+            var corners = 4
+            var description: String {
+                return "\(corners) 边"
+            }
+        }
+        let rectangle2 = SuperClass3()
+        print("矩形: \(rectangle2.description)")
+
+        class SubClass3: SuperClass3 {
+            override init() {  //重载构造器
+                super.init()
+                corners = 5
+            }
+        }
+        let subClass3 = SubClass3()
+        print("五角型: \(subClass3.description)")
+        
+        // 2.5 指定构造器和便利构造器实例
+        /*
+         接下来的例子将在操作中展示指定构造器、便利构造器和自动构造器的继承。
+         它定义了包含两个个类MainClass、SubClass的类层次结构，并将演示它们的构造器是如何相互作用的。
+         */
+        print("指定构造器和便利构造器实例")
+        class MainClass {
+            var name: String
+            init(name: String) {
+                self.name = name
+            }
+            convenience init() {
+                self.init(name: "[匿名]")
+            }
+        }
+        let main = MainClass(name: "Runoob")
+        print("MainClass 名字为: \(main.name)")
+        let main2 = MainClass()
+        print("没有对应名字: \(main2.name)")
+        class SubClass5: MainClass {
+            var count: Int
+            init(name: String, count: Int) {
+                self.count = count
+                super.init(name: name)
+            }
+            override convenience init(name: String) {
+                self.init(name: name, count: 1)
+            }
+        }
+        let sub = SubClass5(name: "Runoob")
+        print("MainClass 名字为: \(sub.name)")
+        let sub2 = SubClass5(name: "Runoob", count: 3)
+        print("count 变量: \(sub2.count)")
+        
+        // 2.5 类的可失败构造器
+        /*
+         如果一个类，结构体或枚举类型的对象，在构造自身的过程中有可能失败，则为其定义一个可失败构造器。
+         变量初始化失败可能的原因有：
+         【1】传入无效的参数值。
+         【2】缺少某种所需的外部资源。
+         【3】没有满足特定条件。
+         为了妥善处理这种构造过程中可能会失败的情况。
+         你可以在一个类，结构体或是枚举类型的定义中，添加一个或多个可失败构造器。其语法为在init关键字后面加添问号(init?)。
+         
+         实例
+         下例中，定义了一个名为Animal的结构体，其中有一个名为species的，String类型的常量属性。
+         同时该结构体还定义了一个，带一个String类型参数species的,可失败构造器。这个可失败构造器，被用来检查传入的参数是否为一个空字符串，如果为空字符串，则该可失败构造器，构建对象失败，否则成功。
+         */
+        struct Animal {
+            let species: String
+            init?(species: String) {
+                if species.isEmpty { return nil }
+                self.species = species
+            }
+        }
+        //通过该可失败构造器来构建一个Animal的对象，并检查其构建过程是否成功
+        // someCreature 的类型是 Animal? 而不是 Animal
+        let someCreature = Animal(species: "长颈鹿")
+        
+        // 打印 "动物初始化为长颈鹿"
+        if let giraffe = someCreature {
+            print("动物初始化为\(giraffe.species)")
+        }
+        
+        // 2.6 枚举类型的可失败构造器
+        /*
+         你可以通过构造一个带一个或多个参数的可失败构造器来获取枚举类型中特定的枚举成员。
+         
+         实例:
+            下例中，定义了一个名为TemperatureUnit的枚举类型。其中包含了三个可能的枚举成员(Kelvin，Celsius，和 Fahrenheit)和一个被用来找到Character值所对应的枚举成员的可失败构造器：
+         */
+        enum TemperatureUnit {
+            // 开尔文，摄氏，华氏
+            case Kelvin, Celsius, Fahrenheit
+            init?(symbol: Character) {
+                switch symbol {
+                case "K":
+                    self = .Kelvin
+                case "C":
+                    self = .Celsius
+                case "F":
+                    self = .Fahrenheit
+                default:
+                    return nil
+                }
+            }
+        }
+
+        let fahrenheitUnit = TemperatureUnit(symbol: "F")
+        if fahrenheitUnit != nil {
+            print("这是一个已定义的温度单位，所以初始化成功。")
+        }
+
+        let unknownUnit = TemperatureUnit(symbol: "X")
+        if unknownUnit == nil {
+            print("这不是一个已定义的温度单位，所以初始化失败。")
+        }
+        
+        // 2.7 类的可失败构造器
+        /*
+         值类型（如结构体或枚举类型）的可失败构造器，对何时何地触发构造失败这个行为没有任何的限制。
+         但是，类的可失败构造器只能在所有的类属性被初始化后和所有类之间的构造器之间的代理调用发生完后触发失败行为。
+         实例
+         下例子中，定义了一个名为 StudRecord 的类，因为 studname 属性是一个常量，所以一旦 StudRecord 类构造成功，studname 属性肯定有一个非nil的值。
+         */
+        class StudRecord1 {
+            let studname: String!
+            init?(studname: String) {
+                self.studname = studname
+                if studname.isEmpty { return nil }
+            }
+        }
+        if let stname = StudRecord1(studname: "失败构造器") {
+            print("模块为 \(stname.studname)")
+        }
+        
+        // 2.8 覆盖一个可失败构造器
+        /*
+         就如同其它构造器一样，你也可以用子类的可失败构造器覆盖基类的可失败构造器。
+         者你也可以用子类的非可失败构造器覆盖一个基类的可失败构造器。
+         你可以用一个非可失败构造器覆盖一个可失败构造器，但反过来却行不通。
+         一个非可失败的构造器永远也不能代理调用一个可失败构造器。
+         
+         
+         实例
+            以下实例描述了可失败与非可失败构造器：
+         */
+        class Planet {
+            var name: String
+            
+            init(name: String) {
+                self.name = name
+            }
+            
+            convenience init() {
+                self.init(name: "[No Planets]")
+            }
+        }
+        let plName = Planet(name: "Mercury")
+        print("行星的名字是: \(plName.name)")
+
+        let noplName = Planet()
+        print("没有这个名字的行星: \(noplName.name)")
+
+        class planets: Planet {
+            var count: Int
+            
+            init(name: String, count: Int) {
+                self.count = count
+                super.init(name: name)
+            }
+            
+            override convenience init(name: String) {
+                self.init(name: name, count: 1)
+            }
+        }
+        
+        // 2.9 可失败构造器 init!
+        /*
+         通常来说我们通过在init关键字后添加问号的方式（init?）来定义一个可失败构造器，但你也可以使用通过在init后面添加惊叹号的方式来定义一个可失败构造器(init!)。实例如下：
+         */
+        struct StudRecord {
+            let stname: String
+            
+            init!(stname: String) {
+                if stname.isEmpty {return nil }
+                self.stname = stname
+            }
+        }
+
+        let stmark = StudRecord(stname: "Runoob")
+        if let name = stmark {
+            print("指定了学生名")
+        }
+
+        let blankname = StudRecord(stname: "")
+        if blankname == nil {
+            print("学生名为空")
+        }
     }
     
     func successionLearn() {
@@ -518,6 +1690,8 @@ class ViewController: UIViewController {
             }
         }
         
+        
+        //
     }
     
     func indexScriptLearn() {

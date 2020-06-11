@@ -35,7 +35,1141 @@ class ViewController: UIViewController {
 //        optionalChainingLearn()
 //        arcLearn()
 //        typeExchange()
-        extensionLearn()
+//        extensionLearn()
+//        protocolLearn()
+//        genericLearn()
+//        rightLearn()
+    }
+    func rightLearn() {
+        // Swift 访问控制
+        /*
+         访问控制可以限定其他源文件或模块中代码对你代码的访问级别。
+         你可以明确地给单个类型（类、结构体、枚举）设置访问级别，也可以给这些类型的属性、函数、初始化方法、基本类型、下标索引等设置访问级别。
+         协议也可以被限定在一定的范围内使用，包括协议里的全局常量、变量和函数。
+         访问控制基于模块与源文件。
+         模块指的是以独立单元构建和发布的 Framework 或 Application。在 Swift 中的一个模块可以使用 import 关键字引入另外一个模块。
+         源文件是单个源码文件，它通常属于一个模块， 源文件可以包含多个类和函数 的定义。
+         
+         Swift 为代码中的实体提供了四种不同的访问级别:public、internal、fileprivate、private。
+         【1】public    可以访问自己模块中源文件里的任何实体，别人也可以通过引入该模块来访问源文件里的所有实体。
+         【2】internal    可以访问自己模块中源文件里的任何实体，但是别人不能访问该模块中源文件里的实体。
+         【3】fileprivate    文件内私有，只能在当前源文件中使用。
+         【4】private    只能在类中访问，离开了这个类或者结构体的作用域外面就无法访问。
+            public 为最高级访问级别，private 为最低级访问级别。
+         
+         语法：
+         通过修饰符public、internal、fileprivate、private来声明实体的访问级别：
+         public class SomePublicClass {}
+         internal class SomeInternalClass {}
+         fileprivate class SomeFilePrivateClass {}
+         private class SomePrivateClass {}
+         
+         public var somePublicVariable = 0
+         internal let someInternalConstant = 0
+         fileprivate func someFilePrivateFunction() {}
+         private func somePrivateFunction() {}
+         */
+        // 除非有特殊的说明，否则实体都使用默认的访问级别 internal。
+//        未指定访问级别默认为 internal
+//        class SomeInternalClass {}              // 访问级别为 internal
+//        let someInternalConstant = 0            // 访问级别为 internal
+        
+        
+        // 1、函数类型访问权限
+        /*
+        函数的访问级别需要根据该函数的参数类型和返回类型的访问级别得出。
+        下面的例子定义了一个名为someFunction全局函数，并且没有明确地申明其访问级别。
+        */
+//        func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+//            // 函数实现
+//        }
+        /*
+        函数中其中一个类 SomeInternalClass 的访问级别是 internal，另一个 SomePrivateClass 的访问级别是 private。所以根据元组访问级别的原则，该元组的访问级别是 private（元组的访问级别与元组中访问级别最低的类型一致）。
+        因为该函数返回类型的访问级别是 private，所以你必须使用 private 修饰符，明确的声明该函数：
+        */
+//        private func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+//            // 函数实现
+//        }
+        // 将该函数申明为 public 或 internal，或者使用默认的访问级别 internal 都是错误的，因为如果这样你就无法访问 private 级别的返回值。
+        
+        
+        
+        // 2、枚举类型访问权限
+        // 枚举中成员的访问级别继承自该枚举，你不能为枚举中的成员单独申明不同的访问级别。
+        // 比如下面的例子，枚举 Student 被明确的申明为 public 级别，那么它的成员 Name，Mark 的访问级别同样也是 public：
+//        public enum Student {
+//            case Name(String)
+//            case Mark(Int,Int,Int)
+//        }
+//
+//        var studDetails = Student.Name("Swift")
+//        var studMarks = Student.Mark(98,97,95)
+//
+//        switch studMarks {
+//        case .Name(let studName):
+//            print("学生名: \(studName).")
+//        case .Mark(let Mark1, let Mark2, let Mark3):
+//            print("学生成绩: \(Mark1),\(Mark2),\(Mark3)")
+//        }
+//        以上程序执行输出结果为：
+//        学生成绩: 98,97,95
+        
+        
+        // 3、子类访问权限
+        // 子类的访问级别不得高于父类的访问级别。比如说，父类的访问级别是internal，子类的访问级别就不能申明为public。
+//        public class SuperClass {
+//            fileprivate func show() {
+//                print("超类")
+//            }
+//        }
+//
+//        // 访问级别不能高于超类 internal > public
+//        internal class SubClass: SuperClass  {
+//            override internal func show() {
+//                print("子类")
+//            }
+//        }
+//
+//        let sup = SuperClass()
+//        sup.show()
+//
+//        let sub = SubClass()
+//        sub.show()
+//        以上程序执行输出结果为：
+//        超类
+//        子类
+        
+        
+        
+        // 4、常量、变量、属性、下标访问权限
+        /*
+         常量、变量、属性不能拥有比它们的类型更高的访问级别。
+         比如说，你定义一个public级别的属性，但是它的类型是private级别的，这是编译器所不允许的。
+         同样，下标也不能拥有比索引类型或返回类型更高的访问级别。
+         如果常量、变量、属性、下标索引的定义类型是private级别的，那么它们必须要明确的申明访问级别为private:
+         private var privateInstance = SomePrivateClass()
+         */
+        
+        
+        
+        // 5、Getter 和 Setter访问权限
+        // 常量、变量、属性、下标索引的Getters和Setters的访问级别继承自它们所属成员的访问级别。
+        // Setter的访问级别可以低于对应的Getter的访问级别，这样就可以控制变量、属性或下标索引的读写权限。
+//        class Samplepgm {
+//            fileprivate var counter: Int = 0{
+//                willSet(newTotal){
+//                    print("计数器: \(newTotal)")
+//                }
+//                didSet{
+//                    if counter > oldValue {
+//                        print("新增加数量 \(counter - oldValue)")
+//                    }
+//                }
+//            }
+//        }
+//
+//        let NewCounter = Samplepgm()
+//        NewCounter.counter = 100
+//        NewCounter.counter = 800
+//        counter 的访问级别为 fileprivate，在文件内可以访问。
+//        以上程序执行输出结果为：
+//        计数器: 100
+//        新增加数量 100
+//        计数器: 800
+//        新增加数量 700
+        
+        
+        
+        // 6、构造器和默认构造器访问权限
+        /*
+         【1】初始化
+         我们可以给自定义的初始化方法申明访问级别，但是要不高于它所属类的访问级别。但必要构造器例外，它的访问级别必须和所属类的访问级别相同。
+         如同函数或方法参数，初始化方法参数的访问级别也不能低于初始化方法的访问级别。
+         
+         【2】默认初始化方法
+         Swift为结构体、类都提供了一个默认的无参初始化方法，用于给它们的所有属性提供赋值操作，但不会给出具体值。
+         默认初始化方法的访问级别与所属类型的访问级别相同。
+         
+         实例:
+         在每个子类的 init() 方法前使用 required 关键字声明访问权限。
+         */
+//        class classA {
+//            required init() {
+//                var a = 10
+//                print(a)
+//            }
+//        }
+//
+//        class classB: classA {
+//            required init() {
+//                var b = 30
+//                print(b)
+//            }
+//        }
+//
+//        let res = classA()
+//        let show = classB()
+//        以上程序执行输出结果为：
+//        10
+//        30
+//        10
+        
+        
+        // 7、协议访问权限
+        /*
+         如果想为一个协议明确的申明访问级别，那么需要注意一点，就是你要确保该协议只在你申明的访问级别作用域中使用。
+         如果你定义了一个public访问级别的协议，那么实现该协议提供的必要函数也会是public的访问级别。这一点不同于其他类型，比如，public访问级别的其他类型，他们成员的访问级别为internal。
+         */
+//        public protocol TcpProtocol {
+//            init(no1: Int)
+//        }
+//
+//        public class MainClass {
+//            var no1: Int // local storage
+//            init(no1: Int) {
+//                self.no1 = no1 // initialization
+//            }
+//        }
+//
+//        class SubClass: MainClass, TcpProtocol {
+//            var no2: Int
+//            init(no1: Int, no2 : Int) {
+//                self.no2 = no2
+//                super.init(no1:no1)
+//            }
+//
+//            // Requires only one parameter for convenient method
+//            required override convenience init(no1: Int)  {
+//                self.init(no1:no1, no2:0)
+//            }
+//        }
+//
+//        let res = MainClass(no1: 20)
+//        let show = SubClass(no1: 30, no2: 50)
+//
+//        print("res is: \(res.no1)")
+//        print("res is: \(show.no1)")
+//        print("res is: \(show.no2)")
+//        以上程序执行输出结果为：
+//        res is: 20
+//        res is: 30
+//        res is: 50
+        
+        
+        //8、 扩展访问权限
+        /*
+         可以在条件允许的情况下对类、结构体、枚举进行扩展。扩展成员应该具有和原始类成员一致的访问级别。比如你扩展了一个公共类型，那么你新加的成员应该具有和原始成员一样的默认的internal访问级别。
+         或者，你可以明确申明扩展的访问级别（比如使用private extension）给该扩展内所有成员申明一个新的默认访问级别。这个新的默认访问级别仍然可以被单独成员所申明的访问级别所覆盖。
+         */
+        
+        
+        // 9、泛型访问权限
+        // 泛型类型或泛型函数的访问级别取泛型类型、函数本身、泛型类型参数三者中的最低访问级别。
+//        public struct TOS<T> {
+//            var items = [T]()
+//            private mutating func push(item: T) {
+//                items.append(item)
+//            }
+//
+//            mutating func pop() -> T {
+//                return items.removeLast()
+//            }
+//        }
+//
+//        var tos = TOS<String>()
+//        tos.push("Swift")
+//        print(tos.items)
+//
+//        tos.push("泛型")
+//        print(tos.items)
+//
+//        tos.push("类型参数")
+//        print(tos.items)
+//
+//        tos.push("类型参数名")
+//        print(tos.items)
+//        let deletetos = tos.pop()
+//        以上程序执行输出结果为：
+//        ["Swift"]
+//        ["Swift", "泛型"]
+//        ["Swift", "泛型", "类型参数"]
+//        ["Swift", "泛型", "类型参数", "类型参数名"]
+        
+        
+        // 10、类型别名
+        /*
+         任何你定义的类型别名都会被当作不同的类型，以便于进行访问控制。一个类型别名的访问级别不可高于原类型的访问级别。
+         比如说，一个private级别的类型别名可以设定给一个public、internal、private的类型，但是一个public级别的类型别名只能设定给一个public级别的类型，不能设定给internal或private 级别的类型。
+         注意：这条规则也适用于为满足协议一致性而给相关类型命名别名的情况。
+         */
+//        public protocol Container {
+//            typealias ItemType
+//            mutating func append(item: ItemType)
+//            var count: Int { get }
+//            subscript(i: Int) -> ItemType { get }
+//        }
+//
+//        struct Stack<T>: Container {
+//            // original Stack<T> implementation
+//            var items = [T]()
+//            mutating func push(item: T) {
+//                items.append(item)
+//            }
+//
+//            mutating func pop() -> T {
+//                return items.removeLast()
+//            }
+//
+//            // conformance to the Container protocol
+//            mutating func append(item: T) {
+//                self.push(item)
+//            }
+//
+//            var count: Int {
+//                return items.count
+//            }
+//
+//            subscript(i: Int) -> T {
+//                return items[i]
+//            }
+//        }
+//
+//        func allItemsMatch<
+//            C1: Container, C2: Container
+//            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
+//            (someContainer: C1, anotherContainer: C2) -> Bool {
+//                // check that both containers contain the same number of items
+//                if someContainer.count != anotherContainer.count {
+//                    return false
+//                }
+//
+//                // check each pair of items to see if they are equivalent
+//                for i in 0..<someContainer.count {
+//                    if someContainer[i] != anotherContainer[i] {
+//                        return false
+//                    }
+//                }
+//
+//                // all items match, so return true
+//                return true
+//        }
+//
+//        var tos = Stack<String>()
+//        tos.push("Swift")
+//        print(tos.items)
+//
+//        tos.push("泛型")
+//        print(tos.items)
+//
+//        tos.push("Where 语句")
+//        print(tos.items)
+//
+//        var eos = ["Swift", "泛型", "Where 语句"]
+//        print(eos)
+//        以上程序执行输出结果为：
+//        ["Swift"]
+//        ["Swift", "泛型"]
+//        ["Swift", "泛型", "Where 语句"]
+//        ["Swift", "泛型", "Where 语句"]
+        
+    }
+    
+    func genericLearn() {
+        // 泛型
+        /*
+         Swift 泛型
+         Swift 提供了泛型让你写出灵活且可重用的函数和类型。
+         Swift 标准库是通过泛型代码构建出来的。
+         Swift 的数组和字典类型都是泛型集。
+         */
+        
+        // 1、你可以创建一个Int数组，也可创建一个String数组，或者甚至于可以是任何其他 Swift 的类型数据数组。
+        // 以下实例是一个非泛型函数 exchange 用来交换两个 Int 值：
+        // 定义一个交换两个变量的函数
+//        func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+//            let temporaryA = a
+//            a = b
+//            b = temporaryA
+//        }
+//
+//        var numb1 = 100
+//        var numb2 = 200
+//        print("交换前数据: \(numb1) 和 \(numb2)")
+//        swapTwoInts(&numb1, &numb2)
+//        print("交换后数据: \(numb1) 和 \(numb2)")
+//        以上程序执行输出结果为：
+//        交换前数据: 100 和 200
+//        交换后数据: 200 和 100
+        // 以上实例只试用与交换整数 Int 类型的变量。如果你想要交换两个 String 值或者 Double 值，就得重新写个对应的函数，例如 swapTwoStrings(_:_:) 和 swapTwoDoubles(_:_:)，如下所示：
+        func swapTwoStrings(_ a: inout String, _ b: inout String) {
+            let temporaryA = a
+            a = b
+            b = temporaryA
+        }
+         
+        func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
+            let temporaryA = a
+            a = b
+            b = temporaryA
+        }
+        /*
+         从以上代码来看，它们功能代码是相同的，只是类型上不一样，这时我们可以使用泛型，从而避免重复编写代码。
+        
+         泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。
+         func swapTwoValues<T>(_ a: inout T, _ b: inout T)
+        
+         swapTwoValues 后面跟着占位类型名（T），并用尖括号括起来（<T>）。这个尖括号告诉 Swift 那个 T 是 swapTwoValues(_:_:) 函数定义内的一个占位类型名，因此 Swift 不会去查找名为 T 的实际类型。
+         以下实例是一个泛型函数 exchange 用来交换两个 Int 和 String 值：
+         */
+        // 定义一个交换两个变量的函数
+        func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+            let temporaryA = a
+            a = b
+            b = temporaryA
+        }
+         
+        var numb1 = 100
+        var numb2 = 200
+         
+        print("交换前数据:  \(numb1) 和 \(numb2)")
+        swapTwoValues(&numb1, &numb2)
+        print("交换后数据: \(numb1) 和 \(numb2)")
+         
+        var str1 = "A"
+        var str2 = "B"
+         
+        print("交换前数据:  \(str1) 和 \(str2)")
+        swapTwoValues(&str1, &str2)
+        print("交换后数据: \(str1) 和 \(str2)")
+        
+        
+        // 2、泛型类型
+        /*
+         Swift 允许你定义你自己的泛型类型。
+         自定义类、结构体和枚举作用于任何类型，如同 Array 和 Dictionary 的用法。
+         */
+        
+        // 后入先出
+        // Int 型的栈
+        struct IntStack {
+            var items = [Int]()
+            mutating func push(_ item: Int) {
+                items.append(item)
+            }
+            mutating func pop() -> Int {
+                return items.removeLast()
+            }
+        }
+        /*
+         这个结构体在栈中使用一个名为 items 的 Array 属性来存储值。Stack 提供了两个方法：push(_:) 和 pop()，用来向栈中压入值以及从栈中移除值。这些方法被标记为 mutating，因为它们需要修改结构体的 items 数组。
+         上面的 IntStack 结构体只能用于 Int 类型。不过，可以定义一个泛型 Stack 结构体，从而能够处理任意类型的值。
+         下面是相同代码的泛型版本：
+         */
+        // 泛型的栈
+        struct Stack<Element> {
+            var items = [Element]()
+            mutating func push(_ item: Element) {
+                items.append(item)
+            }
+            mutating func pop() -> Element {
+                return items.removeLast()
+            }
+        }
+         
+        var stackOfStrings = Stack<String>()
+        print("字符串元素入栈: ")
+        stackOfStrings.push("google")
+        stackOfStrings.push("runoob")
+        print(stackOfStrings.items);
+         
+        let deletetos = stackOfStrings.pop()
+        print("出栈元素: " + deletetos)
+         
+        var stackOfInts = Stack<Int>()
+        print("整数元素入栈: ")
+        stackOfInts.push(1)
+        stackOfInts.push(2)
+        print(stackOfInts.items);
+//        程序实例执行结果为：
+//        字符串元素入栈:
+//        ["google", "runoob"]
+//        出栈元素: runoob
+//        整数元素入栈:
+//        [1, 2]
+        /*
+         Stack 基本上和 IntStack 相同，占位类型参数 Element 代替了实际的 Int 类型。
+         以上实例中 Element 在如下三个地方被用作占位符：
+         创建 items 属性，使用 Element 类型的空数组对其进行初始化。
+         指定 push(_:) 方法的唯一参数 item 的类型必须是 Element 类型。
+         指定 pop() 方法的返回值类型必须是 Element 类型。
+         */
+        
+        
+        // 3、扩展泛型类型
+        /*
+         当你扩展一个泛型类型的时候（使用 extension 关键字），你并不需要在扩展的定义中提供类型参数列表。更加方便的是，原始类型定义中声明的类型参数列表在扩展里是可以使用的，并且这些来自原始类型中的参数名称会被用作原始定义中类型参数的引用。
+         下面的例子扩展了泛型类型 Stack，为其添加了一个名为 topItem 的只读计算型属性，它将会返回当前栈顶端的元素而不会将其从栈中移除：
+         */
+//        extension Stack {
+//            var topItem: Element? {
+//               return items.isEmpty ? nil : items[items.count - 1]
+//            }
+//        }
+//
+//        var stackOfStrings2 = Stack<String>()
+//        print("字符串元素入栈: ")
+//        stackOfStrings2.push("google")
+//        stackOfStrings2.push("runoob")
+//
+//        if let topItem = stackOfStrings2.topItem {
+//            print("栈中的顶部元素是：\(topItem).")
+//        }
+//
+//        print(stackOfStrings2.items)
+//        以上程序执行输出结果为：
+//        字符串元素入栈:
+//        栈中的顶部元素是：runoob.
+//        ["google", "runoob"]
+        /*
+         实例中 topItem 属性会返回一个 Element 类型的可选值。当栈为空的时候，topItem 会返回 nil；当栈不为空的时候，topItem 会返回 items 数组中的最后一个元素。
+         
+         我们也可以通过扩展一个存在的类型来指定关联类型。
+         例如 Swift 的 Array 类型已经提供 append(_:) 方法，一个 count 属性，以及一个接受 Int 类型索引值的下标用以检索其元素。这三个功能都符合 Container 协议的要求，所以你只需简单地声明 Array 采纳该协议就可以扩展 Array。
+         以下实例创建一个空扩展即可:
+         extension Array: Container {}
+         */
+
+        
+        // 4、类型约束：型约束指定了一个必须继承自指定类的类型参数，或者遵循一个特定的协议或协议构成。
+        /*
+         类型约束语法：
+         你可以写一个在一个类型参数名后面的类型约束，通过冒号分割，来作为类型参数链的一部分。这种作用于泛型函数的类型约束的基础语法如下所示（和泛型类型的语法相同）：
+//         func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
+//             // 这里是泛型函数的函数体部分
+//         }
+//         上面这个函数有两个类型参数。第一个类型参数 T，有一个要求 T 必须是 SomeClass 子类的类型约束；第二个类型参数 U，有一个要求 U 必须符合 SomeProtocol 协议的类型约束。
+//         */
+//        // 实例
+////        // 非泛型函数，查找指定字符串在数组中的索引
+////        func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
+////            for (index, value) in array.enumerated() {
+////                if value == valueToFind {
+////                    // 找到返回索引值
+////                    return index
+////                }
+////            }
+////            return nil
+////        }
+////
+////
+////        let strings = ["google", "weibo", "taobao", "runoob", "facebook"]
+////        if let foundIndex = findIndex(ofString: "runoob", in: strings) {
+////            print("runoob 的索引为 \(foundIndex)")
+////        }
+////        索引下标从 0 开始。
+////        以上程序执行输出结果为：
+////        runoob 的索引为 3
+//
+//
+//        // 5、关联类
+//        /*
+//         Swift 中使用 associatedtype 关键字来设置关联类型实例。
+//         下面例子定义了一个 Container 协议，该协议定义了一个关联类型 ItemType。
+//         Container 协议只指定了三个任何遵从 Container 协议的类型必须提供的功能。遵从协议的类型在满足这三个条件的情况下也可以提供其他额外的功能。
+//         */
+//        // Container 协议
+//        protocol Container {
+//            associatedtype ItemType
+//            // 添加一个新元素到容器里
+//            mutating func append(_ item: ItemType)
+//            // 获取容器中元素的数
+//            var count: Int { get }
+//            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
+//            subscript(i: Int) -> ItemType { get }
+//        }
+//
+//        // Stack 结构体遵从 Container 协议
+//        struct Stack<Element>: Container {
+//            // Stack<Element> 的原始实现部分
+//            var items = [Element]()
+//            mutating func push(_ item: Element) {
+//                items.append(item)
+//            }
+//            mutating func pop() -> Element {
+//                return items.removeLast()
+//            }
+//            // Container 协议的实现部分
+//            mutating func append(_ item: Element) {
+//                self.push(item)
+//            }
+//            var count: Int {
+//                return items.count
+//            }
+//            subscript(i: Int) -> Element {
+//                return items[i]
+//            }
+//        }
+//
+//        var tos = Stack<String>()
+//        tos.push("google")
+//        tos.push("runoob")
+//        tos.push("taobao")
+//        // 元素列表
+//        print(tos.items)
+//        // 元素个数
+//        print( tos.count)
+//        以上程序执行输出结果为：
+//        ["google", "runoob", "taobao"]
+//        3
+        
+        // 6、Where 语句
+        /*
+         类型约束能够确保类型符合泛型函数或类的定义约束。
+         你可以在参数列表中通过where语句定义参数的约束。
+         你可以写一个where语句，紧跟在在类型参数列表后面，where语句后跟一个或者多个针对关联类型的约束，以及（或）一个或多个类型和关联类型间的等价(equality)关系。
+         
+         实例:
+         下面的例子定义了一个名为allItemsMatch的泛型函数，用来检查两个Container实例是否包含相同顺序的相同元素。
+         如果所有的元素能够匹配，那么返回 true，反之则返回 false。
+         */
+//        // Container 协议
+//        protocol Container {
+//            associatedtype ItemType
+//            // 添加一个新元素到容器里
+//            mutating func append(_ item: ItemType)
+//            // 获取容器中元素的数
+//            var count: Int { get }
+//            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
+//            subscript(i: Int) -> ItemType { get }
+//        }
+//         
+//        // // 遵循Container协议的泛型TOS类型
+//        struct Stack<Element>: Container {
+//            // Stack<Element> 的原始实现部分
+//            var items = [Element]()
+//            mutating func push(_ item: Element) {
+//                items.append(item)
+//            }
+//            mutating func pop() -> Element {
+//                return items.removeLast()
+//            }
+//            // Container 协议的实现部分
+//            mutating func append(_ item: Element) {
+//                self.push(item)
+//            }
+//            var count: Int {
+//                return items.count
+//            }
+//            subscript(i: Int) -> Element {
+//                return items[i]
+//            }
+//        }
+//        // 扩展，将 Array 当作 Container 来使用
+//        extension Array: Container {}
+//         
+//        func allItemsMatch<C1: Container, C2: Container>
+//            (_ someContainer: C1, _ anotherContainer: C2) -> Bool
+//            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable {
+//                
+//                // 检查两个容器含有相同数量的元素
+//                if someContainer.count != anotherContainer.count {
+//                    return false
+//                }
+//                
+//                // 检查每一对元素是否相等
+//                for i in 0..<someContainer.count {
+//                    if someContainer[i] != anotherContainer[i] {
+//                        return false
+//                    }
+//                }
+//                
+//                // 所有元素都匹配，返回 true
+//                return true
+//        }
+//        var tos = Stack<String>()
+//        tos.push("google")
+//        tos.push("runoob")
+//        tos.push("taobao")
+//         
+//        var aos = ["google", "runoob", "taobao"]
+//         
+//        if allItemsMatch(tos, aos) {
+//            print("匹配所有元素")
+//        } else {
+//            print("元素不匹配")
+//        }
+//        以上程序执行输出结果为：
+//        匹配所有元素
+    }
+    
+    func protocolLearn() {
+        // 协议
+        /*
+         协议规定了用来实现某一特定功能所必需的方法和属性。
+         任意能够满足协议要求的类型被称为遵循(conform)这个协议。
+         类，结构体或枚举类型都可以遵循协议，并提供具体实现来完成协议定义的方法和功能。
+         
+         1、语法
+         协议的语法格式如下：
+         protocol SomeProtocol {
+             // 协议内容
+         }
+        
+         要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。
+         struct SomeStructure: FirstProtocol, AnotherProtocol {
+             // 结构体内容
+         }
+         
+         如果类在遵循协议的同时拥有父类，应该将父类名放在协议名之前，以逗号分隔。
+         class SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {
+             // 类的内容
+         }
+         */
+        
+        // 2、对属性的规定
+        /*
+         协议用于指定特定的实例属性或类属性，而不用指定是存储型属性或计算型属性。此外还必须指明是只读的还是可读可写的。
+         协议中的通常用var来声明变量属性，在类型声明后加上{ set get }来表示属性是可读可写的，只读属性则用{ get }来表示。
+         */
+//        print("对属性的规定")
+//        protocol classa {
+//            var marks: Int { get set }
+//            var result: Bool { get }
+//            func attendance() -> String
+//            func markssecured() -> String
+//        }
+//
+//        protocol classb: classa {
+//            var present: Bool { get set }
+//            var subject: String { get set }
+//            var stname: String { get set }
+//
+//        }
+//
+//        class classc: classb {
+//            var marks = 96
+//            let result = true
+//            var present = false
+//            var subject = "Swift 协议"
+//            var stname = "Protocols"
+//
+//            func attendance() -> String {
+//                return "The \(stname) has secured 99% attendance"
+//            }
+//
+//            func markssecured() -> String {
+//                return "\(stname) has scored \(marks)"
+//            }
+//        }
+//
+//        let studdet = classc()
+//        studdet.stname = "Swift"
+//        studdet.marks = 98
+//        studdet.markssecured()
+//
+//        print(studdet.marks)
+//        print(studdet.result)
+//        print(studdet.present)
+//        print(studdet.subject)
+//        print(studdet.stname)
+        
+        // 3、对 Mutating 方法的规定
+        /*
+         有时需要在方法中改变它的实例。
+         例如，值类型(结构体，枚举)的实例方法中，将mutating关键字作为函数的前缀，写在func之前，表示可以在该方法中修改它所属的实例及其实例属性的值。
+         */
+//        print("3、对 Mutating 方法的规定")
+//        protocol daysofaweek {
+//            mutating func show()
+//        }
+//
+//        enum days: daysofaweek {
+//            case sun, mon, tue, wed, thurs, fri, sat
+//            mutating func show() {
+//                switch self {
+//                case .sun:
+//                    self = .sun
+//                    print("Sunday")
+//                case .mon:
+//                    self = .mon
+//                    print("Monday")
+//                case .tue:
+//                    self = .tue
+//                    print("Tuesday")
+//                case .wed:
+//                    self = .wed
+//                    print("Wednesday")
+//                case .thurs:
+//                    self = .thurs
+//                    print("Wednesday")
+//                case .fri:
+//                    self = .fri
+//                    print("Wednesday")
+//                case .sat:
+//                    self = .sat
+//                    print("Saturday")
+//                default:
+//                    print("NO Such Day")
+//                }
+//            }
+//        }
+//
+//        var res = days.wed
+//        res.show()
+//
+//        以上程序执行输出结果为：
+//        Wednesday
+        
+        // 4、对构造器的规定
+        /*
+         协议可以要求它的遵循者实现指定的构造器。
+         你可以像书写普通的构造器那样，在协议的定义里写下构造器的声明，但不需要写花括号和构造器的实体，语法如下：
+         
+         protocol SomeProtocol {
+            init(someParameter: Int)
+         }
+         
+         实例:
+         protocol tcpprotocol {
+            init(aprot: Int)
+         }
+         */
+        
+        // 5、协议构造器规定在类中的实现
+        // 你可以在遵循该协议的类中实现构造器，并指定其为类的指定构造器或者便利构造器。在这两种情况下，你都必须给构造器实现标上"required"修饰符：
+//        class SomeClass: SomeProtocol {
+//           required init(someParameter: Int) {
+//              // 构造器实现
+//           }
+//        }
+//
+//        protocol tcpprotocol {
+//           init(aprot: Int)
+//        }
+//
+//        class tcpClass: tcpprotocol {
+//           required init(aprot: Int) {
+//           }
+//        }
+        // 使用required修饰符可以保证：所有的遵循该协议的子类，同样能为构造器规定提供一个显式的实现或继承实现。
+        // 如果一个子类重写了父类的指定构造器，并且该构造器遵循了某个协议的规定，那么该构造器的实现需要被同时标示required和override修饰符：
+//        protocol tcpprotocol {
+//            init(no1: Int)
+//        }
+//
+//        class mainClass {
+//            var no1: Int // 局部变量
+//            init(no1: Int) {
+//                self.no1 = no1 // 初始化
+//            }
+//        }
+//
+//        class subClass: mainClass, tcpprotocol {
+//            var no2: Int
+//            init(no1: Int, no2 : Int) {
+//                self.no2 = no2
+//                super.init(no1:no1)
+//            }
+//            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
+//            required override convenience init(no1: Int)  {
+//                self.init(no1:no1, no2:0)
+//            }
+//        }
+//        let res = mainClass(no1: 20)
+//        let show = subClass(no1: 30, no2: 50)
+//
+//        print("res is: \(res.no1)")
+//        print("res is: \(show.no1)")
+//        print("res is: \(show.no2)")
+//
+//        以上程序执行输出结果为：
+//        res is: 20
+//        res is: 30
+//        res is: 50
+        
+        // 6、协议类型
+        /*
+         尽管协议本身并不实现任何功能，但是协议可以被当做类型来使用。
+         协议可以像其他普通类型一样使用，使用场景:
+         作为函数、方法或构造器中的参数类型或返回值类型
+         作为常量、变量或属性的类型
+         作为数组、字典或其他容器中的元素类型
+         实例:
+         */
+//        protocol Generator {
+//            associatedtype members
+//            func next() -> members?
+//        }
+//
+//        var items = [10,20,30].makeIterator()
+//        while let x = items.next() {
+//            print(x)
+//        }
+//
+//        for lists in [1,2,3].map( {i in i*5}) {
+//            print(lists)
+//        }
+//
+//        print([100,200,300])
+//        print([1,2,3].map({i in i*10}))
+//
+//        以上程序执行输出结果为：
+//        10
+//        20
+//        30
+//        5
+//        10
+//        15
+//        [100, 200, 300]
+//        [10, 20, 30]
+        
+        //7、在扩展中添加协议成员
+        //我们可以可以通过扩展来扩充已存在类型( 类，结构体，枚举等)。
+        //扩展可以为已存在的类型添加属性，方法，下标脚本，协议等成员。
+//        protocol AgeClasificationProtocol {
+//           var age: Int { get }
+//           func agetype() -> String
+//        }
+//
+//        class Person {
+//           let firstname: String
+//           let lastname: String
+//           var age: Int
+//           init(firstname: String, lastname: String) {
+//              self.firstname = firstname
+//              self.lastname = lastname
+//              self.age = 10
+//           }
+//        }
+//
+//        extension Person : AgeClasificationProtocol {
+//           func fullname() -> String {
+//              var c: String
+//              c = firstname + " " + lastname
+//              return c
+//           }
+//
+//           func agetype() -> String {
+//              switch age {
+//              case 0...2:
+//                 return "Baby"
+//              case 2...12:
+//                 return "Child"
+//              case 13...19:
+//                 return "Teenager"
+//              case let x where x > 65:
+//                 return "Elderly"
+//              default:
+//                 return "Normal"
+//              }
+//           }
+//        }
+        
+        
+        // 8、协议的继承
+        // 协议能够继承一个或多个其他协议，可以在继承的协议基础上增加新的内容要求。
+        // 协议的继承语法与类的继承相似，多个被继承的协议间用逗号分隔：
+//        protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+//            // 协议定义
+//        }
+//        实例
+//        protocol Classa {
+//            var no1: Int { get set }
+//            func calc(sum: Int)
+//        }
+//
+//        protocol Result {
+//            func print(target: Classa)
+//        }
+//
+//        class Student2: Result {
+//            func print(target: Classa) {
+//                target.calc(1)
+//            }
+//        }
+//
+//        class Classb: Result {
+//            func print(target: Classa) {
+//                target.calc(5)
+//            }
+//        }
+//
+//        class Student: Classa {
+//            var no1: Int = 10
+//
+//            func calc(sum: Int) {
+//                no1 -= sum
+//                print("学生尝试 \(sum) 次通过")
+//
+//                if no1 <= 0 {
+//                    print("学生缺席考试")
+//                }
+//            }
+//        }
+//
+//        class Player {
+//            var stmark: Result!
+//
+//            init(stmark: Result) {
+//                self.stmark = stmark
+//            }
+//
+//            func print(target: Classa) {
+//                stmark.print(target)
+//            }
+//        }
+//
+//        var marks = Player(stmark: Student2())
+//        var marksec = Student()
+//
+//        marks.print(marksec)
+//        marks.print(marksec)
+//        marks.print(marksec)
+//        marks.stmark = Classb()
+//        marks.print(marksec)
+//        marks.print(marksec)
+//        marks.print(marksec)
+//        以上程序执行输出结果为：
+//        学生尝试 1 次通过
+//        学生尝试 1 次通过
+//        学生尝试 1 次通过
+//        学生尝试 5 次通过
+//        学生尝试 5 次通过
+//        学生缺席考试
+//        学生尝试 5 次通过
+//        学生缺席考试
+        
+        
+        
+        // 9、类专属协议
+        // 你可以在协议的继承列表中,通过添加class关键字,限制协议只能适配到类（class）类型。
+        // 该class关键字必须是第一个出现在协议的继承列表中，其后，才是其他继承协议。格式如下：
+//        protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
+//            // 协议定义
+//        }
+//        实例
+//        protocol TcpProtocol {
+//            init(no1: Int)
+//        }
+//
+//        class MainClass {
+//            var no1: Int // 局部变量
+//            init(no1: Int) {
+//                self.no1 = no1 // 初始化
+//            }
+//        }
+//
+//        class SubClass: MainClass, TcpProtocol {
+//            var no2: Int
+//            init(no1: Int, no2 : Int) {
+//                self.no2 = no2
+//                super.init(no1:no1)
+//            }
+//            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
+//            required override convenience init(no1: Int)  {
+//                self.init(no1:no1, no2:0)
+//            }
+//        }
+//
+//        let res = MainClass(no1: 20)
+//        let show = SubClass(no1: 30, no2: 50)
+//
+//        print("res is: \(res.no1)")
+//        print("res is: \(show.no1)")
+//        print("res is: \(show.no2)")
+//        以上程序执行输出结果为：
+//        res is: 20
+//        res is: 30
+//        res is: 50
+        
+        
+        
+        // 10、协议合成
+        //Swift 支持合成多个协议，这在我们需要同时遵循多个协议时非常有用。
+//        语法格式如下：
+//        protocol Stname {
+//            var name: String { get }
+//        }
+//
+//        protocol Stage {
+//            var age: Int { get }
+//        }
+//
+//        struct Person: Stname, Stage {
+//            var name: String
+//            var age: Int
+//        }
+//
+//        func show(celebrator: Stname & Stage) {
+//            print("\(celebrator.name) is \(celebrator.age) years old")
+//        }
+//
+//        let studname = Person(name: "Priya", age: 21)
+//        print(studname)
+//
+//        let stud = Person(name: "Rehan", age: 29)
+//        print(stud)
+//
+//        let student = Person(name: "Roshan", age: 19)
+//        print(student)
+//        以上程序执行输出结果为：
+//        Person(name: "Priya", age: 21)
+//        Person(name: "Rehan", age: 29)
+//        Person(name: "Roshan", age: 19)
+        
+        
+        // 11、检验协议的一致性
+        /*
+         你可以使用is和as操作符来检查是否遵循某一协议或强制转化为某一类型。
+         is操作符用来检查实例是否遵循了某个协议。
+         as?返回一个可选值，当实例遵循协议时，返回该协议类型;否则返回nil。
+         as用以强制向下转型，如果强转失败，会引起运行时错误。
+         
+         实例:
+         下面的例子定义了一个 HasArea 的协议，要求有一个Double类型可读的 area：
+         */
+//        protocol HasArea {
+//            var area: Double { get }
+//        }
+//
+//        // 定义了Circle类，都遵循了HasArea协议
+//        class Circle: HasArea {
+//            let pi = 3.1415927
+//            var radius: Double
+//            var area: Double { return pi * radius * radius }
+//            init(radius: Double) { self.radius = radius }
+//        }
+//
+//        // 定义了Country类，都遵循了HasArea协议
+//        class Country: HasArea {
+//            var area: Double
+//            init(area: Double) { self.area = area }
+//        }
+//
+//        // Animal是一个没有实现HasArea协议的类
+//        class Animal {
+//            var legs: Int
+//            init(legs: Int) { self.legs = legs }
+//        }
+//
+//        let objects: [AnyObject] = [
+//            Circle(radius: 2.0),
+//            Country(area: 243_610),
+//            Animal(legs: 4)
+//        ]
+//
+//        for object in objects {
+//            // 对迭代出的每一个元素进行检查，看它是否遵循了HasArea协议
+//            if let objectWithArea = object as? HasArea {
+//                print("面积为 \(objectWithArea.area)")
+//            } else {
+//                print("没有面积")
+//            }
+//        }
+//        以上程序执行输出结果为：
+//        面积为 12.5663708
+//        面积为 243610.0
+//        没有面积
     }
     
     func extensionLearn() {

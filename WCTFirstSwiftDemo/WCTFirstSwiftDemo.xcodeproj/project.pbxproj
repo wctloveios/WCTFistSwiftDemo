@@ -15,6 +15,7 @@
 		043D09AB24893033004547A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043D09A924893033004547A0 /* LaunchScreen.storyboard */; };
 		043D09B624893033004547A0 /* WCTFirstSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09B524893033004547A0 /* WCTFirstSwiftDemoTests.swift */; };
 		043D09C124893033004547A0 /* WCTFirstSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09C024893033004547A0 /* WCTFirstSwiftDemoUITests.swift */; };
+		04773DA92497AFF300104127 /* LearnBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		043D09BC24893033004547A0 /* WCTFirstSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCTFirstSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		043D09C024893033004547A0 /* WCTFirstSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTFirstSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		043D09C224893033004547A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnBaseUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,8 @@
 				043D099E24893032004547A0 /* AppDelegate.swift */,
 				043D09A024893032004547A0 /* SceneDelegate.swift */,
 				043D09A224893032004547A0 /* ViewController.swift */,
+				04773DAA2497B4F200104127 /* View */,
+				04773DA72497AFD600104127 /* ViewController */,
 				043D09A424893032004547A0 /* Main.storyboard */,
 				043D09A724893033004547A0 /* Assets.xcassets */,
 				043D09A924893033004547A0 /* LaunchScreen.storyboard */,
@@ -126,6 +130,21 @@
 				043D09C224893033004547A0 /* Info.plist */,
 			);
 			path = WCTFirstSwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		04773DA72497AFD600104127 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04773DAA2497B4F200104127 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +281,7 @@
 				043D09A324893032004547A0 /* ViewController.swift in Sources */,
 				043D099F24893032004547A0 /* AppDelegate.swift in Sources */,
 				043D09A124893032004547A0 /* SceneDelegate.swift in Sources */,
+				04773DA92497AFF300104127 /* LearnBaseUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

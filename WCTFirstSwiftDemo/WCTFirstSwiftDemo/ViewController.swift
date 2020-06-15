@@ -40,6 +40,13 @@ class ViewController: UIViewController {
 //        genericLearn()
 //        rightLearn()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.present(LearnBaseUIViewController.init(), animated: true) {
+            
+        }
+    }
+    
     func rightLearn() {
         // Swift 访问控制
         /*

@@ -39,11 +39,11 @@ class ViewController: UIViewController {
 //        protocolLearn()
 //        genericLearn()
 //        rightLearn()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.present(LearnBaseUIViewController.init(), animated: true) {
-            
+        let time: TimeInterval = 0.5
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+           self.present(LearnBaseUIViewController.init(), animated: true) {
+               
+           }
         }
     }
     

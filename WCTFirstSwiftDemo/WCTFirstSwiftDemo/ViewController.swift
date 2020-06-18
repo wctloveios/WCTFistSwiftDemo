@@ -41,9 +41,13 @@ class ViewController: UIViewController {
 //        rightLearn()
         let time: TimeInterval = 0.5
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
-           self.present(LearnBaseUIViewController.init(), animated: true) {
-               
-           }
+//           self.present(LearnBaseUIViewController.init(), animated: true) {
+//
+//           }
+            
+            self.present(LearnSeniorUIViewController.init(), animated: true) {
+
+            }
         }
     }
     

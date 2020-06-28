@@ -45,7 +45,11 @@ class ViewController: UIViewController {
 //
 //           }
             
-            self.present(LearnSeniorUIViewController.init(), animated: true) {
+//            self.present(LearnSeniorUIViewController.init(), animated: true) {
+//
+//            }
+            
+            self.present(LearnHightUIViewController.init(), animated: true) {
 
             }
         }

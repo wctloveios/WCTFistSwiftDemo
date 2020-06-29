@@ -48,8 +48,9 @@ class ViewController: UIViewController {
 //            self.present(LearnSeniorUIViewController.init(), animated: true) {
 //
 //            }
-            
-            self.present(LearnHightUIViewController.init(), animated: true) {
+            let vc = LearnHightUIViewController.init()
+            let navi = UINavigationController.init(rootViewController: vc)
+            self.present(navi, animated: true) {
 
             }
         }

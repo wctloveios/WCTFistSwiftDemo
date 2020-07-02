@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043B176E249B9AEB00C0094F /* LearnSeniorUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043B176D249B9AEB00C0094F /* LearnSeniorUIViewController.swift */; };
 		043D099F24893032004547A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D099E24893032004547A0 /* AppDelegate.swift */; };
 		043D09A124893032004547A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09A024893032004547A0 /* SceneDelegate.swift */; };
 		043D09A324893032004547A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09A224893032004547A0 /* ViewController.swift */; };
@@ -17,8 +16,21 @@
 		043D09B624893033004547A0 /* WCTFirstSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09B524893033004547A0 /* WCTFirstSwiftDemoTests.swift */; };
 		043D09C124893033004547A0 /* WCTFirstSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D09C024893033004547A0 /* WCTFirstSwiftDemoUITests.swift */; };
 		04432ED624AA31C8003B3C9C /* LearnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04432ED524AA31C8003B3C9C /* LearnTableViewCell.swift */; };
-		04773DA92497AFF300104127 /* LearnBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */; };
-		04B1624724A8E2690001F6A2 /* LearnHightUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1624624A8E2690001F6A2 /* LearnHightUIViewController.swift */; };
+		04B1624724A8E2690001F6A2 /* LearnUITableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1624624A8E2690001F6A2 /* LearnUITableViewViewController.swift */; };
+		04D6AF7124AE15360089C616 /* LearnUICollectionViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7024AE15360089C616 /* LearnUICollectionViewViewController.swift */; };
+		04D6AF7324AE15FD0089C616 /* LearnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7224AE15FD0089C616 /* LearnCollectionViewCell.swift */; };
+		04D6AF7524AE20D80089C616 /* LearnCollectionFootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7424AE20D80089C616 /* LearnCollectionFootView.swift */; };
+		04D6AF7724AE210F0089C616 /* LearnCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7624AE210F0089C616 /* LearnCollectionHeaderView.swift */; };
+		04D6AF7924AE2C600089C616 /* LearnLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7824AE2C600089C616 /* LearnLabelViewController.swift */; };
+		04D6AF7B24AE2C710089C616 /* LearnButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7A24AE2C710089C616 /* LearnButtonViewController.swift */; };
+		04D6AF7D24AE2C7F0089C616 /* LearnTextFiledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7C24AE2C7F0089C616 /* LearnTextFiledViewController.swift */; };
+		04D6AF7F24AE2C8D0089C616 /* LearnImageViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF7E24AE2C8D0089C616 /* LearnImageViewViewController.swift */; };
+		04D6AF8124AE2CA00089C616 /* LearnTextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8024AE2CA00089C616 /* LearnTextViewViewController.swift */; };
+		04D6AF8324AE30280089C616 /* LearnDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8224AE30280089C616 /* LearnDatePickerViewController.swift */; };
+		04D6AF8524AE30330089C616 /* LearnSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8424AE30330089C616 /* LearnSliderViewController.swift */; };
+		04D6AF8724AE303C0089C616 /* LearnSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8624AE303C0089C616 /* LearnSwitchViewController.swift */; };
+		04D6AF8924AE304F0089C616 /* LearnProcessViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8824AE304F0089C616 /* LearnProcessViewViewController.swift */; };
+		04D6AF8B24AE30620089C616 /* LearnStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6AF8A24AE30620089C616 /* LearnStepperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		043B176D249B9AEB00C0094F /* LearnSeniorUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSeniorUIViewController.swift; sourceTree = "<group>"; };
 		043D099B24893032004547A0 /* WCTFirstSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTFirstSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043D099E24893032004547A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043D09A024893032004547A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +66,21 @@
 		043D09C024893033004547A0 /* WCTFirstSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTFirstSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		043D09C224893033004547A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04432ED524AA31C8003B3C9C /* LearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewCell.swift; sourceTree = "<group>"; };
-		04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnBaseUIViewController.swift; sourceTree = "<group>"; };
-		04B1624624A8E2690001F6A2 /* LearnHightUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnHightUIViewController.swift; sourceTree = "<group>"; };
+		04B1624624A8E2690001F6A2 /* LearnUITableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnUITableViewViewController.swift; sourceTree = "<group>"; };
+		04D6AF7024AE15360089C616 /* LearnUICollectionViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnUICollectionViewViewController.swift; sourceTree = "<group>"; };
+		04D6AF7224AE15FD0089C616 /* LearnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D6AF7424AE20D80089C616 /* LearnCollectionFootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCollectionFootView.swift; sourceTree = "<group>"; };
+		04D6AF7624AE210F0089C616 /* LearnCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCollectionHeaderView.swift; sourceTree = "<group>"; };
+		04D6AF7824AE2C600089C616 /* LearnLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnLabelViewController.swift; sourceTree = "<group>"; };
+		04D6AF7A24AE2C710089C616 /* LearnButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnButtonViewController.swift; sourceTree = "<group>"; };
+		04D6AF7C24AE2C7F0089C616 /* LearnTextFiledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTextFiledViewController.swift; sourceTree = "<group>"; };
+		04D6AF7E24AE2C8D0089C616 /* LearnImageViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnImageViewViewController.swift; sourceTree = "<group>"; };
+		04D6AF8024AE2CA00089C616 /* LearnTextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTextViewViewController.swift; sourceTree = "<group>"; };
+		04D6AF8224AE30280089C616 /* LearnDatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnDatePickerViewController.swift; sourceTree = "<group>"; };
+		04D6AF8424AE30330089C616 /* LearnSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSliderViewController.swift; sourceTree = "<group>"; };
+		04D6AF8624AE303C0089C616 /* LearnSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnSwitchViewController.swift; sourceTree = "<group>"; };
+		04D6AF8824AE304F0089C616 /* LearnProcessViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnProcessViewViewController.swift; sourceTree = "<group>"; };
+		04D6AF8A24AE30620089C616 /* LearnStepperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnStepperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +134,6 @@
 				043D099E24893032004547A0 /* AppDelegate.swift */,
 				043D09A024893032004547A0 /* SceneDelegate.swift */,
 				043D09A224893032004547A0 /* ViewController.swift */,
-				04773DAA2497B4F200104127 /* View */,
 				04773DA72497AFD600104127 /* ViewController */,
 				043D09A424893032004547A0 /* Main.storyboard */,
 				043D09A724893033004547A0 /* Assets.xcassets */,
@@ -141,19 +164,24 @@
 		04773DA72497AFD600104127 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				04773DA82497AFF300104127 /* LearnBaseUIViewController.swift */,
-				043B176D249B9AEB00C0094F /* LearnSeniorUIViewController.swift */,
-				04B1624624A8E2690001F6A2 /* LearnHightUIViewController.swift */,
+				04B1624624A8E2690001F6A2 /* LearnUITableViewViewController.swift */,
+				04D6AF7024AE15360089C616 /* LearnUICollectionViewViewController.swift */,
 				04432ED524AA31C8003B3C9C /* LearnTableViewCell.swift */,
+				04D6AF7224AE15FD0089C616 /* LearnCollectionViewCell.swift */,
+				04D6AF7424AE20D80089C616 /* LearnCollectionFootView.swift */,
+				04D6AF7624AE210F0089C616 /* LearnCollectionHeaderView.swift */,
+				04D6AF7824AE2C600089C616 /* LearnLabelViewController.swift */,
+				04D6AF7A24AE2C710089C616 /* LearnButtonViewController.swift */,
+				04D6AF7C24AE2C7F0089C616 /* LearnTextFiledViewController.swift */,
+				04D6AF7E24AE2C8D0089C616 /* LearnImageViewViewController.swift */,
+				04D6AF8024AE2CA00089C616 /* LearnTextViewViewController.swift */,
+				04D6AF8224AE30280089C616 /* LearnDatePickerViewController.swift */,
+				04D6AF8424AE30330089C616 /* LearnSliderViewController.swift */,
+				04D6AF8624AE303C0089C616 /* LearnSwitchViewController.swift */,
+				04D6AF8824AE304F0089C616 /* LearnProcessViewViewController.swift */,
+				04D6AF8A24AE30620089C616 /* LearnStepperViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		04773DAA2497B4F200104127 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,13 +315,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043B176E249B9AEB00C0094F /* LearnSeniorUIViewController.swift in Sources */,
+				04D6AF7324AE15FD0089C616 /* LearnCollectionViewCell.swift in Sources */,
+				04D6AF7F24AE2C8D0089C616 /* LearnImageViewViewController.swift in Sources */,
+				04D6AF8324AE30280089C616 /* LearnDatePickerViewController.swift in Sources */,
+				04D6AF8924AE304F0089C616 /* LearnProcessViewViewController.swift in Sources */,
+				04D6AF7924AE2C600089C616 /* LearnLabelViewController.swift in Sources */,
+				04D6AF8724AE303C0089C616 /* LearnSwitchViewController.swift in Sources */,
+				04D6AF7D24AE2C7F0089C616 /* LearnTextFiledViewController.swift in Sources */,
 				043D09A324893032004547A0 /* ViewController.swift in Sources */,
+				04D6AF7124AE15360089C616 /* LearnUICollectionViewViewController.swift in Sources */,
+				04D6AF8124AE2CA00089C616 /* LearnTextViewViewController.swift in Sources */,
 				04432ED624AA31C8003B3C9C /* LearnTableViewCell.swift in Sources */,
+				04D6AF7B24AE2C710089C616 /* LearnButtonViewController.swift in Sources */,
 				043D099F24893032004547A0 /* AppDelegate.swift in Sources */,
+				04D6AF8B24AE30620089C616 /* LearnStepperViewController.swift in Sources */,
+				04D6AF7524AE20D80089C616 /* LearnCollectionFootView.swift in Sources */,
 				043D09A124893032004547A0 /* SceneDelegate.swift in Sources */,
-				04B1624724A8E2690001F6A2 /* LearnHightUIViewController.swift in Sources */,
-				04773DA92497AFF300104127 /* LearnBaseUIViewController.swift in Sources */,
+				04D6AF8524AE30330089C616 /* LearnSliderViewController.swift in Sources */,
+				04B1624724A8E2690001F6A2 /* LearnUITableViewViewController.swift in Sources */,
+				04D6AF7724AE210F0089C616 /* LearnCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

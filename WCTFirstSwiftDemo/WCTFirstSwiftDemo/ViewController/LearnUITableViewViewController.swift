@@ -1,5 +1,5 @@
 //
-//  LearnHightUIViewController.swift
+//  LearnUITableViewViewController.swift
 //  WCTFirstSwiftDemo
 //
 //  Created by wct on 2020/6/28.
@@ -10,7 +10,7 @@ import UIKit
 
 let cell_identifier: String = "Cell"
 
-class LearnHightUIViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class LearnUITableViewViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     var infoTableView:UITableView? = nil    //声明tableView变量
     var itemArr:NSMutableArray = []         //声明可变数组变量
     var isShowEdit:Bool? = false

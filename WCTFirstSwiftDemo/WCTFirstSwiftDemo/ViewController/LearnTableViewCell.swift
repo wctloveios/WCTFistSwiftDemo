@@ -31,7 +31,7 @@ class LearnTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = .red
+//        self.backgroundColor = .red
         
         let label = UILabel.init();
         label.frame = CGRect.init(x: 200, y: 0, width: 100, height: 20)
@@ -46,7 +46,7 @@ class LearnTableViewCell: UITableViewCell {
     }
     
     @objc func didClickBtn () {
-//        LearnHightUIViewController().didClickButton
+//        LearnUITableViewViewController().didClickButton
         print("cell 上按钮点击")
     }
 }

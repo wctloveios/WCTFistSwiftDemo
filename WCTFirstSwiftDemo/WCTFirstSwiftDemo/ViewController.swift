@@ -16,44 +16,81 @@ class ViewController: UIViewController {
         
         /*
          全局提示：
-        【1】如果一个变量（var），你没进行过任何变化操作，系统会提示你修改成常量（let）
+         【1】如果一个变量（var），你没进行过任何变化操作，系统会提示你修改成常量（let）
          */
-//        baseLearn()
-//        arrayLearn()
-//        dictLearn()
-//        funcLearn()
-//        blockLearn()
-//        typeLearn()
-//        structLearn()
-//        classLearn()
-//        propertyLearn()
-//        funcTwoLearn()
-//        indexScriptLearn()
-//        successionLearn()
-//        initLearn()
-//        dellocLearn()
-//        optionalChainingLearn()
-//        arcLearn()
-//        typeExchange()
-//        extensionLearn()
-//        protocolLearn()
-//        genericLearn()
-//        rightLearn()
+        //        baseLearn()
+        //        arrayLearn()
+        //        dictLearn()
+        //        funcLearn()
+        //        blockLearn()
+        //        typeLearn()
+        //        structLearn()
+        //        classLearn()
+        //        propertyLearn()
+        //        funcTwoLearn()
+        //        indexScriptLearn()
+        //        successionLearn()
+        //        initLearn()
+        //        dellocLearn()
+        //        optionalChainingLearn()
+        //        arcLearn()
+        //        typeExchange()
+        //        extensionLearn()
+        //        protocolLearn()
+        //        genericLearn()
+        //        rightLearn()
         let time: TimeInterval = 0.5
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
-//           self.present(LearnBaseUIViewController.init(), animated: true) {
-//
-//           }
-            
-//            self.present(LearnSeniorUIViewController.init(), animated: true) {
-//
-//            }
-            let vc = LearnHightUIViewController.init()
-            let navi = UINavigationController.init(rootViewController: vc)
-            self.present(navi, animated: true) {
-
-            }
         }
+    }
+    
+    @IBAction func showLabel(_ sender: Any) {
+        let vc = LearnLabelViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showButton(_ sender: Any) {
+        let vc = LearnButtonViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showIamgeView(_ sender: Any) {
+        let vc = LearnImageViewViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showTextView(_ sender: Any) {
+        let vc = LearnTextViewViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showTextFiled(_ sender: Any) {
+        let vc = LearnTextFiledViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showDatePicker(_ sender: Any) {
+        let vc = LearnDatePickerViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showSlider(_ sender: Any) {
+        let vc = LearnSliderViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showStepper(_ sender: Any) {
+        let vc = LearnStepperViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showProcessView(_ sender: Any) {
+        let vc = LearnProcessViewViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showSwitch(_ sender: Any) {
+        let vc = LearnSwitchViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showTableView(_ sender: Any) {
+        let vc = LearnUITableViewViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func showCollectView(_ sender: Any) {
+        let vc = LearnUICollectionViewViewController.init()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func rightLearn() {
@@ -71,7 +108,7 @@ class ViewController: UIViewController {
          【2】internal    可以访问自己模块中源文件里的任何实体，但是别人不能访问该模块中源文件里的实体。
          【3】fileprivate    文件内私有，只能在当前源文件中使用。
          【4】private    只能在类中访问，离开了这个类或者结构体的作用域外面就无法访问。
-            public 为最高级访问级别，private 为最低级访问级别。
+         public 为最高级访问级别，private 为最低级访问级别。
          
          语法：
          通过修饰符public、internal、fileprivate、private来声明实体的访问级别：
@@ -86,26 +123,26 @@ class ViewController: UIViewController {
          private func somePrivateFunction() {}
          */
         // 除非有特殊的说明，否则实体都使用默认的访问级别 internal。
-//        未指定访问级别默认为 internal
-//        class SomeInternalClass {}              // 访问级别为 internal
-//        let someInternalConstant = 0            // 访问级别为 internal
+        //        未指定访问级别默认为 internal
+        //        class SomeInternalClass {}              // 访问级别为 internal
+        //        let someInternalConstant = 0            // 访问级别为 internal
         
         
         // 1、函数类型访问权限
         /*
-        函数的访问级别需要根据该函数的参数类型和返回类型的访问级别得出。
-        下面的例子定义了一个名为someFunction全局函数，并且没有明确地申明其访问级别。
-        */
-//        func someFunction() -> (SomeInternalClass, SomePrivateClass) {
-//            // 函数实现
-//        }
+         函数的访问级别需要根据该函数的参数类型和返回类型的访问级别得出。
+         下面的例子定义了一个名为someFunction全局函数，并且没有明确地申明其访问级别。
+         */
+        //        func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+        //            // 函数实现
+        //        }
         /*
-        函数中其中一个类 SomeInternalClass 的访问级别是 internal，另一个 SomePrivateClass 的访问级别是 private。所以根据元组访问级别的原则，该元组的访问级别是 private（元组的访问级别与元组中访问级别最低的类型一致）。
-        因为该函数返回类型的访问级别是 private，所以你必须使用 private 修饰符，明确的声明该函数：
-        */
-//        private func someFunction() -> (SomeInternalClass, SomePrivateClass) {
-//            // 函数实现
-//        }
+         函数中其中一个类 SomeInternalClass 的访问级别是 internal，另一个 SomePrivateClass 的访问级别是 private。所以根据元组访问级别的原则，该元组的访问级别是 private（元组的访问级别与元组中访问级别最低的类型一致）。
+         因为该函数返回类型的访问级别是 private，所以你必须使用 private 修饰符，明确的声明该函数：
+         */
+        //        private func someFunction() -> (SomeInternalClass, SomePrivateClass) {
+        //            // 函数实现
+        //        }
         // 将该函数申明为 public 或 internal，或者使用默认的访问级别 internal 都是错误的，因为如果这样你就无法访问 private 级别的返回值。
         
         
@@ -113,47 +150,47 @@ class ViewController: UIViewController {
         // 2、枚举类型访问权限
         // 枚举中成员的访问级别继承自该枚举，你不能为枚举中的成员单独申明不同的访问级别。
         // 比如下面的例子，枚举 Student 被明确的申明为 public 级别，那么它的成员 Name，Mark 的访问级别同样也是 public：
-//        public enum Student {
-//            case Name(String)
-//            case Mark(Int,Int,Int)
-//        }
-//
-//        var studDetails = Student.Name("Swift")
-//        var studMarks = Student.Mark(98,97,95)
-//
-//        switch studMarks {
-//        case .Name(let studName):
-//            print("学生名: \(studName).")
-//        case .Mark(let Mark1, let Mark2, let Mark3):
-//            print("学生成绩: \(Mark1),\(Mark2),\(Mark3)")
-//        }
-//        以上程序执行输出结果为：
-//        学生成绩: 98,97,95
+        //        public enum Student {
+        //            case Name(String)
+        //            case Mark(Int,Int,Int)
+        //        }
+        //
+        //        var studDetails = Student.Name("Swift")
+        //        var studMarks = Student.Mark(98,97,95)
+        //
+        //        switch studMarks {
+        //        case .Name(let studName):
+        //            print("学生名: \(studName).")
+        //        case .Mark(let Mark1, let Mark2, let Mark3):
+        //            print("学生成绩: \(Mark1),\(Mark2),\(Mark3)")
+        //        }
+        //        以上程序执行输出结果为：
+        //        学生成绩: 98,97,95
         
         
         // 3、子类访问权限
         // 子类的访问级别不得高于父类的访问级别。比如说，父类的访问级别是internal，子类的访问级别就不能申明为public。
-//        public class SuperClass {
-//            fileprivate func show() {
-//                print("超类")
-//            }
-//        }
-//
-//        // 访问级别不能高于超类 internal > public
-//        internal class SubClass: SuperClass  {
-//            override internal func show() {
-//                print("子类")
-//            }
-//        }
-//
-//        let sup = SuperClass()
-//        sup.show()
-//
-//        let sub = SubClass()
-//        sub.show()
-//        以上程序执行输出结果为：
-//        超类
-//        子类
+        //        public class SuperClass {
+        //            fileprivate func show() {
+        //                print("超类")
+        //            }
+        //        }
+        //
+        //        // 访问级别不能高于超类 internal > public
+        //        internal class SubClass: SuperClass  {
+        //            override internal func show() {
+        //                print("子类")
+        //            }
+        //        }
+        //
+        //        let sup = SuperClass()
+        //        sup.show()
+        //
+        //        let sub = SubClass()
+        //        sub.show()
+        //        以上程序执行输出结果为：
+        //        超类
+        //        子类
         
         
         
@@ -171,28 +208,28 @@ class ViewController: UIViewController {
         // 5、Getter 和 Setter访问权限
         // 常量、变量、属性、下标索引的Getters和Setters的访问级别继承自它们所属成员的访问级别。
         // Setter的访问级别可以低于对应的Getter的访问级别，这样就可以控制变量、属性或下标索引的读写权限。
-//        class Samplepgm {
-//            fileprivate var counter: Int = 0{
-//                willSet(newTotal){
-//                    print("计数器: \(newTotal)")
-//                }
-//                didSet{
-//                    if counter > oldValue {
-//                        print("新增加数量 \(counter - oldValue)")
-//                    }
-//                }
-//            }
-//        }
-//
-//        let NewCounter = Samplepgm()
-//        NewCounter.counter = 100
-//        NewCounter.counter = 800
-//        counter 的访问级别为 fileprivate，在文件内可以访问。
-//        以上程序执行输出结果为：
-//        计数器: 100
-//        新增加数量 100
-//        计数器: 800
-//        新增加数量 700
+        //        class Samplepgm {
+        //            fileprivate var counter: Int = 0{
+        //                willSet(newTotal){
+        //                    print("计数器: \(newTotal)")
+        //                }
+        //                didSet{
+        //                    if counter > oldValue {
+        //                        print("新增加数量 \(counter - oldValue)")
+        //                    }
+        //                }
+        //            }
+        //        }
+        //
+        //        let NewCounter = Samplepgm()
+        //        NewCounter.counter = 100
+        //        NewCounter.counter = 800
+        //        counter 的访问级别为 fileprivate，在文件内可以访问。
+        //        以上程序执行输出结果为：
+        //        计数器: 100
+        //        新增加数量 100
+        //        计数器: 800
+        //        新增加数量 700
         
         
         
@@ -209,26 +246,26 @@ class ViewController: UIViewController {
          实例:
          在每个子类的 init() 方法前使用 required 关键字声明访问权限。
          */
-//        class classA {
-//            required init() {
-//                var a = 10
-//                print(a)
-//            }
-//        }
-//
-//        class classB: classA {
-//            required init() {
-//                var b = 30
-//                print(b)
-//            }
-//        }
-//
-//        let res = classA()
-//        let show = classB()
-//        以上程序执行输出结果为：
-//        10
-//        30
-//        10
+        //        class classA {
+        //            required init() {
+        //                var a = 10
+        //                print(a)
+        //            }
+        //        }
+        //
+        //        class classB: classA {
+        //            required init() {
+        //                var b = 30
+        //                print(b)
+        //            }
+        //        }
+        //
+        //        let res = classA()
+        //        let show = classB()
+        //        以上程序执行输出结果为：
+        //        10
+        //        30
+        //        10
         
         
         // 7、协议访问权限
@@ -236,40 +273,40 @@ class ViewController: UIViewController {
          如果想为一个协议明确的申明访问级别，那么需要注意一点，就是你要确保该协议只在你申明的访问级别作用域中使用。
          如果你定义了一个public访问级别的协议，那么实现该协议提供的必要函数也会是public的访问级别。这一点不同于其他类型，比如，public访问级别的其他类型，他们成员的访问级别为internal。
          */
-//        public protocol TcpProtocol {
-//            init(no1: Int)
-//        }
-//
-//        public class MainClass {
-//            var no1: Int // local storage
-//            init(no1: Int) {
-//                self.no1 = no1 // initialization
-//            }
-//        }
-//
-//        class SubClass: MainClass, TcpProtocol {
-//            var no2: Int
-//            init(no1: Int, no2 : Int) {
-//                self.no2 = no2
-//                super.init(no1:no1)
-//            }
-//
-//            // Requires only one parameter for convenient method
-//            required override convenience init(no1: Int)  {
-//                self.init(no1:no1, no2:0)
-//            }
-//        }
-//
-//        let res = MainClass(no1: 20)
-//        let show = SubClass(no1: 30, no2: 50)
-//
-//        print("res is: \(res.no1)")
-//        print("res is: \(show.no1)")
-//        print("res is: \(show.no2)")
-//        以上程序执行输出结果为：
-//        res is: 20
-//        res is: 30
-//        res is: 50
+        //        public protocol TcpProtocol {
+        //            init(no1: Int)
+        //        }
+        //
+        //        public class MainClass {
+        //            var no1: Int // local storage
+        //            init(no1: Int) {
+        //                self.no1 = no1 // initialization
+        //            }
+        //        }
+        //
+        //        class SubClass: MainClass, TcpProtocol {
+        //            var no2: Int
+        //            init(no1: Int, no2 : Int) {
+        //                self.no2 = no2
+        //                super.init(no1:no1)
+        //            }
+        //
+        //            // Requires only one parameter for convenient method
+        //            required override convenience init(no1: Int)  {
+        //                self.init(no1:no1, no2:0)
+        //            }
+        //        }
+        //
+        //        let res = MainClass(no1: 20)
+        //        let show = SubClass(no1: 30, no2: 50)
+        //
+        //        print("res is: \(res.no1)")
+        //        print("res is: \(show.no1)")
+        //        print("res is: \(show.no2)")
+        //        以上程序执行输出结果为：
+        //        res is: 20
+        //        res is: 30
+        //        res is: 50
         
         
         //8、 扩展访问权限
@@ -281,35 +318,35 @@ class ViewController: UIViewController {
         
         // 9、泛型访问权限
         // 泛型类型或泛型函数的访问级别取泛型类型、函数本身、泛型类型参数三者中的最低访问级别。
-//        public struct TOS<T> {
-//            var items = [T]()
-//            private mutating func push(item: T) {
-//                items.append(item)
-//            }
-//
-//            mutating func pop() -> T {
-//                return items.removeLast()
-//            }
-//        }
-//
-//        var tos = TOS<String>()
-//        tos.push("Swift")
-//        print(tos.items)
-//
-//        tos.push("泛型")
-//        print(tos.items)
-//
-//        tos.push("类型参数")
-//        print(tos.items)
-//
-//        tos.push("类型参数名")
-//        print(tos.items)
-//        let deletetos = tos.pop()
-//        以上程序执行输出结果为：
-//        ["Swift"]
-//        ["Swift", "泛型"]
-//        ["Swift", "泛型", "类型参数"]
-//        ["Swift", "泛型", "类型参数", "类型参数名"]
+        //        public struct TOS<T> {
+        //            var items = [T]()
+        //            private mutating func push(item: T) {
+        //                items.append(item)
+        //            }
+        //
+        //            mutating func pop() -> T {
+        //                return items.removeLast()
+        //            }
+        //        }
+        //
+        //        var tos = TOS<String>()
+        //        tos.push("Swift")
+        //        print(tos.items)
+        //
+        //        tos.push("泛型")
+        //        print(tos.items)
+        //
+        //        tos.push("类型参数")
+        //        print(tos.items)
+        //
+        //        tos.push("类型参数名")
+        //        print(tos.items)
+        //        let deletetos = tos.pop()
+        //        以上程序执行输出结果为：
+        //        ["Swift"]
+        //        ["Swift", "泛型"]
+        //        ["Swift", "泛型", "类型参数"]
+        //        ["Swift", "泛型", "类型参数", "类型参数名"]
         
         
         // 10、类型别名
@@ -318,75 +355,75 @@ class ViewController: UIViewController {
          比如说，一个private级别的类型别名可以设定给一个public、internal、private的类型，但是一个public级别的类型别名只能设定给一个public级别的类型，不能设定给internal或private 级别的类型。
          注意：这条规则也适用于为满足协议一致性而给相关类型命名别名的情况。
          */
-//        public protocol Container {
-//            typealias ItemType
-//            mutating func append(item: ItemType)
-//            var count: Int { get }
-//            subscript(i: Int) -> ItemType { get }
-//        }
-//
-//        struct Stack<T>: Container {
-//            // original Stack<T> implementation
-//            var items = [T]()
-//            mutating func push(item: T) {
-//                items.append(item)
-//            }
-//
-//            mutating func pop() -> T {
-//                return items.removeLast()
-//            }
-//
-//            // conformance to the Container protocol
-//            mutating func append(item: T) {
-//                self.push(item)
-//            }
-//
-//            var count: Int {
-//                return items.count
-//            }
-//
-//            subscript(i: Int) -> T {
-//                return items[i]
-//            }
-//        }
-//
-//        func allItemsMatch<
-//            C1: Container, C2: Container
-//            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
-//            (someContainer: C1, anotherContainer: C2) -> Bool {
-//                // check that both containers contain the same number of items
-//                if someContainer.count != anotherContainer.count {
-//                    return false
-//                }
-//
-//                // check each pair of items to see if they are equivalent
-//                for i in 0..<someContainer.count {
-//                    if someContainer[i] != anotherContainer[i] {
-//                        return false
-//                    }
-//                }
-//
-//                // all items match, so return true
-//                return true
-//        }
-//
-//        var tos = Stack<String>()
-//        tos.push("Swift")
-//        print(tos.items)
-//
-//        tos.push("泛型")
-//        print(tos.items)
-//
-//        tos.push("Where 语句")
-//        print(tos.items)
-//
-//        var eos = ["Swift", "泛型", "Where 语句"]
-//        print(eos)
-//        以上程序执行输出结果为：
-//        ["Swift"]
-//        ["Swift", "泛型"]
-//        ["Swift", "泛型", "Where 语句"]
-//        ["Swift", "泛型", "Where 语句"]
+        //        public protocol Container {
+        //            typealias ItemType
+        //            mutating func append(item: ItemType)
+        //            var count: Int { get }
+        //            subscript(i: Int) -> ItemType { get }
+        //        }
+        //
+        //        struct Stack<T>: Container {
+        //            // original Stack<T> implementation
+        //            var items = [T]()
+        //            mutating func push(item: T) {
+        //                items.append(item)
+        //            }
+        //
+        //            mutating func pop() -> T {
+        //                return items.removeLast()
+        //            }
+        //
+        //            // conformance to the Container protocol
+        //            mutating func append(item: T) {
+        //                self.push(item)
+        //            }
+        //
+        //            var count: Int {
+        //                return items.count
+        //            }
+        //
+        //            subscript(i: Int) -> T {
+        //                return items[i]
+        //            }
+        //        }
+        //
+        //        func allItemsMatch<
+        //            C1: Container, C2: Container
+        //            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
+        //            (someContainer: C1, anotherContainer: C2) -> Bool {
+        //                // check that both containers contain the same number of items
+        //                if someContainer.count != anotherContainer.count {
+        //                    return false
+        //                }
+        //
+        //                // check each pair of items to see if they are equivalent
+        //                for i in 0..<someContainer.count {
+        //                    if someContainer[i] != anotherContainer[i] {
+        //                        return false
+        //                    }
+        //                }
+        //
+        //                // all items match, so return true
+        //                return true
+        //        }
+        //
+        //        var tos = Stack<String>()
+        //        tos.push("Swift")
+        //        print(tos.items)
+        //
+        //        tos.push("泛型")
+        //        print(tos.items)
+        //
+        //        tos.push("Where 语句")
+        //        print(tos.items)
+        //
+        //        var eos = ["Swift", "泛型", "Where 语句"]
+        //        print(eos)
+        //        以上程序执行输出结果为：
+        //        ["Swift"]
+        //        ["Swift", "泛型"]
+        //        ["Swift", "泛型", "Where 语句"]
+        //        ["Swift", "泛型", "Where 语句"]
         
     }
     
@@ -402,27 +439,27 @@ class ViewController: UIViewController {
         // 1、你可以创建一个Int数组，也可创建一个String数组，或者甚至于可以是任何其他 Swift 的类型数据数组。
         // 以下实例是一个非泛型函数 exchange 用来交换两个 Int 值：
         // 定义一个交换两个变量的函数
-//        func swapTwoInts(_ a: inout Int, _ b: inout Int) {
-//            let temporaryA = a
-//            a = b
-//            b = temporaryA
-//        }
-//
-//        var numb1 = 100
-//        var numb2 = 200
-//        print("交换前数据: \(numb1) 和 \(numb2)")
-//        swapTwoInts(&numb1, &numb2)
-//        print("交换后数据: \(numb1) 和 \(numb2)")
-//        以上程序执行输出结果为：
-//        交换前数据: 100 和 200
-//        交换后数据: 200 和 100
+        //        func swapTwoInts(_ a: inout Int, _ b: inout Int) {
+        //            let temporaryA = a
+        //            a = b
+        //            b = temporaryA
+        //        }
+        //
+        //        var numb1 = 100
+        //        var numb2 = 200
+        //        print("交换前数据: \(numb1) 和 \(numb2)")
+        //        swapTwoInts(&numb1, &numb2)
+        //        print("交换后数据: \(numb1) 和 \(numb2)")
+        //        以上程序执行输出结果为：
+        //        交换前数据: 100 和 200
+        //        交换后数据: 200 和 100
         // 以上实例只试用与交换整数 Int 类型的变量。如果你想要交换两个 String 值或者 Double 值，就得重新写个对应的函数，例如 swapTwoStrings(_:_:) 和 swapTwoDoubles(_:_:)，如下所示：
         func swapTwoStrings(_ a: inout String, _ b: inout String) {
             let temporaryA = a
             a = b
             b = temporaryA
         }
-         
+        
         func swapTwoDoubles(_ a: inout Double, _ b: inout Double) {
             let temporaryA = a
             a = b
@@ -430,10 +467,10 @@ class ViewController: UIViewController {
         }
         /*
          从以上代码来看，它们功能代码是相同的，只是类型上不一样，这时我们可以使用泛型，从而避免重复编写代码。
-        
+         
          泛型使用了占位类型名（在这里用字母 T 来表示）来代替实际类型名（例如 Int、String 或 Double）。
          func swapTwoValues<T>(_ a: inout T, _ b: inout T)
-        
+         
          swapTwoValues 后面跟着占位类型名（T），并用尖括号括起来（<T>）。这个尖括号告诉 Swift 那个 T 是 swapTwoValues(_:_:) 函数定义内的一个占位类型名，因此 Swift 不会去查找名为 T 的实际类型。
          以下实例是一个泛型函数 exchange 用来交换两个 Int 和 String 值：
          */
@@ -443,17 +480,17 @@ class ViewController: UIViewController {
             a = b
             b = temporaryA
         }
-         
+        
         var numb1 = 100
         var numb2 = 200
-         
+        
         print("交换前数据:  \(numb1) 和 \(numb2)")
         swapTwoValues(&numb1, &numb2)
         print("交换后数据: \(numb1) 和 \(numb2)")
-         
+        
         var str1 = "A"
         var str2 = "B"
-         
+        
         print("交换前数据:  \(str1) 和 \(str2)")
         swapTwoValues(&str1, &str2)
         print("交换后数据: \(str1) 和 \(str2)")
@@ -491,27 +528,27 @@ class ViewController: UIViewController {
                 return items.removeLast()
             }
         }
-         
+        
         var stackOfStrings = Stack<String>()
         print("字符串元素入栈: ")
         stackOfStrings.push("google")
         stackOfStrings.push("runoob")
         print(stackOfStrings.items);
-         
+        
         let deletetos = stackOfStrings.pop()
         print("出栈元素: " + deletetos)
-         
+        
         var stackOfInts = Stack<Int>()
         print("整数元素入栈: ")
         stackOfInts.push(1)
         stackOfInts.push(2)
         print(stackOfInts.items);
-//        程序实例执行结果为：
-//        字符串元素入栈:
-//        ["google", "runoob"]
-//        出栈元素: runoob
-//        整数元素入栈:
-//        [1, 2]
+        //        程序实例执行结果为：
+        //        字符串元素入栈:
+        //        ["google", "runoob"]
+        //        出栈元素: runoob
+        //        整数元素入栈:
+        //        [1, 2]
         /*
          Stack 基本上和 IntStack 相同，占位类型参数 Element 代替了实际的 Int 类型。
          以上实例中 Element 在如下三个地方被用作占位符：
@@ -526,26 +563,26 @@ class ViewController: UIViewController {
          当你扩展一个泛型类型的时候（使用 extension 关键字），你并不需要在扩展的定义中提供类型参数列表。更加方便的是，原始类型定义中声明的类型参数列表在扩展里是可以使用的，并且这些来自原始类型中的参数名称会被用作原始定义中类型参数的引用。
          下面的例子扩展了泛型类型 Stack，为其添加了一个名为 topItem 的只读计算型属性，它将会返回当前栈顶端的元素而不会将其从栈中移除：
          */
-//        extension Stack {
-//            var topItem: Element? {
-//               return items.isEmpty ? nil : items[items.count - 1]
-//            }
-//        }
-//
-//        var stackOfStrings2 = Stack<String>()
-//        print("字符串元素入栈: ")
-//        stackOfStrings2.push("google")
-//        stackOfStrings2.push("runoob")
-//
-//        if let topItem = stackOfStrings2.topItem {
-//            print("栈中的顶部元素是：\(topItem).")
-//        }
-//
-//        print(stackOfStrings2.items)
-//        以上程序执行输出结果为：
-//        字符串元素入栈:
-//        栈中的顶部元素是：runoob.
-//        ["google", "runoob"]
+        //        extension Stack {
+        //            var topItem: Element? {
+        //               return items.isEmpty ? nil : items[items.count - 1]
+        //            }
+        //        }
+        //
+        //        var stackOfStrings2 = Stack<String>()
+        //        print("字符串元素入栈: ")
+        //        stackOfStrings2.push("google")
+        //        stackOfStrings2.push("runoob")
+        //
+        //        if let topItem = stackOfStrings2.topItem {
+        //            print("栈中的顶部元素是：\(topItem).")
+        //        }
+        //
+        //        print(stackOfStrings2.items)
+        //        以上程序执行输出结果为：
+        //        字符串元素入栈:
+        //        栈中的顶部元素是：runoob.
+        //        ["google", "runoob"]
         /*
          实例中 topItem 属性会返回一个 Element 类型的可选值。当栈为空的时候，topItem 会返回 nil；当栈不为空的时候，topItem 会返回 items 数组中的最后一个元素。
          
@@ -554,89 +591,89 @@ class ViewController: UIViewController {
          以下实例创建一个空扩展即可:
          extension Array: Container {}
          */
-
+        
         
         // 4、类型约束：型约束指定了一个必须继承自指定类的类型参数，或者遵循一个特定的协议或协议构成。
         /*
          类型约束语法：
          你可以写一个在一个类型参数名后面的类型约束，通过冒号分割，来作为类型参数链的一部分。这种作用于泛型函数的类型约束的基础语法如下所示（和泛型类型的语法相同）：
-//         func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
-//             // 这里是泛型函数的函数体部分
-//         }
-//         上面这个函数有两个类型参数。第一个类型参数 T，有一个要求 T 必须是 SomeClass 子类的类型约束；第二个类型参数 U，有一个要求 U 必须符合 SomeProtocol 协议的类型约束。
-//         */
-//        // 实例
-////        // 非泛型函数，查找指定字符串在数组中的索引
-////        func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
-////            for (index, value) in array.enumerated() {
-////                if value == valueToFind {
-////                    // 找到返回索引值
-////                    return index
-////                }
-////            }
-////            return nil
-////        }
-////
-////
-////        let strings = ["google", "weibo", "taobao", "runoob", "facebook"]
-////        if let foundIndex = findIndex(ofString: "runoob", in: strings) {
-////            print("runoob 的索引为 \(foundIndex)")
-////        }
-////        索引下标从 0 开始。
-////        以上程序执行输出结果为：
-////        runoob 的索引为 3
-//
-//
-//        // 5、关联类
-//        /*
-//         Swift 中使用 associatedtype 关键字来设置关联类型实例。
-//         下面例子定义了一个 Container 协议，该协议定义了一个关联类型 ItemType。
-//         Container 协议只指定了三个任何遵从 Container 协议的类型必须提供的功能。遵从协议的类型在满足这三个条件的情况下也可以提供其他额外的功能。
-//         */
-//        // Container 协议
-//        protocol Container {
-//            associatedtype ItemType
-//            // 添加一个新元素到容器里
-//            mutating func append(_ item: ItemType)
-//            // 获取容器中元素的数
-//            var count: Int { get }
-//            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
-//            subscript(i: Int) -> ItemType { get }
-//        }
-//
-//        // Stack 结构体遵从 Container 协议
-//        struct Stack<Element>: Container {
-//            // Stack<Element> 的原始实现部分
-//            var items = [Element]()
-//            mutating func push(_ item: Element) {
-//                items.append(item)
-//            }
-//            mutating func pop() -> Element {
-//                return items.removeLast()
-//            }
-//            // Container 协议的实现部分
-//            mutating func append(_ item: Element) {
-//                self.push(item)
-//            }
-//            var count: Int {
-//                return items.count
-//            }
-//            subscript(i: Int) -> Element {
-//                return items[i]
-//            }
-//        }
-//
-//        var tos = Stack<String>()
-//        tos.push("google")
-//        tos.push("runoob")
-//        tos.push("taobao")
-//        // 元素列表
-//        print(tos.items)
-//        // 元素个数
-//        print( tos.count)
-//        以上程序执行输出结果为：
-//        ["google", "runoob", "taobao"]
-//        3
+         //         func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
+         //             // 这里是泛型函数的函数体部分
+         //         }
+         //         上面这个函数有两个类型参数。第一个类型参数 T，有一个要求 T 必须是 SomeClass 子类的类型约束；第二个类型参数 U，有一个要求 U 必须符合 SomeProtocol 协议的类型约束。
+         //         */
+        //        // 实例
+        ////        // 非泛型函数，查找指定字符串在数组中的索引
+        ////        func findIndex(ofString valueToFind: String, in array: [String]) -> Int? {
+        ////            for (index, value) in array.enumerated() {
+        ////                if value == valueToFind {
+        ////                    // 找到返回索引值
+        ////                    return index
+        ////                }
+        ////            }
+        ////            return nil
+        ////        }
+        ////
+        ////
+        ////        let strings = ["google", "weibo", "taobao", "runoob", "facebook"]
+        ////        if let foundIndex = findIndex(ofString: "runoob", in: strings) {
+        ////            print("runoob 的索引为 \(foundIndex)")
+        ////        }
+        ////        索引下标从 0 开始。
+        ////        以上程序执行输出结果为：
+        ////        runoob 的索引为 3
+        //
+        //
+        //        // 5、关联类
+        //        /*
+        //         Swift 中使用 associatedtype 关键字来设置关联类型实例。
+        //         下面例子定义了一个 Container 协议，该协议定义了一个关联类型 ItemType。
+        //         Container 协议只指定了三个任何遵从 Container 协议的类型必须提供的功能。遵从协议的类型在满足这三个条件的情况下也可以提供其他额外的功能。
+        //         */
+        //        // Container 协议
+        //        protocol Container {
+        //            associatedtype ItemType
+        //            // 添加一个新元素到容器里
+        //            mutating func append(_ item: ItemType)
+        //            // 获取容器中元素的数
+        //            var count: Int { get }
+        //            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
+        //            subscript(i: Int) -> ItemType { get }
+        //        }
+        //
+        //        // Stack 结构体遵从 Container 协议
+        //        struct Stack<Element>: Container {
+        //            // Stack<Element> 的原始实现部分
+        //            var items = [Element]()
+        //            mutating func push(_ item: Element) {
+        //                items.append(item)
+        //            }
+        //            mutating func pop() -> Element {
+        //                return items.removeLast()
+        //            }
+        //            // Container 协议的实现部分
+        //            mutating func append(_ item: Element) {
+        //                self.push(item)
+        //            }
+        //            var count: Int {
+        //                return items.count
+        //            }
+        //            subscript(i: Int) -> Element {
+        //                return items[i]
+        //            }
+        //        }
+        //
+        //        var tos = Stack<String>()
+        //        tos.push("google")
+        //        tos.push("runoob")
+        //        tos.push("taobao")
+        //        // 元素列表
+        //        print(tos.items)
+        //        // 元素个数
+        //        print( tos.count)
+        //        以上程序执行输出结果为：
+        //        ["google", "runoob", "taobao"]
+        //        3
         
         // 6、Where 语句
         /*
@@ -648,74 +685,74 @@ class ViewController: UIViewController {
          下面的例子定义了一个名为allItemsMatch的泛型函数，用来检查两个Container实例是否包含相同顺序的相同元素。
          如果所有的元素能够匹配，那么返回 true，反之则返回 false。
          */
-//        // Container 协议
-//        protocol Container {
-//            associatedtype ItemType
-//            // 添加一个新元素到容器里
-//            mutating func append(_ item: ItemType)
-//            // 获取容器中元素的数
-//            var count: Int { get }
-//            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
-//            subscript(i: Int) -> ItemType { get }
-//        }
-//         
-//        // // 遵循Container协议的泛型TOS类型
-//        struct Stack<Element>: Container {
-//            // Stack<Element> 的原始实现部分
-//            var items = [Element]()
-//            mutating func push(_ item: Element) {
-//                items.append(item)
-//            }
-//            mutating func pop() -> Element {
-//                return items.removeLast()
-//            }
-//            // Container 协议的实现部分
-//            mutating func append(_ item: Element) {
-//                self.push(item)
-//            }
-//            var count: Int {
-//                return items.count
-//            }
-//            subscript(i: Int) -> Element {
-//                return items[i]
-//            }
-//        }
-//        // 扩展，将 Array 当作 Container 来使用
-//        extension Array: Container {}
-//         
-//        func allItemsMatch<C1: Container, C2: Container>
-//            (_ someContainer: C1, _ anotherContainer: C2) -> Bool
-//            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable {
-//                
-//                // 检查两个容器含有相同数量的元素
-//                if someContainer.count != anotherContainer.count {
-//                    return false
-//                }
-//                
-//                // 检查每一对元素是否相等
-//                for i in 0..<someContainer.count {
-//                    if someContainer[i] != anotherContainer[i] {
-//                        return false
-//                    }
-//                }
-//                
-//                // 所有元素都匹配，返回 true
-//                return true
-//        }
-//        var tos = Stack<String>()
-//        tos.push("google")
-//        tos.push("runoob")
-//        tos.push("taobao")
-//         
-//        var aos = ["google", "runoob", "taobao"]
-//         
-//        if allItemsMatch(tos, aos) {
-//            print("匹配所有元素")
-//        } else {
-//            print("元素不匹配")
-//        }
-//        以上程序执行输出结果为：
-//        匹配所有元素
+        //        // Container 协议
+        //        protocol Container {
+        //            associatedtype ItemType
+        //            // 添加一个新元素到容器里
+        //            mutating func append(_ item: ItemType)
+        //            // 获取容器中元素的数
+        //            var count: Int { get }
+        //            // 通过索引值类型为 Int 的下标检索到容器中的每一个元素
+        //            subscript(i: Int) -> ItemType { get }
+        //        }
+        //         
+        //        // // 遵循Container协议的泛型TOS类型
+        //        struct Stack<Element>: Container {
+        //            // Stack<Element> 的原始实现部分
+        //            var items = [Element]()
+        //            mutating func push(_ item: Element) {
+        //                items.append(item)
+        //            }
+        //            mutating func pop() -> Element {
+        //                return items.removeLast()
+        //            }
+        //            // Container 协议的实现部分
+        //            mutating func append(_ item: Element) {
+        //                self.push(item)
+        //            }
+        //            var count: Int {
+        //                return items.count
+        //            }
+        //            subscript(i: Int) -> Element {
+        //                return items[i]
+        //            }
+        //        }
+        //        // 扩展，将 Array 当作 Container 来使用
+        //        extension Array: Container {}
+        //         
+        //        func allItemsMatch<C1: Container, C2: Container>
+        //            (_ someContainer: C1, _ anotherContainer: C2) -> Bool
+        //            where C1.ItemType == C2.ItemType, C1.ItemType: Equatable {
+        //                
+        //                // 检查两个容器含有相同数量的元素
+        //                if someContainer.count != anotherContainer.count {
+        //                    return false
+        //                }
+        //                
+        //                // 检查每一对元素是否相等
+        //                for i in 0..<someContainer.count {
+        //                    if someContainer[i] != anotherContainer[i] {
+        //                        return false
+        //                    }
+        //                }
+        //                
+        //                // 所有元素都匹配，返回 true
+        //                return true
+        //        }
+        //        var tos = Stack<String>()
+        //        tos.push("google")
+        //        tos.push("runoob")
+        //        tos.push("taobao")
+        //         
+        //        var aos = ["google", "runoob", "taobao"]
+        //         
+        //        if allItemsMatch(tos, aos) {
+        //            print("匹配所有元素")
+        //        } else {
+        //            print("元素不匹配")
+        //        }
+        //        以上程序执行输出结果为：
+        //        匹配所有元素
     }
     
     func protocolLearn() {
@@ -728,17 +765,17 @@ class ViewController: UIViewController {
          1、语法
          协议的语法格式如下：
          protocol SomeProtocol {
-             // 协议内容
+         // 协议内容
          }
-        
+         
          要使类遵循某个协议，需要在类型名称后加上协议名称，中间以冒号:分隔，作为类型定义的一部分。遵循多个协议时，各协议之间用逗号,分隔。
          struct SomeStructure: FirstProtocol, AnotherProtocol {
-             // 结构体内容
+         // 结构体内容
          }
          
          如果类在遵循协议的同时拥有父类，应该将父类名放在协议名之前，以逗号分隔。
          class SomeClass: SomeSuperClass, FirstProtocol, AnotherProtocol {
-             // 类的内容
+         // 类的内容
          }
          */
         
@@ -747,94 +784,94 @@ class ViewController: UIViewController {
          协议用于指定特定的实例属性或类属性，而不用指定是存储型属性或计算型属性。此外还必须指明是只读的还是可读可写的。
          协议中的通常用var来声明变量属性，在类型声明后加上{ set get }来表示属性是可读可写的，只读属性则用{ get }来表示。
          */
-//        print("对属性的规定")
-//        protocol classa {
-//            var marks: Int { get set }
-//            var result: Bool { get }
-//            func attendance() -> String
-//            func markssecured() -> String
-//        }
-//
-//        protocol classb: classa {
-//            var present: Bool { get set }
-//            var subject: String { get set }
-//            var stname: String { get set }
-//
-//        }
-//
-//        class classc: classb {
-//            var marks = 96
-//            let result = true
-//            var present = false
-//            var subject = "Swift 协议"
-//            var stname = "Protocols"
-//
-//            func attendance() -> String {
-//                return "The \(stname) has secured 99% attendance"
-//            }
-//
-//            func markssecured() -> String {
-//                return "\(stname) has scored \(marks)"
-//            }
-//        }
-//
-//        let studdet = classc()
-//        studdet.stname = "Swift"
-//        studdet.marks = 98
-//        studdet.markssecured()
-//
-//        print(studdet.marks)
-//        print(studdet.result)
-//        print(studdet.present)
-//        print(studdet.subject)
-//        print(studdet.stname)
+        //        print("对属性的规定")
+        //        protocol classa {
+        //            var marks: Int { get set }
+        //            var result: Bool { get }
+        //            func attendance() -> String
+        //            func markssecured() -> String
+        //        }
+        //
+        //        protocol classb: classa {
+        //            var present: Bool { get set }
+        //            var subject: String { get set }
+        //            var stname: String { get set }
+        //
+        //        }
+        //
+        //        class classc: classb {
+        //            var marks = 96
+        //            let result = true
+        //            var present = false
+        //            var subject = "Swift 协议"
+        //            var stname = "Protocols"
+        //
+        //            func attendance() -> String {
+        //                return "The \(stname) has secured 99% attendance"
+        //            }
+        //
+        //            func markssecured() -> String {
+        //                return "\(stname) has scored \(marks)"
+        //            }
+        //        }
+        //
+        //        let studdet = classc()
+        //        studdet.stname = "Swift"
+        //        studdet.marks = 98
+        //        studdet.markssecured()
+        //
+        //        print(studdet.marks)
+        //        print(studdet.result)
+        //        print(studdet.present)
+        //        print(studdet.subject)
+        //        print(studdet.stname)
         
         // 3、对 Mutating 方法的规定
         /*
          有时需要在方法中改变它的实例。
          例如，值类型(结构体，枚举)的实例方法中，将mutating关键字作为函数的前缀，写在func之前，表示可以在该方法中修改它所属的实例及其实例属性的值。
          */
-//        print("3、对 Mutating 方法的规定")
-//        protocol daysofaweek {
-//            mutating func show()
-//        }
-//
-//        enum days: daysofaweek {
-//            case sun, mon, tue, wed, thurs, fri, sat
-//            mutating func show() {
-//                switch self {
-//                case .sun:
-//                    self = .sun
-//                    print("Sunday")
-//                case .mon:
-//                    self = .mon
-//                    print("Monday")
-//                case .tue:
-//                    self = .tue
-//                    print("Tuesday")
-//                case .wed:
-//                    self = .wed
-//                    print("Wednesday")
-//                case .thurs:
-//                    self = .thurs
-//                    print("Wednesday")
-//                case .fri:
-//                    self = .fri
-//                    print("Wednesday")
-//                case .sat:
-//                    self = .sat
-//                    print("Saturday")
-//                default:
-//                    print("NO Such Day")
-//                }
-//            }
-//        }
-//
-//        var res = days.wed
-//        res.show()
-//
-//        以上程序执行输出结果为：
-//        Wednesday
+        //        print("3、对 Mutating 方法的规定")
+        //        protocol daysofaweek {
+        //            mutating func show()
+        //        }
+        //
+        //        enum days: daysofaweek {
+        //            case sun, mon, tue, wed, thurs, fri, sat
+        //            mutating func show() {
+        //                switch self {
+        //                case .sun:
+        //                    self = .sun
+        //                    print("Sunday")
+        //                case .mon:
+        //                    self = .mon
+        //                    print("Monday")
+        //                case .tue:
+        //                    self = .tue
+        //                    print("Tuesday")
+        //                case .wed:
+        //                    self = .wed
+        //                    print("Wednesday")
+        //                case .thurs:
+        //                    self = .thurs
+        //                    print("Wednesday")
+        //                case .fri:
+        //                    self = .fri
+        //                    print("Wednesday")
+        //                case .sat:
+        //                    self = .sat
+        //                    print("Saturday")
+        //                default:
+        //                    print("NO Such Day")
+        //                }
+        //            }
+        //        }
+        //
+        //        var res = days.wed
+        //        res.show()
+        //
+        //        以上程序执行输出结果为：
+        //        Wednesday
         
         // 4、对构造器的规定
         /*
@@ -842,66 +879,66 @@ class ViewController: UIViewController {
          你可以像书写普通的构造器那样，在协议的定义里写下构造器的声明，但不需要写花括号和构造器的实体，语法如下：
          
          protocol SomeProtocol {
-            init(someParameter: Int)
+         init(someParameter: Int)
          }
          
          实例:
          protocol tcpprotocol {
-            init(aprot: Int)
+         init(aprot: Int)
          }
          */
         
         // 5、协议构造器规定在类中的实现
         // 你可以在遵循该协议的类中实现构造器，并指定其为类的指定构造器或者便利构造器。在这两种情况下，你都必须给构造器实现标上"required"修饰符：
-//        class SomeClass: SomeProtocol {
-//           required init(someParameter: Int) {
-//              // 构造器实现
-//           }
-//        }
-//
-//        protocol tcpprotocol {
-//           init(aprot: Int)
-//        }
-//
-//        class tcpClass: tcpprotocol {
-//           required init(aprot: Int) {
-//           }
-//        }
+        //        class SomeClass: SomeProtocol {
+        //           required init(someParameter: Int) {
+        //              // 构造器实现
+        //           }
+        //        }
+        //
+        //        protocol tcpprotocol {
+        //           init(aprot: Int)
+        //        }
+        //
+        //        class tcpClass: tcpprotocol {
+        //           required init(aprot: Int) {
+        //           }
+        //        }
         // 使用required修饰符可以保证：所有的遵循该协议的子类，同样能为构造器规定提供一个显式的实现或继承实现。
         // 如果一个子类重写了父类的指定构造器，并且该构造器遵循了某个协议的规定，那么该构造器的实现需要被同时标示required和override修饰符：
-//        protocol tcpprotocol {
-//            init(no1: Int)
-//        }
-//
-//        class mainClass {
-//            var no1: Int // 局部变量
-//            init(no1: Int) {
-//                self.no1 = no1 // 初始化
-//            }
-//        }
-//
-//        class subClass: mainClass, tcpprotocol {
-//            var no2: Int
-//            init(no1: Int, no2 : Int) {
-//                self.no2 = no2
-//                super.init(no1:no1)
-//            }
-//            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
-//            required override convenience init(no1: Int)  {
-//                self.init(no1:no1, no2:0)
-//            }
-//        }
-//        let res = mainClass(no1: 20)
-//        let show = subClass(no1: 30, no2: 50)
-//
-//        print("res is: \(res.no1)")
-//        print("res is: \(show.no1)")
-//        print("res is: \(show.no2)")
-//
-//        以上程序执行输出结果为：
-//        res is: 20
-//        res is: 30
-//        res is: 50
+        //        protocol tcpprotocol {
+        //            init(no1: Int)
+        //        }
+        //
+        //        class mainClass {
+        //            var no1: Int // 局部变量
+        //            init(no1: Int) {
+        //                self.no1 = no1 // 初始化
+        //            }
+        //        }
+        //
+        //        class subClass: mainClass, tcpprotocol {
+        //            var no2: Int
+        //            init(no1: Int, no2 : Int) {
+        //                self.no2 = no2
+        //                super.init(no1:no1)
+        //            }
+        //            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
+        //            required override convenience init(no1: Int)  {
+        //                self.init(no1:no1, no2:0)
+        //            }
+        //        }
+        //        let res = mainClass(no1: 20)
+        //        let show = subClass(no1: 30, no2: 50)
+        //
+        //        print("res is: \(res.no1)")
+        //        print("res is: \(show.no1)")
+        //        print("res is: \(show.no2)")
+        //
+        //        以上程序执行输出结果为：
+        //        res is: 20
+        //        res is: 30
+        //        res is: 50
         
         // 6、协议类型
         /*
@@ -912,226 +949,226 @@ class ViewController: UIViewController {
          作为数组、字典或其他容器中的元素类型
          实例:
          */
-//        protocol Generator {
-//            associatedtype members
-//            func next() -> members?
-//        }
-//
-//        var items = [10,20,30].makeIterator()
-//        while let x = items.next() {
-//            print(x)
-//        }
-//
-//        for lists in [1,2,3].map( {i in i*5}) {
-//            print(lists)
-//        }
-//
-//        print([100,200,300])
-//        print([1,2,3].map({i in i*10}))
-//
-//        以上程序执行输出结果为：
-//        10
-//        20
-//        30
-//        5
-//        10
-//        15
-//        [100, 200, 300]
-//        [10, 20, 30]
+        //        protocol Generator {
+        //            associatedtype members
+        //            func next() -> members?
+        //        }
+        //
+        //        var items = [10,20,30].makeIterator()
+        //        while let x = items.next() {
+        //            print(x)
+        //        }
+        //
+        //        for lists in [1,2,3].map( {i in i*5}) {
+        //            print(lists)
+        //        }
+        //
+        //        print([100,200,300])
+        //        print([1,2,3].map({i in i*10}))
+        //
+        //        以上程序执行输出结果为：
+        //        10
+        //        20
+        //        30
+        //        5
+        //        10
+        //        15
+        //        [100, 200, 300]
+        //        [10, 20, 30]
         
         //7、在扩展中添加协议成员
         //我们可以可以通过扩展来扩充已存在类型( 类，结构体，枚举等)。
         //扩展可以为已存在的类型添加属性，方法，下标脚本，协议等成员。
-//        protocol AgeClasificationProtocol {
-//           var age: Int { get }
-//           func agetype() -> String
-//        }
-//
-//        class Person {
-//           let firstname: String
-//           let lastname: String
-//           var age: Int
-//           init(firstname: String, lastname: String) {
-//              self.firstname = firstname
-//              self.lastname = lastname
-//              self.age = 10
-//           }
-//        }
-//
-//        extension Person : AgeClasificationProtocol {
-//           func fullname() -> String {
-//              var c: String
-//              c = firstname + " " + lastname
-//              return c
-//           }
-//
-//           func agetype() -> String {
-//              switch age {
-//              case 0...2:
-//                 return "Baby"
-//              case 2...12:
-//                 return "Child"
-//              case 13...19:
-//                 return "Teenager"
-//              case let x where x > 65:
-//                 return "Elderly"
-//              default:
-//                 return "Normal"
-//              }
-//           }
-//        }
+        //        protocol AgeClasificationProtocol {
+        //           var age: Int { get }
+        //           func agetype() -> String
+        //        }
+        //
+        //        class Person {
+        //           let firstname: String
+        //           let lastname: String
+        //           var age: Int
+        //           init(firstname: String, lastname: String) {
+        //              self.firstname = firstname
+        //              self.lastname = lastname
+        //              self.age = 10
+        //           }
+        //        }
+        //
+        //        extension Person : AgeClasificationProtocol {
+        //           func fullname() -> String {
+        //              var c: String
+        //              c = firstname + " " + lastname
+        //              return c
+        //           }
+        //
+        //           func agetype() -> String {
+        //              switch age {
+        //              case 0...2:
+        //                 return "Baby"
+        //              case 2...12:
+        //                 return "Child"
+        //              case 13...19:
+        //                 return "Teenager"
+        //              case let x where x > 65:
+        //                 return "Elderly"
+        //              default:
+        //                 return "Normal"
+        //              }
+        //           }
+        //        }
         
         
         // 8、协议的继承
         // 协议能够继承一个或多个其他协议，可以在继承的协议基础上增加新的内容要求。
         // 协议的继承语法与类的继承相似，多个被继承的协议间用逗号分隔：
-//        protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
-//            // 协议定义
-//        }
-//        实例
-//        protocol Classa {
-//            var no1: Int { get set }
-//            func calc(sum: Int)
-//        }
-//
-//        protocol Result {
-//            func print(target: Classa)
-//        }
-//
-//        class Student2: Result {
-//            func print(target: Classa) {
-//                target.calc(1)
-//            }
-//        }
-//
-//        class Classb: Result {
-//            func print(target: Classa) {
-//                target.calc(5)
-//            }
-//        }
-//
-//        class Student: Classa {
-//            var no1: Int = 10
-//
-//            func calc(sum: Int) {
-//                no1 -= sum
-//                print("学生尝试 \(sum) 次通过")
-//
-//                if no1 <= 0 {
-//                    print("学生缺席考试")
-//                }
-//            }
-//        }
-//
-//        class Player {
-//            var stmark: Result!
-//
-//            init(stmark: Result) {
-//                self.stmark = stmark
-//            }
-//
-//            func print(target: Classa) {
-//                stmark.print(target)
-//            }
-//        }
-//
-//        var marks = Player(stmark: Student2())
-//        var marksec = Student()
-//
-//        marks.print(marksec)
-//        marks.print(marksec)
-//        marks.print(marksec)
-//        marks.stmark = Classb()
-//        marks.print(marksec)
-//        marks.print(marksec)
-//        marks.print(marksec)
-//        以上程序执行输出结果为：
-//        学生尝试 1 次通过
-//        学生尝试 1 次通过
-//        学生尝试 1 次通过
-//        学生尝试 5 次通过
-//        学生尝试 5 次通过
-//        学生缺席考试
-//        学生尝试 5 次通过
-//        学生缺席考试
+        //        protocol InheritingProtocol: SomeProtocol, AnotherProtocol {
+        //            // 协议定义
+        //        }
+        //        实例
+        //        protocol Classa {
+        //            var no1: Int { get set }
+        //            func calc(sum: Int)
+        //        }
+        //
+        //        protocol Result {
+        //            func print(target: Classa)
+        //        }
+        //
+        //        class Student2: Result {
+        //            func print(target: Classa) {
+        //                target.calc(1)
+        //            }
+        //        }
+        //
+        //        class Classb: Result {
+        //            func print(target: Classa) {
+        //                target.calc(5)
+        //            }
+        //        }
+        //
+        //        class Student: Classa {
+        //            var no1: Int = 10
+        //
+        //            func calc(sum: Int) {
+        //                no1 -= sum
+        //                print("学生尝试 \(sum) 次通过")
+        //
+        //                if no1 <= 0 {
+        //                    print("学生缺席考试")
+        //                }
+        //            }
+        //        }
+        //
+        //        class Player {
+        //            var stmark: Result!
+        //
+        //            init(stmark: Result) {
+        //                self.stmark = stmark
+        //            }
+        //
+        //            func print(target: Classa) {
+        //                stmark.print(target)
+        //            }
+        //        }
+        //
+        //        var marks = Player(stmark: Student2())
+        //        var marksec = Student()
+        //
+        //        marks.print(marksec)
+        //        marks.print(marksec)
+        //        marks.print(marksec)
+        //        marks.stmark = Classb()
+        //        marks.print(marksec)
+        //        marks.print(marksec)
+        //        marks.print(marksec)
+        //        以上程序执行输出结果为：
+        //        学生尝试 1 次通过
+        //        学生尝试 1 次通过
+        //        学生尝试 1 次通过
+        //        学生尝试 5 次通过
+        //        学生尝试 5 次通过
+        //        学生缺席考试
+        //        学生尝试 5 次通过
+        //        学生缺席考试
         
         
         
         // 9、类专属协议
         // 你可以在协议的继承列表中,通过添加class关键字,限制协议只能适配到类（class）类型。
         // 该class关键字必须是第一个出现在协议的继承列表中，其后，才是其他继承协议。格式如下：
-//        protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
-//            // 协议定义
-//        }
-//        实例
-//        protocol TcpProtocol {
-//            init(no1: Int)
-//        }
-//
-//        class MainClass {
-//            var no1: Int // 局部变量
-//            init(no1: Int) {
-//                self.no1 = no1 // 初始化
-//            }
-//        }
-//
-//        class SubClass: MainClass, TcpProtocol {
-//            var no2: Int
-//            init(no1: Int, no2 : Int) {
-//                self.no2 = no2
-//                super.init(no1:no1)
-//            }
-//            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
-//            required override convenience init(no1: Int)  {
-//                self.init(no1:no1, no2:0)
-//            }
-//        }
-//
-//        let res = MainClass(no1: 20)
-//        let show = SubClass(no1: 30, no2: 50)
-//
-//        print("res is: \(res.no1)")
-//        print("res is: \(show.no1)")
-//        print("res is: \(show.no2)")
-//        以上程序执行输出结果为：
-//        res is: 20
-//        res is: 30
-//        res is: 50
+        //        protocol SomeClassOnlyProtocol: class, SomeInheritedProtocol {
+        //            // 协议定义
+        //        }
+        //        实例
+        //        protocol TcpProtocol {
+        //            init(no1: Int)
+        //        }
+        //
+        //        class MainClass {
+        //            var no1: Int // 局部变量
+        //            init(no1: Int) {
+        //                self.no1 = no1 // 初始化
+        //            }
+        //        }
+        //
+        //        class SubClass: MainClass, TcpProtocol {
+        //            var no2: Int
+        //            init(no1: Int, no2 : Int) {
+        //                self.no2 = no2
+        //                super.init(no1:no1)
+        //            }
+        //            // 因为遵循协议，需要加上"required"; 因为继承自父类，需要加上"override"
+        //            required override convenience init(no1: Int)  {
+        //                self.init(no1:no1, no2:0)
+        //            }
+        //        }
+        //
+        //        let res = MainClass(no1: 20)
+        //        let show = SubClass(no1: 30, no2: 50)
+        //
+        //        print("res is: \(res.no1)")
+        //        print("res is: \(show.no1)")
+        //        print("res is: \(show.no2)")
+        //        以上程序执行输出结果为：
+        //        res is: 20
+        //        res is: 30
+        //        res is: 50
         
         
         
         // 10、协议合成
         //Swift 支持合成多个协议，这在我们需要同时遵循多个协议时非常有用。
-//        语法格式如下：
-//        protocol Stname {
-//            var name: String { get }
-//        }
-//
-//        protocol Stage {
-//            var age: Int { get }
-//        }
-//
-//        struct Person: Stname, Stage {
-//            var name: String
-//            var age: Int
-//        }
-//
-//        func show(celebrator: Stname & Stage) {
-//            print("\(celebrator.name) is \(celebrator.age) years old")
-//        }
-//
-//        let studname = Person(name: "Priya", age: 21)
-//        print(studname)
-//
-//        let stud = Person(name: "Rehan", age: 29)
-//        print(stud)
-//
-//        let student = Person(name: "Roshan", age: 19)
-//        print(student)
-//        以上程序执行输出结果为：
-//        Person(name: "Priya", age: 21)
-//        Person(name: "Rehan", age: 29)
-//        Person(name: "Roshan", age: 19)
+        //        语法格式如下：
+        //        protocol Stname {
+        //            var name: String { get }
+        //        }
+        //
+        //        protocol Stage {
+        //            var age: Int { get }
+        //        }
+        //
+        //        struct Person: Stname, Stage {
+        //            var name: String
+        //            var age: Int
+        //        }
+        //
+        //        func show(celebrator: Stname & Stage) {
+        //            print("\(celebrator.name) is \(celebrator.age) years old")
+        //        }
+        //
+        //        let studname = Person(name: "Priya", age: 21)
+        //        print(studname)
+        //
+        //        let stud = Person(name: "Rehan", age: 29)
+        //        print(stud)
+        //
+        //        let student = Person(name: "Roshan", age: 19)
+        //        print(student)
+        //        以上程序执行输出结果为：
+        //        Person(name: "Priya", age: 21)
+        //        Person(name: "Rehan", age: 29)
+        //        Person(name: "Roshan", age: 19)
         
         
         // 11、检验协议的一致性
@@ -1144,48 +1181,48 @@ class ViewController: UIViewController {
          实例:
          下面的例子定义了一个 HasArea 的协议，要求有一个Double类型可读的 area：
          */
-//        protocol HasArea {
-//            var area: Double { get }
-//        }
-//
-//        // 定义了Circle类，都遵循了HasArea协议
-//        class Circle: HasArea {
-//            let pi = 3.1415927
-//            var radius: Double
-//            var area: Double { return pi * radius * radius }
-//            init(radius: Double) { self.radius = radius }
-//        }
-//
-//        // 定义了Country类，都遵循了HasArea协议
-//        class Country: HasArea {
-//            var area: Double
-//            init(area: Double) { self.area = area }
-//        }
-//
-//        // Animal是一个没有实现HasArea协议的类
-//        class Animal {
-//            var legs: Int
-//            init(legs: Int) { self.legs = legs }
-//        }
-//
-//        let objects: [AnyObject] = [
-//            Circle(radius: 2.0),
-//            Country(area: 243_610),
-//            Animal(legs: 4)
-//        ]
-//
-//        for object in objects {
-//            // 对迭代出的每一个元素进行检查，看它是否遵循了HasArea协议
-//            if let objectWithArea = object as? HasArea {
-//                print("面积为 \(objectWithArea.area)")
-//            } else {
-//                print("没有面积")
-//            }
-//        }
-//        以上程序执行输出结果为：
-//        面积为 12.5663708
-//        面积为 243610.0
-//        没有面积
+        //        protocol HasArea {
+        //            var area: Double { get }
+        //        }
+        //
+        //        // 定义了Circle类，都遵循了HasArea协议
+        //        class Circle: HasArea {
+        //            let pi = 3.1415927
+        //            var radius: Double
+        //            var area: Double { return pi * radius * radius }
+        //            init(radius: Double) { self.radius = radius }
+        //        }
+        //
+        //        // 定义了Country类，都遵循了HasArea协议
+        //        class Country: HasArea {
+        //            var area: Double
+        //            init(area: Double) { self.area = area }
+        //        }
+        //
+        //        // Animal是一个没有实现HasArea协议的类
+        //        class Animal {
+        //            var legs: Int
+        //            init(legs: Int) { self.legs = legs }
+        //        }
+        //
+        //        let objects: [AnyObject] = [
+        //            Circle(radius: 2.0),
+        //            Country(area: 243_610),
+        //            Animal(legs: 4)
+        //        ]
+        //
+        //        for object in objects {
+        //            // 对迭代出的每一个元素进行检查，看它是否遵循了HasArea协议
+        //            if let objectWithArea = object as? HasArea {
+        //                print("面积为 \(objectWithArea.area)")
+        //            } else {
+        //                print("没有面积")
+        //            }
+        //        }
+        //        以上程序执行输出结果为：
+        //        面积为 12.5663708
+        //        面积为 243610.0
+        //        没有面积
     }
     
     func extensionLearn() {
@@ -1206,12 +1243,12 @@ class ViewController: UIViewController {
          语法：
          扩展声明使用关键字 extension：
          extension SomeType {
-             // 加到SomeType的新功能写到这里
+         // 加到SomeType的新功能写到这里
          }
          
          一个扩展可以扩展一个已有类型，使其能够适配一个或多个协议，语法格式如下：
          extension SomeType: SomeProtocol, AnotherProctocol {
-             // 协议实现写到这里
+         // 协议实现写到这里
          }
          */
         
@@ -1224,27 +1261,27 @@ class ViewController: UIViewController {
          下面的例子向 Int 类型添加了 5 个计算型实例属性并扩展其功能：
          */
         print("1、计算型属性")
-//        extension Int {
-//           var add: Int {return self + 100 }
-//           var sub: Int { return self - 10 }
-//           var mul: Int { return self * 10 }
-//           var div: Int { return self / 5 }
-//        }
-//
-//        let addition = 3.add
-//        print("加法运算后的值：\(addition)")
-//
-//        let subtraction = 120.sub
-//        print("减法运算后的值：\(subtraction)")
-//
-//        let multiplication = 39.mul
-//        print("乘法运算后的值：\(multiplication)")
-//
-//        let division = 55.div
-//        print("除法运算后的值: \(division)")
-//
-//        let mix = 30.add + 34.sub
-//        print("混合运算结果：\(mix)")
+        //        extension Int {
+        //           var add: Int {return self + 100 }
+        //           var sub: Int { return self - 10 }
+        //           var mul: Int { return self * 10 }
+        //           var div: Int { return self / 5 }
+        //        }
+        //
+        //        let addition = 3.add
+        //        print("加法运算后的值：\(addition)")
+        //
+        //        let subtraction = 120.sub
+        //        print("减法运算后的值：\(subtraction)")
+        //
+        //        let multiplication = 39.mul
+        //        print("乘法运算后的值：\(multiplication)")
+        //
+        //        let division = 55.div
+        //        print("除法运算后的值: \(division)")
+        //
+        //        let mix = 30.add + 34.sub
+        //        print("混合运算结果：\(mix)")
         
         // 2、构造器
         /*
@@ -1253,32 +1290,32 @@ class ViewController: UIViewController {
          扩展可以向类中添加新的便利构造器 init()，但是它们不能向类中添加新的指定构造器或析构函数 deinit() 。
          */
         print("2、构造器")
-//        struct sum {
-//            var num1 = 100, num2 = 200
-//        }
-//
-//        struct diff {
-//            var no1 = 200, no2 = 100
-//        }
-//
-//        struct mult {
-//            var a = sum()
-//            var b = diff()
-//        }
-//
-//        extension mult {
-//            init(x: sum, y: diff) {
-//                _ = x.num1 + x.num2
-//                _ = y.no1 + y.no2
-//            }
-//        }
-//
-//        let a = sum(num1: 100, num2: 200)
-//        let b = diff(no1: 200, no2: 100)
-//
-//        let getMult = mult(x: a, y: b)
-//        print("getMult sum\(getMult.a.num1, getMult.a.num2)")
-//        print("getMult diff\(getMult.b.no1, getMult.b.no2)")
+        //        struct sum {
+        //            var num1 = 100, num2 = 200
+        //        }
+        //
+        //        struct diff {
+        //            var no1 = 200, no2 = 100
+        //        }
+        //
+        //        struct mult {
+        //            var a = sum()
+        //            var b = diff()
+        //        }
+        //
+        //        extension mult {
+        //            init(x: sum, y: diff) {
+        //                _ = x.num1 + x.num2
+        //                _ = y.no1 + y.no2
+        //            }
+        //        }
+        //
+        //        let a = sum(num1: 100, num2: 200)
+        //        let b = diff(no1: 200, no2: 100)
+        //
+        //        let getMult = mult(x: a, y: b)
+        //        print("getMult sum\(getMult.a.num1, getMult.a.num2)")
+        //        print("getMult diff\(getMult.b.no1, getMult.b.no2)")
         /*
          这个topics方法使用了一个() -> ()类型的单参数，表明函数没有参数而且没有返回值。
          定义该扩展之后，你就可以对任意整数调用 topics 方法,实现的功能则是多次执行某任务：
@@ -1294,26 +1331,26 @@ class ViewController: UIViewController {
          下面的例子向 Swift 的 Double 类型添加了一个新的名为 square 的修改方法，来实现一个原始值的平方计算：
          */
         print("3、可变实例方法")
-//        extension Double {
-//           mutating func square() {
-//              let pi = 3.1415
-//              self = pi * self * self
-//           }
-//        }
-//
-//        var Trial1 = 3.3
-//        Trial1.square()
-//        print("圆的面积为: \(Trial1)")
-//
-//
-//        var Trial2 = 5.8
-//        Trial2.square()
-//        print("圆的面积为: \(Trial2)")
-//
-//
-//        var Trial3 = 120.3
-//        Trial3.square()
-//        print("圆的面积为: \(Trial3)")
+        //        extension Double {
+        //           mutating func square() {
+        //              let pi = 3.1415
+        //              self = pi * self * self
+        //           }
+        //        }
+        //
+        //        var Trial1 = 3.3
+        //        Trial1.square()
+        //        print("圆的面积为: \(Trial1)")
+        //
+        //
+        //        var Trial2 = 5.8
+        //        Trial2.square()
+        //        print("圆的面积为: \(Trial2)")
+        //
+        //
+        //        var Trial3 = 120.3
+        //        Trial3.square()
+        //        print("圆的面积为: \(Trial3)")
         
         
         // 4、下标
@@ -1323,70 +1360,70 @@ class ViewController: UIViewController {
          实例:
          以下例子向 Swift 内建类型Int添加了一个整型下标。该下标[n]返回十进制数字
          */
-//        extension Int {
-//           subscript(var multtable: Int) -> Int {
-//              var no1 = 1
-//              while multtable > 0 {
-//                 no1 *= 10
-//                 --multtable
-//              }
-//              return (self / no1) % 10
-//           }
-//        }
-//
-//        print(12[0])
-//        print(7869[1])
-//        print(786543[2])
+        //        extension Int {
+        //           subscript(var multtable: Int) -> Int {
+        //              var no1 = 1
+        //              while multtable > 0 {
+        //                 no1 *= 10
+        //                 --multtable
+        //              }
+        //              return (self / no1) % 10
+        //           }
+        //        }
+        //
+        //        print(12[0])
+        //        print(7869[1])
+        //        print(786543[2])
         
         
         // 5、嵌套类型
         // 扩展可以向已有的类、结构体和枚举添加新的嵌套类型：
-//        extension Int {
-//           enum calc
-//           {
-//              case add
-//              case sub
-//              case mult
-//              case div
-//              case anything
-//           }
-//
-//           var print: calc {
-//              switch self
-//              {
-//                 case 0:
-//                    return .add
-//                 case 1:
-//                    return .sub
-//                 case 2:
-//                    return .mult
-//                 case 3:
-//                    return .div
-//                 default:
-//                    return .anything
-//               }
-//           }
-//        }
-//
-//        func result(numb: [Int]) {
-//           for i in numb {
-//              switch i.print {
-//                 case .add:
-//                    print(" 10 ")
-//                  case .sub:
-//                    print(" 20 ")
-//                 case .mult:
-//                 print(" 30 ")
-//                 case .div:
-//                 print(" 40 ")
-//                 default:
-//                 print(" 50 ")
-//
-//              }
-//           }
-//        }
-//
-//        result([0, 1, 2, 3, 4, 7])
+        //        extension Int {
+        //           enum calc
+        //           {
+        //              case add
+        //              case sub
+        //              case mult
+        //              case div
+        //              case anything
+        //           }
+        //
+        //           var print: calc {
+        //              switch self
+        //              {
+        //                 case 0:
+        //                    return .add
+        //                 case 1:
+        //                    return .sub
+        //                 case 2:
+        //                    return .mult
+        //                 case 3:
+        //                    return .div
+        //                 default:
+        //                    return .anything
+        //               }
+        //           }
+        //        }
+        //
+        //        func result(numb: [Int]) {
+        //           for i in numb {
+        //              switch i.print {
+        //                 case .add:
+        //                    print(" 10 ")
+        //                  case .sub:
+        //                    print(" 20 ")
+        //                 case .mult:
+        //                 print(" 30 ")
+        //                 case .div:
+        //                 print(" 40 ")
+        //                 default:
+        //                 print(" 50 ")
+        //
+        //              }
+        //           }
+        //        }
+        //
+        //        result([0, 1, 2, 3, 4, 7])
         
         
     }
@@ -1407,7 +1444,7 @@ class ViewController: UIViewController {
                 self.physics = physics
             }
         }
-
+        
         class Chemistry: Subjects {
             var equations: String
             init(physics: String, equations: String) {
@@ -1415,7 +1452,7 @@ class ViewController: UIViewController {
                 super.init(physics: physics)
             }
         }
-
+        
         class Maths: Subjects {
             var formulae: String
             init(physics: String, formulae: String) {
@@ -1423,20 +1460,20 @@ class ViewController: UIViewController {
                 super.init(physics: physics)
             }
         }
-
+        
         let sa = [
             Chemistry(physics: "固体物理", equations: "赫兹"),
             Maths(physics: "流体动力学", formulae: "千兆赫"),
             Chemistry(physics: "热物理学", equations: "分贝"),
             Maths(physics: "天体物理学", formulae: "兆赫"),
             Maths(physics: "微分方程", formulae: "余弦级数")]
-
-
+        
+        
         let samplechem = Chemistry(physics: "固体物理", equations: "赫兹")
         print("实例物理学是: \(samplechem.physics)")
         print("实例方程式: \(samplechem.equations)")
-
-
+        
+        
         let samplemaths = Maths(physics: "流体动力学", formulae: "千兆赫")
         print("实例物理学是: \(samplemaths.physics)")
         print("实例公式是: \(samplemaths.formulae)")
@@ -1488,17 +1525,17 @@ class ViewController: UIViewController {
          注意：
          只有当你明确的需要它的行为和功能时才使用Any和AnyObject。在你的代码里使用你期望的明确的类型总是更好的。
          */
-
+        
         // 4.1 Any 实例
         // 可以存储Any类型的数组 exampleany
         print("4.1 Any 实例")
         var exampleany = [Any]()
-
+        
         exampleany.append(12)
         exampleany.append(3.14159)
         exampleany.append("Any 实例")
         exampleany.append(Chemistry(physics: "固体物理", equations: "兆赫"))
-
+        
         for item2 in exampleany {
             switch item2 {
             case let someInt as Int:
@@ -1523,7 +1560,7 @@ class ViewController: UIViewController {
             Chemistry(physics: "热物理学", equations: "分贝"),
             Maths(physics: "天体物理学", formulae: "兆赫"),
             Maths(physics: "微分方程", formulae: "余弦级数")]
-       
+        
         for item in saprint {
             // 类型转换的条件形式
             if let show = item as? Chemistry {
@@ -1533,7 +1570,7 @@ class ViewController: UIViewController {
                 print("数学主题是: '\(example.physics)',  \(example.formulae)")
             }
         }
-    
+        
         for item2 in exampleany {
             switch item2 {
             case let someInt as Int:
@@ -1587,20 +1624,20 @@ class ViewController: UIViewController {
             var tenant: Person?
             deinit { print("Apartment #\(number) 被析构") }
         }
-
+        
         // 值会被自动初始化为nil，目前还不会引用到Person类的实例
         var reference1: Person?
         var reference2: Person?
         var reference3: Person?
-
+        
         // 创建Person类的新实例
         reference1 = Person(name: "Runoob")
-
-
+        
+        
         //赋值给其他两个变量，该实例又会多出两个强引用
         reference2 = reference1
         reference3 = reference1
-
+        
         //断开第一个强引用
         reference1 = nil
         //断开第二个强引用
@@ -1613,21 +1650,21 @@ class ViewController: UIViewController {
          在上面的例子中，ARC 会跟踪你所新创建的 Person 实例的引用数量，并且会在 Person 实例不再被需要时销毁它。
          然而，我们可能会写出这样的代码，一个类永远不会有0个强引用。这种情况发生在两个类实例互相保持对方的强引用，并让对方不被销毁。这就是所谓的循环强引用。
          实例：
-            下面展示了一个不经意产生循环强引用的例子。例子定义了两个类：Person和Apartment，用来建模公寓和它其中的居民:
+         下面展示了一个不经意产生循环强引用的例子。例子定义了两个类：Person和Apartment，用来建模公寓和它其中的居民:
          */
         // 两个变量都被初始化为nil
         var runoob: Person?
         var number73: Apartment?
-
+        
         // 赋值
         runoob = Person(name: "Runoob")
         number73 = Apartment(number: 73)
-
+        
         // 意感叹号是用来展开和访问可选变量 runoob 和 number73 中的实例
         // 循环强引用被创建
         runoob!.apartment = number73
         number73!.tenant = runoob
-
+        
         // 断开 runoob 和 number73 变量所持有的强引用时，引用计数并不会降为 0，实例也不会被 ARC 销毁
         // 注意，当你把这两个变量设为nil时，没有任何一个析构函数被调用。
         // 强引用循环阻止了Person和Apartment类实例的销毁，并在你的应用程序中造成了内存泄漏
@@ -1650,7 +1687,7 @@ class ViewController: UIViewController {
             var sub: SubModule?
             deinit { print("\(name) 主模块") }
         }
-
+        
         class SubModule {
             let number: Int
             
@@ -1660,14 +1697,14 @@ class ViewController: UIViewController {
             
             deinit { print("子模块 topic 数为 \(number)") }
         }
-
+        
         var toc: Module?
         var list: SubModule?
         toc = Module(name: "ARC")
         list = SubModule(number: 4)
         toc!.sub = list
         list!.topic = toc
-
+        
         toc = nil
         list = nil
         
@@ -1693,7 +1730,7 @@ class ViewController: UIViewController {
             
             deinit { print("学生的分数为 \(marks)") }
         }
-
+        
         var module: Student?
         module = Student(name: "ARC")
         module!.section = Marks(marks: 98, stname: module!)
@@ -1771,11 +1808,11 @@ class ViewController: UIViewController {
             }
             
         }
-
+        
         //创建并打印HTMLElement实例
         var paragraph2: HTMLElement2? = HTMLElement2(name: "p", text: "hello, world")
         print(paragraph2!.asHTML())
-
+        
         // HTMLElement实例将会被销毁，并能看到它的析构函数打印出的消息
         paragraph2 = nil
     }
@@ -1809,13 +1846,13 @@ class ViewController: UIViewController {
         class Person {
             var residence: Residence?
         }
-
+        
         class Residence {
             var numberOfRooms = 1
         }
         let john = Person()
         //将导致运行时错误
-//        let roomCount = john.residence!.numberOfRooms     // 运行crash
+        //        let roomCount = john.residence!.numberOfRooms     // 运行crash
         // 想使用感叹号（!）强制解析获得这个人residence属性numberOfRooms属性值，将会引发运行时错误，因为这时没有可以供解析的residence值。
         
         // 3、使用问号(?)可选链实例
@@ -1823,11 +1860,11 @@ class ViewController: UIViewController {
         class Person1 {
             var residence: Residence?
         }
-
+        
         class Residence1 {
             var numberOfRooms = 1
         }
-
+        
         let john1 = Person1()
         // 链接可选residence?属性，如果residence存在则取回numberOfRooms的值
         if let roomCount = john1.residence?.numberOfRooms {
@@ -1846,13 +1883,13 @@ class ViewController: UIViewController {
          你可以使用可选链来多层调用属性，方法，和下标脚本。这让你可以利用它们之间的复杂模型来获取更底层的属性，并检查是否可以成功获取此类底层属性。
          
          实例:
-            定义了四个模型类，其中包括多层可选链：
+         定义了四个模型类，其中包括多层可选链：
          */
         print("4、为可选链定义模型类")
         class Person2 {
             var residence: Residence2?
         }
-
+        
         // 定义了一个变量rooms，它被初始化为一个Room[]类型的空数组
         class Residence2 {
             var rooms = [Room2]()
@@ -1867,13 +1904,13 @@ class ViewController: UIViewController {
             }
             var address: Address2?
         }
-
+        
         // Room 定义一个name属性和一个设定room名的初始化器
         class Room2 {
             let name: String
             init(name: String) { self.name = name }
         }
-
+        
         // 模型中的最终类叫做Address
         class Address2 {
             var buildingName: String?
@@ -1920,12 +1957,12 @@ class ViewController: UIViewController {
         johnsHouse.rooms.append(Room2(name: "客厅"))
         johnsHouse.rooms.append(Room2(name: "厨房"))
         john7.residence = johnsHouse
-
+        
         let johnsAddress = Address2()
         johnsAddress.buildingName = "The Larches"
         johnsAddress.street = "Laurel Street"
         john7.residence!.address = johnsAddress
-
+        
         if let johnsStreet = john7.residence?.address?.street {
             print("John 所在的街道是 \(johnsStreet)。")
         } else {
@@ -1935,12 +1972,12 @@ class ViewController: UIViewController {
         // 7、通过可选链接调用来访问下标
         // 通过可选链接调用，我们可以用下标来对可选值进行读取或写入，并且判断下标调用是否成功。
         let john8 = Person2()
-
+        
         let johnsHouse8 = Residence2()
         johnsHouse8.rooms.append(Room2(name: "客厅"))
         johnsHouse8.rooms.append(Room2(name: "厨房"))
         john8.residence = johnsHouse8
-
+        
         if let firstRoomName = john8.residence?[0].name {
             print("第一个房间名为\(firstRoomName)")
         } else {
@@ -1972,7 +2009,7 @@ class ViewController: UIViewController {
          */
         print("9、连接多层链接")
         let john9 = Person2()
-
+        
         if let johnsStreet = john9.residence?.address?.street {
             print("John 的地址为 \(johnsStreet).")
         } else {
@@ -1981,9 +2018,9 @@ class ViewController: UIViewController {
         // 实例2
         // 如果你为Address设定一个实例来作为john.residence.address的值，并为address的street属性设定一个实际值，你可以通过多层可选链来得到这个属性值。
         class Person3 {
-           var residence: Residence3?
+            var residence: Residence3?
         }
-
+        
         class Residence3 {
             var rooms = [Room3]()
             var numberOfRooms: Int {
@@ -2002,12 +2039,12 @@ class ViewController: UIViewController {
             }
             var address: Address3?
         }
-
+        
         class Room3 {
             let name: String
             init(name: String) { self.name = name }
         }
-
+        
         class Address3 {
             var buildingName: String?
             var buildingNumber: String?
@@ -2024,12 +2061,12 @@ class ViewController: UIViewController {
         }
         let john10 = Person3()
         john10.residence?[0] = Room3(name: "浴室")
-
+        
         let johnsHouse10 = Residence3()
         johnsHouse10.rooms.append(Room3(name: "客厅"))
         johnsHouse10.rooms.append(Room3(name: "厨房"))
         john10.residence = johnsHouse10
-
+        
         if let firstRoomName = john10.residence?[0].name {
             print("第一个房间是\(firstRoomName)")
         } else {
@@ -2040,7 +2077,7 @@ class ViewController: UIViewController {
         // 11、对返回可选值的函数进行链接
         // 我们还可以通过可选链接来调用返回可空值的方法，并且可以继续对可选值进行链接。
         let john11 = Person2()
-
+        
         if john11.residence?.printNumberOfRooms() != nil {
             print("指定了房间号)")
         }  else {
@@ -2062,27 +2099,27 @@ class ViewController: UIViewController {
          例如，如果创建了一个自定义的类来打开一个文件，并写入一些数据，你可能需要在类实例被释放之前关闭该文件。
          
          语法 ：
-            在类的定义中，每个类最多只能有一个析构函数。析构函数不带任何参数，在写法上不带括号：
+         在类的定义中，每个类最多只能有一个析构函数。析构函数不带任何参数，在写法上不带括号：
          deinit {
-             // 执行析构过程
+         // 执行析构过程
          }
-
+         
          */
         
         // 2、实例
         var counter = 0;  // 引用计数器
         class BaseClass {
             init() {
-//                counter += 1;     // 验证请释放注释
+                //                counter += 1;     // 验证请释放注释
             }
             deinit {
-//                counter -= 1;     // 验证请释放注释
+                //                counter -= 1;     // 验证请释放注释
             }
         }
         
         var show: BaseClass? = BaseClass()
         print(counter)
-//        show = nil            // 会执行deinit
+        //        show = nil            // 会执行deinit
         print(counter)
         
     }
@@ -2104,9 +2141,9 @@ class ViewController: UIViewController {
          类和结构体在实例创建时，必须为所有存储型属性设置合适的初始值。
          存储属性在构造器中赋值时，它们的值是被直接设置的，不会触发任何属性观测器。
          存储属性在构造器中赋值流程：
-            [1]创建初始值。
-            [2]在属性定义中指定默认属性值。
-            [3]初始化实例，并调用 init() 方法。
+         [1]创建初始值。
+         [2]在属性定义中指定默认属性值。
+         [3]初始化实例，并调用 init() 方法。
          */
         
         // 1.3、构造器
@@ -2171,10 +2208,10 @@ class ViewController: UIViewController {
                 area = leng * bread
             }
         }
-
+        
         let ar = Rectangle(fromLength: 6, fromBreadth: 12)
         print("面积为: \(ar.area)")
-
+        
         let are = Rectangle(fromLeng: 36, fromBread: 12)
         print("面积为: \(are.area)")
         
@@ -2199,14 +2236,14 @@ class ViewController: UIViewController {
                 blue  = white
             }
         }
-
+        
         // 创建一个新的Color实例，通过三种颜色的外部参数名来传值，并调用构造器
         let magenta = Color(red: 1.0, green: 0.0, blue: 1.0)
-
+        
         print("red 值为: \(magenta.red)")
         print("green 值为: \(magenta.green)")
         print("blue 值为: \(magenta.blue)")
-
+        
         // 创建一个新的Color实例，通过三种颜色的外部参数名来传值，并调用构造器
         let halfGray = Color(white: 0.5)
         print("red 值为: \(halfGray.red)")
@@ -2294,14 +2331,14 @@ class ViewController: UIViewController {
                 length = area
             }
         }
-
+        
         _ = Rectangle4(180.0)
         print("面积为：\(rectarea.length)")
         let rearea4 = Rectangle4(370.0)
         print("面积为：\(rearea.length)")
         let recarea4 = Rectangle4(110.0)
         print("面积为：\(recarea.length)")
-//        recarea.length = 2000   编译报错：不在构造内，常量不可更改
+        //        recarea.length = 2000   编译报错：不在构造内，常量不可更改
         
         
         // 1.11、默认构造器
@@ -2349,7 +2386,7 @@ class ViewController: UIViewController {
         struct Point {
             var x = 0.0, y = 0.0
         }
-
+        
         struct Rect {
             var origin = Point()
             var size = Size()
@@ -2364,25 +2401,25 @@ class ViewController: UIViewController {
                 self.init(origin: Point(x: originX, y: originY), size: size)
             }
         }
-
+        
         // origin和size属性都使用定义时的默认值Point(x: 0.0, y: 0.0)和Size(width: 0.0, height: 0.0)：
         let basicRect = Rect()
         print("Size 结构体初始值: \(basicRect.size.width),\(basicRect.size.height) ")
         print("Rect 结构体初始值: \(basicRect.origin.x),\(basicRect.origin.y) ")
-
+        
         // 将origin和size的参数值赋给对应的存储型属性
         let originRect = Rect(origin: Point(x: 2.0, y: 2.0),
-            size: Size(width: 5.0, height: 5.0))
-
+                              size: Size(width: 5.0, height: 5.0))
+        
         print("Size 结构体初始值: \(originRect.size.width),\(originRect.size.height) ")
         print("Rect 结构体初始值: \(originRect.origin.x),\(originRect.origin.y) ")
-
-
+        
+        
         //先通过center和size的值计算出origin的坐标。
         //然后再调用（或代理给）init(origin:size:)构造器来将新的origin和size值赋值到对应的属性中
         let centerRect = Rect(center: Point(x: 4.0, y: 4.0),
-            size: Size(width: 3.0, height: 3.0))
-
+                              size: Size(width: 3.0, height: 3.0))
+        
         print("Size 结构体初始值: \(centerRect.size.width),\(centerRect.size.height) ")
         print("Rect 结构体初始值: \(centerRect.origin.x),\(centerRect.origin.y) ")
         
@@ -2475,7 +2512,7 @@ class ViewController: UIViewController {
         }
         let rectangle2 = SuperClass3()
         print("矩形: \(rectangle2.description)")
-
+        
         class SubClass3: SuperClass3 {
             override init() {  //重载构造器
                 super.init()
@@ -2554,7 +2591,7 @@ class ViewController: UIViewController {
          你可以通过构造一个带一个或多个参数的可失败构造器来获取枚举类型中特定的枚举成员。
          
          实例:
-            下例中，定义了一个名为TemperatureUnit的枚举类型。其中包含了三个可能的枚举成员(Kelvin，Celsius，和 Fahrenheit)和一个被用来找到Character值所对应的枚举成员的可失败构造器：
+         下例中，定义了一个名为TemperatureUnit的枚举类型。其中包含了三个可能的枚举成员(Kelvin，Celsius，和 Fahrenheit)和一个被用来找到Character值所对应的枚举成员的可失败构造器：
          */
         enum TemperatureUnit {
             // 开尔文，摄氏，华氏
@@ -2572,12 +2609,12 @@ class ViewController: UIViewController {
                 }
             }
         }
-
+        
         let fahrenheitUnit = TemperatureUnit(symbol: "F")
         if fahrenheitUnit != nil {
             print("这是一个已定义的温度单位，所以初始化成功。")
         }
-
+        
         let unknownUnit = TemperatureUnit(symbol: "X")
         if unknownUnit == nil {
             print("这不是一个已定义的温度单位，所以初始化失败。")
@@ -2610,7 +2647,7 @@ class ViewController: UIViewController {
          
          
          实例
-            以下实例描述了可失败与非可失败构造器：
+         以下实例描述了可失败与非可失败构造器：
          */
         class Planet {
             var name: String
@@ -2625,10 +2662,10 @@ class ViewController: UIViewController {
         }
         let plName = Planet(name: "Mercury")
         print("行星的名字是: \(plName.name)")
-
+        
         let noplName = Planet()
         print("没有这个名字的行星: \(noplName.name)")
-
+        
         class planets: Planet {
             var count: Int
             
@@ -2654,12 +2691,12 @@ class ViewController: UIViewController {
                 self.stname = stname
             }
         }
-
+        
         let stmark = StudRecord(stname: "Runoob")
         if let name = stmark {
             print("指定了学生名")
         }
-
+        
         let blankname = StudRecord(stname: "")
         if blankname == nil {
             print("学生名为空")
@@ -2668,7 +2705,7 @@ class ViewController: UIViewController {
     
     func successionLearn() {
         // 继承
-
+        
         /*
          继承我们可以理解为一个类获取了另外一个类的方法和属性。
          当一个类继承其它类时，继承类叫子类，被继承类叫超类（或父类)
@@ -2711,7 +2748,7 @@ class ViewController: UIViewController {
          为了指明某个类的超类，将超类名写在子类名的后面，用冒号(:)分隔,语法格式如下
          
          class SomeClass: SomeSuperclass {
-             // 类的定义
+         // 类的定义
          }
          */
         // 实例
@@ -2730,13 +2767,13 @@ class ViewController: UIViewController {
                 print("Mark1:\(self.mark1), Mark2:\(self.mark2)")
             }
         }
-
+        
         class Tom : LearnDetail {
             init() {
                 super.init(stm1: 93, results: 89)
             }
         }
-
+        
         let tom = Tom()
         tom.show()
         
@@ -2756,23 +2793,23 @@ class ViewController: UIViewController {
         /*
          在我们的子类中我们可以使用 override 关键字来重写超类的方法。
          以下实例中我们重写了 show() 方法：
-        */
+         */
         print("3.1 重写方法")
         class SuperClass {
             func show() {
                 print("这是超类 SuperClass")
             }
         }
-
+        
         class SubClass: SuperClass  {
             override func show() {
                 print("这是子类 SubClass")
             }
         }
-
+        
         let superClass = SuperClass()
         superClass.show()
-
+        
         let subClass = SubClass()
         subClass.show()
         
@@ -2793,7 +2830,7 @@ class ViewController: UIViewController {
                 return "矩形半径 \(radius) "
             }
         }
-
+        
         // 继承超类 Circle
         class Rectangle: Circle {
             var show = 7
@@ -2801,7 +2838,7 @@ class ViewController: UIViewController {
                 return super.area + " ，但现在被重写为 \(show)"
             }
         }
-
+        
         let rect = Rectangle()
         rect.radius = 25.0
         rect.show = 3
@@ -2847,7 +2884,7 @@ class ViewController: UIViewController {
     func indexScriptLearn() {
         
         // Swift 下标脚本
-       /*
+        /*
          下标脚本 可以定义在类（Class）、结构体（structure）和枚举（enumeration）这些目标中，可以认为是访问对象、集合或序列的快捷方式，不需要再调用实例的特定的赋值和访问方法。
          举例来说，用下标脚本访问一个数组(Array)实例中的元素可以这样写 someArray[index] ，访问字典(Dictionary)实例中的元素可以这样写 someDictionary[key]。
          对于同一个目标可以定义多个下标脚本，通过索引值类型的不同来进行重载，而且索引值的个数可以是多个。
@@ -2862,12 +2899,12 @@ class ViewController: UIViewController {
          与实例方法不同的是下标脚本可以设定为读写或只读。这种方式又有点像计算型属性的getter和setter：
          
          subscript(index: Int) -> Int {
-            get {
-                // 用于下标脚本值的声明
-            }
-            set(newValue) {
-                // 执行赋值操作
-            }
+         get {
+         // 用于下标脚本值的声明
+         }
+         set(newValue) {
+         // 执行赋值操作
+         }
          }
          */
         
@@ -2894,7 +2931,7 @@ class ViewController: UIViewController {
         // 3、实例2
         class daysofaweek {
             private var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
-                "Thursday", "Friday", "saturday"]
+                                "Thursday", "Friday", "saturday"]
             subscript(index: Int) -> String {
                 get {
                     return days[index]   // 声明下标脚本的值
@@ -2949,13 +2986,13 @@ class ViewController: UIViewController {
         }
         // 创建了一个新的 3 行 3 列的Matrix实例
         var mat = Matrix(rows: 3, columns: 3)
-
+        
         // 通过下标脚本设置值
         mat[0,0] = 1.0
         mat[0,1] = 2.0
         mat[1,0] = 3.0
         mat[1,1] = 5.0
-
+        
         // 通过下标脚本获取值
         print("\(mat[0,0])")
         print("\(mat[0,1])")
@@ -2978,8 +3015,8 @@ class ViewController: UIViewController {
         /*
          在 Swift 语言中，实例方法是属于某个特定类、结构体或者枚举类型实例的方法。
          实例方法提供以下方法：
-            【1】可以访问和修改实例属性
-            【2】提供与实例目的相关的功能
+         【1】可以访问和修改实例属性
+         【2】提供与实例目的相关的功能
          实例方法要写在它所属的类型的前后大括号({})之间。
          实例方法能够隐式访问它所属类型的所有的其他实例方法和属性。
          实例方法只能被它所属的类的某个特定实例调用。
@@ -2988,11 +3025,11 @@ class ViewController: UIViewController {
          语法：
          func funcname(Parameters) -> returntype
          {
-             Statement1
-             Statement2
-             ……
-             Statement N
-             return parameters
+         Statement1
+         Statement2
+         ……
+         Statement N
+         return parameters
          }
          */
         
@@ -3011,7 +3048,7 @@ class ViewController: UIViewController {
         }
         // 初始计数值是0
         let counter = Counter()
-
+        
         // 计数值现在是1
         counter.increment()
         // 计数值现在是6
@@ -3037,7 +3074,7 @@ class ViewController: UIViewController {
                 print(count)
             }
         }
-
+        
         let counter2 = division()
         counter2.incrementBy(no1: 1800, no2: 3)
         counter2.incrementBy(no1: 1600, no2: 5)
@@ -3090,10 +3127,10 @@ class ViewController: UIViewController {
                 print("结果为: \(tot(c: 50))")
             }
         }
-
+        
         let pri = calculations(a: 600, b: 300)
         let sum = calculations(a: 1200, b: 300)
-
+        
         pri.result()
         sum.result()
         
@@ -3119,7 +3156,7 @@ class ViewController: UIViewController {
                 print(breadth)
             }
         }
-
+        
         var val = area(length: 3, breadth: 5)
         val.scaleBy(res: 3)
         val.scaleBy(res: 30)
@@ -3165,7 +3202,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-
+        
         struct absno {
             static func abs(number: Int) -> Int {
                 if number < 0 {
@@ -3175,10 +3212,10 @@ class ViewController: UIViewController {
                 }
             }
         }
-
+        
         let no = Math.abs(number: -35)
         let num = absno.abs(number: -5)
-
+        
         print(no)
         print(num)
     }
@@ -3198,8 +3235,8 @@ class ViewController: UIViewController {
          【2】也可以在构造过程中设置或修改存储属性的值，甚至修改常量存储属性的值
          */
         struct Number {
-           var digits: Int
-           let numbers = 3.1415
+            var digits: Int
+            let numbers = 3.1415
         }
         
         var n = Number(digits: 12345)
@@ -3212,7 +3249,7 @@ class ViewController: UIViewController {
          代码中 pi 在定义存储属性的时候指定默认值（pi = 3.1415），所以不管你什么时候实例化结构体，它都不会改变。
          如果你定义的是一个常量存储属性，如果尝试修改它就会报错，如下所示：
          */
-//        n.numbers = 8.7 // 编译不过：常量不能修改
+        //        n.numbers = 8.7 // 编译不过：常量不能修改
         
         // 2、延迟存储属性
         /*
@@ -3220,20 +3257,20 @@ class ViewController: UIViewController {
          在属性声明前使用 lazy 来标示一个延迟存储属性。
          
          注意：
-            必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
+         必须将延迟存储属性声明成变量（使用var关键字），因为属性的值在实例构造完成之前可能无法得到。而常量属性在构造过程完成之前必须要有初始值，因此无法声明成延迟属性。
          
          延迟存储属性一般用于：
-            延迟对象的创建。
-            当属性的值依赖于其他未知类
+         延迟对象的创建。
+         当属性的值依赖于其他未知类
          */
         class sample {
             lazy var no = number() // `var` 关键字是必须的
         }
-
+        
         class number {
             var name = "Runoob Swift 教程"
         }
-
+        
         let firstsample = sample()
         print(firstsample.no.name)
         
@@ -3265,7 +3302,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-
+        
         let result = sample2()
         print(result.middle)
         print(result.no1)
@@ -3278,10 +3315,10 @@ class ViewController: UIViewController {
         
         // 4、只读计算属性
         /*
-            只有 getter 没有 setter 的计算属性就是只读计算属性。
-            只读计算属性总是返回一个值，可以通过点(.)运算符访问，但不能设置新的值。
-            
-            下问的metaInfo就是只读
+         只有 getter 没有 setter 的计算属性就是只读计算属性。
+         只读计算属性总是返回一个值，可以通过点(.)运算符访问，但不能设置新的值。
+         
+         下问的metaInfo就是只读
          */
         print("只读计算属性")
         class film {
@@ -3294,7 +3331,7 @@ class ViewController: UIViewController {
                 ]
             }
         }
-
+        
         let movie = film()
         movie.head = "Swift 属性"
         movie.duration = 3.09
@@ -3309,12 +3346,12 @@ class ViewController: UIViewController {
          可以为除了延迟存储属性之外的其他存储属性添加属性观察器，也可以通过重载属性的方式为继承的属性（包括存储属性和计算属性）添加属性观察器。
          
          注意：
-            不需要为无法重载的计算属性添加属性观察器，因为可以通过 setter 直接监控和响应值的变化。
+         不需要为无法重载的计算属性添加属性观察器，因为可以通过 setter 直接监控和响应值的变化。
          
          可以为属性添加如下的一个或全部观察器：
-            willSet在设置新的值之前调用
-            didSet在新的值被设置之后立即调用
-            willSet和didSet观察器在属性初始化过程中不会被调用
+         willSet在设置新的值之前调用
+         didSet在新的值被设置之后立即调用
+         willSet和didSet观察器在属性初始化过程中不会被调用
          */
         print("属性观察器")
         class Samplepgm {
@@ -3341,27 +3378,27 @@ class ViewController: UIViewController {
          使用关键字 static 来定义值类型的类型属性，关键字 class 来为类定义类型属性。
          
          struct Structname {
-            static var storedTypeProperty = " "
-            static var computedTypeProperty: Int {
-               // 这里返回一个 Int 值
-            }
+         static var storedTypeProperty = " "
+         static var computedTypeProperty: Int {
+         // 这里返回一个 Int 值
          }
-
+         }
+         
          enum Enumname {
-            static var storedTypeProperty = " "
-            static var computedTypeProperty: Int {
-               // 这里返回一个 Int 值
-            }
+         static var storedTypeProperty = " "
+         static var computedTypeProperty: Int {
+         // 这里返回一个 Int 值
          }
-
+         }
+         
          class Classname {
-            class var computedTypeProperty: Int {
-               // 这里返回一个 Int 值
-            }
+         class var computedTypeProperty: Int {
+         // 这里返回一个 Int 值
+         }
          }
          
          注意：
-            例子中的计算型类型属性是只读的，但也可以定义可读可写的计算型类型属性，跟实例计算属性的语法类似。
+         例子中的计算型类型属性是只读的，但也可以定义可读可写的计算型类型属性，跟实例计算属性的语法类似。
          */
         
         
@@ -3370,33 +3407,33 @@ class ViewController: UIViewController {
          类似于实例的属性，类型属性的访问也是通过点运算符(.)来进行。但是，类型属性是通过类型本身来获取和设置，而不是通过实例。实例如下：
          */
         struct StudMarks {
-           static let markCount = 97
-           static var totalCount = 0
-           var InternalMarks: Int = 0 {
-              didSet {
-                 if InternalMarks > StudMarks.markCount {
-                    InternalMarks = StudMarks.markCount
-                 }
-                 if InternalMarks > StudMarks.totalCount {
-                    StudMarks.totalCount = InternalMarks
-                 }
-              }
-           }
+            static let markCount = 97
+            static var totalCount = 0
+            var InternalMarks: Int = 0 {
+                didSet {
+                    if InternalMarks > StudMarks.markCount {
+                        InternalMarks = StudMarks.markCount
+                    }
+                    if InternalMarks > StudMarks.totalCount {
+                        StudMarks.totalCount = InternalMarks
+                    }
+                }
+            }
         }
-
+        
         var stud1Mark1 = StudMarks()
         var stud1Mark2 = StudMarks()
-
+        
         stud1Mark1.InternalMarks = 98
         print(stud1Mark1.InternalMarks)
-
+        
         stud1Mark2.InternalMarks = 87
         print(stud1Mark2.InternalMarks)
     }
     
     func classLearn() {
         // swift 类
-
+        
         /* 1、类介绍
          Swift 类是构建代码所用的一种通用且灵活的构造体。
          我们可以为类定义属性（常量、变量）和方法。
@@ -3405,25 +3442,25 @@ class ViewController: UIViewController {
         
         /* 2、类和结构体共同点、额外功能
          【1】Swift 中类和结构体有很多共同点。共同处在于：
-            定义属性用于存储值
-            定义方法用于提供功能
-            定义附属脚本用于访问值
-            定义构造器用于生成初始化值
-            通过扩展以增加默认实现的功能
-            符合协议以对某类提供标准功能
+         定义属性用于存储值
+         定义方法用于提供功能
+         定义附属脚本用于访问值
+         定义构造器用于生成初始化值
+         通过扩展以增加默认实现的功能
+         符合协议以对某类提供标准功能
          【2】与结构体相比，类还有如下的附加功能：
-            继承允许一个类继承另一个类的特征
-            类型转换允许在运行时检查和解释一个类实例的类型
-            解构器允许一个类实例释放任何其所被分配的资源
-            引用计数允许对一个类的多次引用
+         继承允许一个类继承另一个类的特征
+         类型转换允许在运行时检查和解释一个类实例的类型
+         解构器允许一个类实例释放任何其所被分配的资源
+         引用计数允许对一个类的多次引用
          */
         
         /* 3、语法:
          class classname {
-            Definition 1
-            Definition 2
-            ……
-            Definition N
+         Definition 1
+         Definition 2
+         ……
+         Definition N
          }
          */
         
@@ -3438,14 +3475,14 @@ class ViewController: UIViewController {
         
         // 5、案例
         // 5.1 模范结构体
-//        class studentMarks {
-//            var mark: Int
-//            init(mark: Int) {
-//                self.mark = mark
-//            }
-//        }
-//        let marks = studentMarks(mark: 500)
-//        print("成绩为 \(marks.mark)")
+        //        class studentMarks {
+        //            var mark: Int
+        //            init(mark: Int) {
+        //                self.mark = mark
+        //            }
+        //        }
+        //        let marks = studentMarks(mark: 500)
+        //        print("成绩为 \(marks.mark)")
         
         // 5.2 正常类初始化
         class studentMarks {
@@ -3466,7 +3503,7 @@ class ViewController: UIViewController {
          如果两个常量或者变量引用同一个类实例则返回 true       如果两个常量或者变量引用不同一个类实例则返回 true
          */
         class SampleClass {
-           var mark: String
+            var mark: String
             init(mark: String) {
                 self.mark = mark
             }
@@ -3494,27 +3531,27 @@ class ViewController: UIViewController {
          语法
          我们通过关键字 struct 来定义结构体：
          struct nameStruct {
-            Definition 1
-            Definition 2
-            ……
-            Definition N
+         Definition 1
+         Definition 2
+         ……
+         Definition N
          }
          */
         
         // 实例：基本案例
         // 我们定义一个名为 MarkStruct 的结构体 ，结构体的属性为学生三个科目的分数，数据类型为 Int：
-//        struct MarkStruct{
-//           var mark1: Int
-//           var mark2: Int
-//           var mark3: Int
-//        }
+        //        struct MarkStruct{
+        //           var mark1: Int
+        //           var mark2: Int
+        //           var mark3: Int
+        //        }
         
         // 我们可以通过结构体名来访问结构体成员。
         // 结构体实例化使用 let 关键字：
         struct studentMarks {
-           var mark1 = 100
-           var mark2 = 78
-           var mark3 = 98
+            var mark1 = 100
+            var mark2 = 78
+            var mark3 = 98
         }
         let marks = studentMarks()
         print("Mark1 是 \(marks.mark1)")
@@ -3527,10 +3564,10 @@ class ViewController: UIViewController {
          以下实例化通过结构体实例化时传值并克隆一个结构体：
          */
         struct MarksStruct {
-           var mark: Int
-           init(mark: Int) {
-              self.mark = mark
-           }
+            var mark: Int
+            init(mark: Int) {
+                self.mark = mark
+            }
         }
         let aStruct = MarksStruct(mark: 98)
         var bStruct = aStruct // aStruct 和 bStruct 是使用相同值的结构体！
@@ -3570,7 +3607,7 @@ class ViewController: UIViewController {
         print(marks2.mark1)
         print(marks2.mark2)
         print(marks2.mark3)
-
+        
         print("糟糕成绩:")
         let fail = markStruct(mark1: 34, mark2: 42, mark3: 13)
         print(fail.mark1)
@@ -3595,7 +3632,7 @@ class ViewController: UIViewController {
          
          语法: Swift 中使用 enum 关键词来创建枚举并且把它们的整个定义放在一对大括号内：
          enum enumname {
-            // 枚举定义放在这里
+         // 枚举定义放在这里
          }
          */
         
@@ -3612,10 +3649,10 @@ class ViewController: UIViewController {
         
         /* 案例PS
          【1】枚举中定义的值（如 Sunday，Monday，……和Saturday）是这个枚举的成员值（或成员）。case关键词表示一行新的成员值将被定义。
- 
+         
          【2】注意： 和 C 和 Objective-C 不同，Swift 的枚举成员在被创建时不会被赋予一个默认的整型值。在上面的DaysofaWeek例子中，Sunday，Monday，……和Saturday不会隐式地赋值为0，1，……和6。相反，这些枚举成员本身就有完备的值，这些值是已经明确定义好的DaysofaWeek类型。
          */
-
+        
         var weekDay = DaysofaWeek.THURSDAY
         // weekDay的类型可以在它被DaysofaWeek的一个可能值初始化时推断出来。一旦weekDay被声明为一个DaysofaWeek，你可以使用一个缩写语法（.）将其设置为另一个DaysofaWeek的值：
         weekDay = .FRIDAY
@@ -3637,14 +3674,14 @@ class ViewController: UIViewController {
             print("星期六")
         }
         
-
+        
         // 1.1 相关值
         /*
-            相关值                                                                                     原始值
-            不同数据类型                                                                                相同数据类型
-            实例: enum {10,0.8,"Hello"}                                                                实例: enum {10,35,50}
-            值的创建基于常量或变量                                                                         预先填充的值
-            相关值是当你在创建一个基于枚举成员的新常量或变量时才会被设置，并且每次当你这么做得时候，它的值可以是不同的。    原始值始终是相同的
+         相关值                                                                                     原始值
+         不同数据类型                                                                                相同数据类型
+         实例: enum {10,0.8,"Hello"}                                                                实例: enum {10,35,50}
+         值的创建基于常量或变量                                                                         预先填充的值
+         相关值是当你在创建一个基于枚举成员的新常量或变量时才会被设置，并且每次当你这么做得时候，它的值可以是不同的。    原始值始终是相同的
          */
         
         // 1.1.1 相关值
@@ -3674,12 +3711,12 @@ class ViewController: UIViewController {
          原始值可以是字符串，字符，或者任何整型值或浮点型值。每个原始值在它的枚举声明中必须是唯一的。
          在原始值为整数的枚举时，不需要显式的为每一个成员赋值，Swift会自动为你赋值。
          例如，当使用整数作为原始值时，隐式赋值的值依次递增1。如果第一个值没有被赋初值，将会被自动置为0。
-
+         
          */
         enum Month: Int {
             case January = 1, February, March, April, May, June, July, August, September, October, November, December
         }
-
+        
         let yearMonth = Month.August.rawValue
         print("数字月份为: \(yearMonth)。")
     }
@@ -3695,7 +3732,7 @@ class ViewController: UIViewController {
          【1】全局函数：有名字但不能捕获任何值。
          【2】嵌套函数：有名字，也能捕获封闭函数内的值。
          【3】闭包表达式：有名字，也能捕获封闭函数内的值。
-                 
+         
          Swift中的闭包有很多优化的地方:
          【1】根据上下文推断参数和返回值类型
          【2】从单行表达式闭包中隐式返回（也就是闭包体只有一行代码，可以省略return）
@@ -3708,7 +3745,7 @@ class ViewController: UIViewController {
         /*// 实例1
          以下定义了一个接收参数并返回指定类型的闭包语法：
          {(parameters) -> return type in
-            statements
+         statements
          }
          */
         let studname = {print("Swift 闭包实例。")}
@@ -3717,14 +3754,14 @@ class ViewController: UIViewController {
         /*// 实例2
          以下闭包形式接收两个参数并返回布尔值：
          {(Int, Int) -> Bool in
-            Statement1
-            Statement 2
-             ---
-            Statement n
+         Statement1
+         Statement 2
+         ---
+         Statement n
          }
          */
         let divide = {(val1: Int, val2: Int) -> Int in
-           return val1 / val2
+            return val1 / val2
         }
         let result = divide(200, 20)
         print(result)
@@ -3768,17 +3805,17 @@ class ViewController: UIViewController {
         /*
          尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用。
          func someFunctionThatTakesAClosure(closure: () -> Void) {
-             // 函数体部分
+         // 函数体部分
          }
-
+         
          // 以下是不使用尾随闭包进行函数调用
          someFunctionThatTakesAClosure({
-             // 闭包主体部分
+         // 闭包主体部分
          })
-
+         
          // 以下是使用尾随闭包进行函数调用
          someFunctionThatTakesAClosure() {
-           // 闭包主体部分
+         // 闭包主体部分
          }
          */
         print("尾随闭包")
@@ -3812,11 +3849,11 @@ class ViewController: UIViewController {
         }
         /*
          一个函数makeIncrementor ，它有一个Int型的参数amout, 并且它有一个外部参数名字forIncremet，意味着你调用的时候，必须使用这个外部名字。返回值是一个()-> Int的函数。
-                
+         
          函数体内，声明了变量 runningTotal 和一个函数 incrementor。
-                incrementor函数并没有获取任何参数，但是在函数体内访问了runningTotal和amount变量。这是因为其通过捕获在包含它的函数体内已经存在的runningTotal和amount变量而实现。
-                由于没有修改amount变量，incrementor实际上捕获并存储了该变量的一个副本，而该副本随着incrementor一同被存储。
-                所以我们调用这个函数时会累加：
+         incrementor函数并没有获取任何参数，但是在函数体内访问了runningTotal和amount变量。这是因为其通过捕获在包含它的函数体内已经存在的runningTotal和amount变量而实现。
+         由于没有修改amount变量，incrementor实际上捕获并存储了该变量的一个副本，而该副本随着incrementor一同被存储。
+         所以我们调用这个函数时会累加：
          */
         print("初始 求值")
         let incrementByTen = makeIncrementor(forIncrement: 10)
@@ -3841,7 +3878,7 @@ class ViewController: UIViewController {
         let alsoIncrementByTen = incrementByTen
         // 返回的值也为40
         print(alsoIncrementByTen())
-
+        
     }
     
     func funcLearn() -> () {
@@ -3849,8 +3886,8 @@ class ViewController: UIViewController {
         /*
          Swift 函数用来完成特定任务的独立的代码块。
          Swift使用一个统一的语法来表示简单的C语言风格的函数到复杂的Objective-C语言风格的方法。
-            函数声明: 告诉编译器函数的名字，返回类型及参数。
-            函数定义: 提供了函数的实体。
+         函数声明: 告诉编译器函数的名字，返回类型及参数。
+         函数定义: 提供了函数的实体。
          Swift 函数包含了参数类型及返回值类型：
          */
         
@@ -3863,8 +3900,8 @@ class ViewController: UIViewController {
          语法:
          func funcname(形参) -> returntype
          {
-            code ...
-            return parameters
+         code ...
+         return parameters
          }
          */
         let name = wctFunc(name: "wct")
@@ -3893,11 +3930,11 @@ class ViewController: UIViewController {
         
         // 1.5 外部参数名
         func pow(firstArg a: Int, secondArg b: Int) -> Int {
-           var res = a
-           for _ in 1..<b {
-              res = res * a
-           }
-           return res
+            var res = a
+            for _ in 1..<b {
+                res = res * a
+            }
+            return res
         }
         let number = pow(firstArg:5, secondArg:3)
         print(number)
@@ -3942,7 +3979,7 @@ class ViewController: UIViewController {
         // 1.8 使用函数类型（将整个函数作为一个变量）
         // 在 Swift 中，使用函数类型就像使用其他类型一样。例如，你可以定义一个类型为函数的常量或变量，并将适当的函数赋值给它：
         func sum(a: Int, b: Int) -> Int {
-           return a + b
+            return a + b
         }
         let addition: (Int, Int) -> Int = sum
         print("输出结果: \(addition(40, 89))")
@@ -3957,12 +3994,12 @@ class ViewController: UIViewController {
         
         // 1.10 函数嵌套
         func calcDecrement(forDecrement total: Int) -> () -> Int {
-           var overallDecrement = 0
-           func decrementer() -> Int {
-              overallDecrement -= total
-              return overallDecrement
-           }
-           return decrementer
+            var overallDecrement = 0
+            func decrementer() -> Int {
+                overallDecrement -= total
+                return overallDecrement
+            }
+            return decrementer
         }
         let decrem = calcDecrement(forDecrement: 30)
         print(decrem())
@@ -4024,7 +4061,7 @@ class ViewController: UIViewController {
         // 1.5 遍历
         print("遍历字典：遍历值")
         for (key, value) in someDataDict {
-           print("字典 key \(key) -  字典 value \(value)")
+            print("字典 key \(key) -  字典 value \(value)")
         }
         print("遍历字典：遍历value + key + 下标")
         for (index, value) in someDataDict.enumerated() {
@@ -4087,7 +4124,7 @@ class ViewController: UIViewController {
         // 1.3 遍历数组
         // 【1】只输出值
         for item in someDataInts {
-           print(item)
+            print(item)
         }
         // 【2】输出值和下标：
         /*
@@ -4116,7 +4153,7 @@ class ViewController: UIViewController {
     
     func baseLearn() -> () {
         print("基础知识学习")
-    
+        
         // 1、定义常量用let、变量用var
         let str = "hello swift"
         let number = 100

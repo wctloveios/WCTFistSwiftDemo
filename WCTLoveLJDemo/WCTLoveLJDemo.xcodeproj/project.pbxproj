@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		04D74EE424B0D959008D0E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EE324B0D959008D0E3B /* AppDelegate.swift */; };
-		04D74EE624B0D959008D0E3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EE524B0D959008D0E3B /* SceneDelegate.swift */; };
-		04D74EE824B0D959008D0E3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EE724B0D959008D0E3B /* ViewController.swift */; };
-		04D74EEB24B0D959008D0E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D74EE924B0D959008D0E3B /* Main.storyboard */; };
 		04D74EED24B0D95A008D0E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74EEC24B0D95A008D0E3B /* Assets.xcassets */; };
-		04D74EF024B0D95A008D0E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D74EEE24B0D95A008D0E3B /* LaunchScreen.storyboard */; };
 		04D74EFB24B0D95A008D0E3B /* WCTLoveLJDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EFA24B0D95A008D0E3B /* WCTLoveLJDemoTests.swift */; };
 		04D74F0624B0D95A008D0E3B /* WCTLoveLJDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F0524B0D95A008D0E3B /* WCTLoveLJDemoUITests.swift */; };
+		04D74F1524B0DBD7008D0E3B /* WCTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F1424B0DBD7008D0E3B /* WCTLoginViewController.swift */; };
+		04D74F1724B0DBEF008D0E3B /* WCTRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F1624B0DBEF008D0E3B /* WCTRegisterViewController.swift */; };
+		04D74F1924B0DC02008D0E3B /* WCTSetPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F1824B0DC02008D0E3B /* WCTSetPassWordViewController.swift */; };
+		04D74F1F24B0DC4E008D0E3B /* WCTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F1E24B0DC4E008D0E3B /* WCTHomeViewController.swift */; };
+		04D74F2124B0DC78008D0E3B /* WCTAccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F2024B0DC78008D0E3B /* WCTAccountDetailViewController.swift */; };
+		04D74F2524B0DDA4008D0E3B /* WCTWifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F2424B0DDA4008D0E3B /* WCTWifeViewController.swift */; };
+		04D74F2924B0DE2F008D0E3B /* WCTUserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F2824B0DE2F008D0E3B /* WCTUserCenterViewController.swift */; };
+		04D74F2B24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74F2A24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift */; };
+		04D74F2D24B0E3BA008D0E3B /* Launch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04D74F2C24B0E3BA008D0E3B /* Launch.jpg */; };
+		3584ACFE911A3B4C35B5029E /* Pods_WCTLoveLJDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A1261A5692F6D089C13219 /* Pods_WCTLoveLJDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +43,7 @@
 /* Begin PBXFileReference section */
 		04D74EE024B0D959008D0E3B /* WCTLoveLJDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTLoveLJDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D74EE324B0D959008D0E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04D74EE524B0D959008D0E3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04D74EE724B0D959008D0E3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04D74EEA24B0D959008D0E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04D74EEC24B0D95A008D0E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04D74EEF24B0D95A008D0E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04D74EF124B0D95A008D0E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04D74EF624B0D95A008D0E3B /* WCTLoveLJDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCTLoveLJDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D74EFA24B0D95A008D0E3B /* WCTLoveLJDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTLoveLJDemoTests.swift; sourceTree = "<group>"; };
@@ -49,6 +51,18 @@
 		04D74F0124B0D95A008D0E3B /* WCTLoveLJDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCTLoveLJDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D74F0524B0D95A008D0E3B /* WCTLoveLJDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTLoveLJDemoUITests.swift; sourceTree = "<group>"; };
 		04D74F0724B0D95A008D0E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D74F1424B0DBD7008D0E3B /* WCTLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTLoginViewController.swift; sourceTree = "<group>"; };
+		04D74F1624B0DBEF008D0E3B /* WCTRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTRegisterViewController.swift; sourceTree = "<group>"; };
+		04D74F1824B0DC02008D0E3B /* WCTSetPassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTSetPassWordViewController.swift; sourceTree = "<group>"; };
+		04D74F1E24B0DC4E008D0E3B /* WCTHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTHomeViewController.swift; sourceTree = "<group>"; };
+		04D74F2024B0DC78008D0E3B /* WCTAccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTAccountDetailViewController.swift; sourceTree = "<group>"; };
+		04D74F2424B0DDA4008D0E3B /* WCTWifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTWifeViewController.swift; sourceTree = "<group>"; };
+		04D74F2824B0DE2F008D0E3B /* WCTUserCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTUserCenterViewController.swift; sourceTree = "<group>"; };
+		04D74F2A24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTTabbarViewContrller.swift; sourceTree = "<group>"; };
+		04D74F2C24B0E3BA008D0E3B /* Launch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Launch.jpg; sourceTree = "<group>"; };
+		A4EB2888F6D5802E91A43B08 /* Pods-WCTLoveLJDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTLoveLJDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCTLoveLJDemo/Pods-WCTLoveLJDemo.release.xcconfig"; sourceTree = "<group>"; };
+		E5A1261A5692F6D089C13219 /* Pods_WCTLoveLJDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTLoveLJDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F09B00283C3CE93D6C485399 /* Pods-WCTLoveLJDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTLoveLJDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTLoveLJDemo/Pods-WCTLoveLJDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3584ACFE911A3B4C35B5029E /* Pods_WCTLoveLJDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				04D74EF924B0D95A008D0E3B /* WCTLoveLJDemoTests */,
 				04D74F0424B0D95A008D0E3B /* WCTLoveLJDemoUITests */,
 				04D74EE124B0D959008D0E3B /* Products */,
+				F75E55DB86E89F5D2B17B4D4 /* Pods */,
+				5C278807EA42CAF1B05D67BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +116,11 @@
 		04D74EE224B0D959008D0E3B /* WCTLoveLJDemo */ = {
 			isa = PBXGroup;
 			children = (
+				04D74F2C24B0E3BA008D0E3B /* Launch.jpg */,
 				04D74EE324B0D959008D0E3B /* AppDelegate.swift */,
-				04D74EE524B0D959008D0E3B /* SceneDelegate.swift */,
-				04D74EE724B0D959008D0E3B /* ViewController.swift */,
-				04D74EE924B0D959008D0E3B /* Main.storyboard */,
+				04D74F1D24B0DC39008D0E3B /* TabBar */,
+				04D74F1324B0DBB9008D0E3B /* UserAccount */,
 				04D74EEC24B0D95A008D0E3B /* Assets.xcassets */,
-				04D74EEE24B0D95A008D0E3B /* LaunchScreen.storyboard */,
 				04D74EF124B0D95A008D0E3B /* Info.plist */,
 			);
 			path = WCTLoveLJDemo;
@@ -128,6 +144,53 @@
 			path = WCTLoveLJDemoUITests;
 			sourceTree = "<group>";
 		};
+		04D74F1324B0DBB9008D0E3B /* UserAccount */ = {
+			isa = PBXGroup;
+			children = (
+				04D74F1C24B0DC1F008D0E3B /* ViewController */,
+			);
+			path = UserAccount;
+			sourceTree = "<group>";
+		};
+		04D74F1C24B0DC1F008D0E3B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04D74F1424B0DBD7008D0E3B /* WCTLoginViewController.swift */,
+				04D74F1624B0DBEF008D0E3B /* WCTRegisterViewController.swift */,
+				04D74F1824B0DC02008D0E3B /* WCTSetPassWordViewController.swift */,
+				04D74F2024B0DC78008D0E3B /* WCTAccountDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04D74F1D24B0DC39008D0E3B /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				04D74F1E24B0DC4E008D0E3B /* WCTHomeViewController.swift */,
+				04D74F2824B0DE2F008D0E3B /* WCTUserCenterViewController.swift */,
+				04D74F2424B0DDA4008D0E3B /* WCTWifeViewController.swift */,
+				04D74F2A24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5C278807EA42CAF1B05D67BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5A1261A5692F6D089C13219 /* Pods_WCTLoveLJDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F75E55DB86E89F5D2B17B4D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F09B00283C3CE93D6C485399 /* Pods-WCTLoveLJDemo.debug.xcconfig */,
+				A4EB2888F6D5802E91A43B08 /* Pods-WCTLoveLJDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04D74F0A24B0D95A008D0E3B /* Build configuration list for PBXNativeTarget "WCTLoveLJDemo" */;
 			buildPhases = (
+				D205BC76E6C50D74F48EC9B7 /* [CP] Check Pods Manifest.lock */,
 				04D74EDC24B0D959008D0E3B /* Sources */,
 				04D74EDD24B0D959008D0E3B /* Frameworks */,
 				04D74EDE24B0D959008D0E3B /* Resources */,
+				2D23280AB9C94FA781F6A325 /* [CP] Embed Pods Frameworks */,
+				A0FBC7A7FA9D36188E751351 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,9 +298,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D74EF024B0D95A008D0E3B /* LaunchScreen.storyboard in Resources */,
 				04D74EED24B0D95A008D0E3B /* Assets.xcassets in Resources */,
-				04D74EEB24B0D959008D0E3B /* Main.storyboard in Resources */,
+				04D74F2D24B0E3BA008D0E3B /* Launch.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +319,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D23280AB9C94FA781F6A325 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WCTLoveLJDemo/Pods-WCTLoveLJDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTLoveLJDemo/Pods-WCTLoveLJDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0FBC7A7FA9D36188E751351 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTLoveLJDemo/Pods-WCTLoveLJDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D205BC76E6C50D74F48EC9B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WCTLoveLJDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04D74EDC24B0D959008D0E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D74EE824B0D959008D0E3B /* ViewController.swift in Sources */,
+				04D74F1724B0DBEF008D0E3B /* WCTRegisterViewController.swift in Sources */,
+				04D74F2924B0DE2F008D0E3B /* WCTUserCenterViewController.swift in Sources */,
+				04D74F1524B0DBD7008D0E3B /* WCTLoginViewController.swift in Sources */,
+				04D74F2B24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift in Sources */,
+				04D74F1924B0DC02008D0E3B /* WCTSetPassWordViewController.swift in Sources */,
+				04D74F1F24B0DC4E008D0E3B /* WCTHomeViewController.swift in Sources */,
 				04D74EE424B0D959008D0E3B /* AppDelegate.swift in Sources */,
-				04D74EE624B0D959008D0E3B /* SceneDelegate.swift in Sources */,
+				04D74F2124B0DC78008D0E3B /* WCTAccountDetailViewController.swift in Sources */,
+				04D74F2524B0DDA4008D0E3B /* WCTWifeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +420,6 @@
 			targetProxy = 04D74F0224B0D95A008D0E3B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		04D74EE924B0D959008D0E3B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04D74EEA24B0D959008D0E3B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		04D74EEE24B0D95A008D0E3B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04D74EEF24B0D95A008D0E3B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04D74F0824B0D95A008D0E3B /* Debug */ = {
@@ -432,6 +538,7 @@
 		};
 		04D74F0B24B0D95A008D0E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F09B00283C3CE93D6C485399 /* Pods-WCTLoveLJDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,12 +550,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTLoveLJDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		04D74F0C24B0D95A008D0E3B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4EB2888F6D5802E91A43B08 /* Pods-WCTLoveLJDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTLoveLJDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

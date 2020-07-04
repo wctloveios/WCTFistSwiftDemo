@@ -1,2 +1,3 @@
 # WCTFistSwiftDemo
-一个完成的swift demo 工程
+【1】Swift 基础知识4.0学习
+【2】Swift UIKit 学习

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042C7D2E24B20FBE00CE11D2 /* WCTUserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C7D2D24B20FBE00CE11D2 /* WCTUserDefaultManager.swift */; };
+		042C7D3124B22C0900CE11D2 /* WCTAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C7D3024B22C0900CE11D2 /* WCTAccountManager.swift */; };
 		04D74EE424B0D959008D0E3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EE324B0D959008D0E3B /* AppDelegate.swift */; };
 		04D74EED24B0D95A008D0E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04D74EEC24B0D95A008D0E3B /* Assets.xcassets */; };
 		04D74EFB24B0D95A008D0E3B /* WCTLoveLJDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D74EFA24B0D95A008D0E3B /* WCTLoveLJDemoTests.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042C7D2D24B20FBE00CE11D2 /* WCTUserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTUserDefaultManager.swift; sourceTree = "<group>"; };
+		042C7D3024B22C0900CE11D2 /* WCTAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTAccountManager.swift; sourceTree = "<group>"; };
 		04D74EE024B0D959008D0E3B /* WCTLoveLJDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTLoveLJDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D74EE324B0D959008D0E3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D74EEC24B0D95A008D0E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042C7D2F24B20FCB00CE11D2 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				042C7D2D24B20FBE00CE11D2 /* WCTUserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		04D74ED724B0D959008D0E3B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +130,7 @@
 			children = (
 				04D74F2C24B0E3BA008D0E3B /* Launch.jpg */,
 				04D74EE324B0D959008D0E3B /* AppDelegate.swift */,
+				042C7D2F24B20FCB00CE11D2 /* Manager */,
 				04D74F1D24B0DC39008D0E3B /* TabBar */,
 				04D74F1324B0DBB9008D0E3B /* UserAccount */,
 				04D74EEC24B0D95A008D0E3B /* Assets.xcassets */,
@@ -148,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				04D74F1C24B0DC1F008D0E3B /* ViewController */,
+				042C7D3024B22C0900CE11D2 /* WCTAccountManager.swift */,
 			);
 			path = UserAccount;
 			sourceTree = "<group>";
@@ -381,9 +395,11 @@
 				04D74F1724B0DBEF008D0E3B /* WCTRegisterViewController.swift in Sources */,
 				04D74F2924B0DE2F008D0E3B /* WCTUserCenterViewController.swift in Sources */,
 				04D74F1524B0DBD7008D0E3B /* WCTLoginViewController.swift in Sources */,
+				042C7D2E24B20FBE00CE11D2 /* WCTUserDefaultManager.swift in Sources */,
 				04D74F2B24B0DEA8008D0E3B /* WCTTabbarViewContrller.swift in Sources */,
 				04D74F1924B0DC02008D0E3B /* WCTSetPassWordViewController.swift in Sources */,
 				04D74F1F24B0DC4E008D0E3B /* WCTHomeViewController.swift in Sources */,
+				042C7D3124B22C0900CE11D2 /* WCTAccountManager.swift in Sources */,
 				04D74EE424B0D959008D0E3B /* AppDelegate.swift in Sources */,
 				04D74F2124B0DC78008D0E3B /* WCTAccountDetailViewController.swift in Sources */,
 				04D74F2524B0DDA4008D0E3B /* WCTWifeViewController.swift in Sources */,

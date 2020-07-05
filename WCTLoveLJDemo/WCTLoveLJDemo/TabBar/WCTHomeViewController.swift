@@ -14,8 +14,25 @@ class WCTHomeViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivedLogout), name: NSNotification.Name(rawValue:"WCTDidReceivedLogoutNotification"), object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NotificationCenter.default.post(name: NSNotification.Name("WCTDidReceivedLogoutNotification"), object: self, userInfo: nil)
+    }
+    
+    @objc func didReceivedLogout(nofi : Notification) {
+        let loginManager = WCTUserDefaultManager.init()
+        loginManager.saveLoginState(false)
+        
+        let loginVC = WCTLoginViewController.init()
+        let userCenterNavi = UINavigationController(rootViewController: loginVC)
+        UIApplication.shared.keyWindow?.rootViewController = userCenterNavi
+    }
 
     /*
     // MARK: - Navigation

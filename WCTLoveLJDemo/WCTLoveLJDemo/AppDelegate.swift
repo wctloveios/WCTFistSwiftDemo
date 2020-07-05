@@ -18,10 +18,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.backgroundColor = .white
-        let rootVC = WCTTabbarViewContrller.init()
-        self.window?.rootViewController = rootVC
+        // 判断启动显示页面
+        let loginManager = WCTUserDefaultManager.init()
+        let loginState = loginManager.getLoginState()
+        if loginState == true {
+            let rootVC = WCTTabbarViewContrller.init()
+            self.window?.rootViewController = rootVC
+        } else {
+            let loginVC = WCTLoginViewController.init()
+            let userCenterNavi = UINavigationController(rootViewController: loginVC)
+            self.window?.rootViewController = userCenterNavi
+        }
         self.window?.makeKeyAndVisible()
         
+        // 注册登录登出通知
+//        let accountManager = WCTAccountManager.init()
+//        accountManager.addLoginStateChangedNotifi()
+//        
         return true
     }
 }

@@ -14,9 +14,25 @@ class WCTLoginViewController: UIViewController {
         super.viewDidLoad()
         self.title = "登录"
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(didReceivedLogin), name: NSNotification.Name(rawValue:"WCTDidReceivedLoginNotification"), object: nil)
     }
     
+    deinit {
+         NotificationCenter.default.removeObserver(self)
+     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        NotificationCenter.default.post(name: NSNotification.Name("WCTDidReceivedLoginNotification"), object: self, userInfo: nil)
+    }
+    
+    @objc func didReceivedLogin(nofi : Notification) {
+        let loginManager = WCTUserDefaultManager.init()
+        loginManager.saveLoginState(true)
+
+        let rootVC = WCTTabbarViewContrller.init()
+        UIApplication.shared.keyWindow?.rootViewController = rootVC
+    }
+    
     /*
     // MARK: - Navigation
 

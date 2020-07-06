@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         
         // 注册登录登出通知
-//        let accountManager = WCTAccountManager.init()
-//        accountManager.addLoginStateChangedNotifi()
-//        
+        let accountManager = WCTAccountManager.init()
+        accountManager.addLoginStateChangedNotifi()
+        
         return true
     }
 }

@@ -10,6 +10,12 @@ import UIKit
 
 class WCTTabbarController: UITabBarController {
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        print(tabBar.subviews)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +25,8 @@ class WCTTabbarController: UITabBarController {
         
         // 调用创建子控制器
         addChildViewController()
+        
+        
     }
     
     /// 添加子控制器
@@ -27,6 +35,9 @@ class WCTTabbarController: UITabBarController {
         setChildViewController(WCTVideoViewController(), title: "直播", imageName: "video_tabbar_32x32_", selectImageName: "video_tabbar_press_32x32_")
         setChildViewController(WCTHuoShanViewController(), title: "火山", imageName: "huoshan_tabbar_32x32_", selectImageName: "huoshan_tabbar_press_32x32_")
         setChildViewController(WCTMineViewController(), title: "我的", imageName: "mine_tabbar_32x32_", selectImageName: "mine_tabbar_press_32x32_")
+        
+        // tabBar 是 readonly 属性，不能直接修改，利用 KVC 把 readonly 属性的权限改过来
+        setValue(WCTTabBar(), forKey: "tabBar")
     }
     
     /// 初始化自控制器

@@ -19,6 +19,8 @@
 		046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21624C0A21000F5798A /* WCTNaviViewController.swift */; };
 		046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21724C0A21000F5798A /* WCTTabbarController.swift */; };
 		046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21A24C0A21000F5798A /* WCTTabBar.swift */; };
+		046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22424C0A9D200F5798A /* WCTConst.swift */; };
+		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
 		10BB7EF68CD1AAF363790E58 /* Pods_WCTMoveLearnDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF1BEEA2C3A10FFE7D7C6E1 /* Pods_WCTMoveLearnDemoUITests.framework */; };
 		6140DAD969D7E084DE7245B0 /* Pods_WCTMoveLearnDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */; };
 		82AD0A45442AC2A05BD98493 /* Pods_WCTMoveLearnDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */; };
@@ -60,6 +62,8 @@
 		046CF21624C0A21000F5798A /* WCTNaviViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTNaviViewController.swift; sourceTree = "<group>"; };
 		046CF21724C0A21000F5798A /* WCTTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabbarController.swift; sourceTree = "<group>"; };
 		046CF21A24C0A21000F5798A /* WCTTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabBar.swift; sourceTree = "<group>"; };
+		046CF22424C0A9D200F5798A /* WCTConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTConst.swift; sourceTree = "<group>"; };
+		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0B59B1D9FDA3989B0F2970AA /* Pods-WCTMoveLearnDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoTests/Pods-WCTMoveLearnDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55984C9837E1B655B5427CB4 /* Pods-WCTMoveLearnDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoUITests/Pods-WCTMoveLearnDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			children = (
 				046CF20D24C0A21000F5798A /* AppDelegate.swift */,
 				046CF20E24C0A21000F5798A /* Info.plist */,
+				046CF22424C0A9D200F5798A /* WCTConst.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 		046CF21424C0A21000F5798A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				046CF22624C0AA9600F5798A /* Extension */,
 				046CF21524C0A21000F5798A /* Controller */,
 				046CF21824C0A21000F5798A /* Model */,
 				046CF21924C0A21000F5798A /* View */,
@@ -331,6 +337,14 @@
 				046CF21A24C0A21000F5798A /* WCTTabBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		046CF22624C0AA9600F5798A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				046CF22724C0AAED00F5798A /* UIColor+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		3EE81065D2FAF7035B764F8F /* Frameworks */ = {
@@ -648,8 +662,10 @@
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
+				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
 				046CF21C24C0A21000F5798A /* WCTVideoViewController.swift in Sources */,
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
+				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

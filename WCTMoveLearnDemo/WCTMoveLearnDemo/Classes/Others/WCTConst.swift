@@ -16,3 +16,9 @@ let screenWidth = UIScreen.main.bounds.width
 
 /// 屏幕的高度
 let screenHeight = UIScreen.main.bounds.height
+
+
+/// 服务器地址
+let BASE_URL = "htttps://is.snssdk.com"
+
+let device_id: String = "6096495334"

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040E3AA124C5F4B1009498D6 /* mydata.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E3AA024C5F4B1009498D6 /* mydata.json */; };
 		046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046CF1C524C07F3F00F5798A /* Assets.xcassets */; };
 		046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046CF1C724C07F3F00F5798A /* LaunchScreen.storyboard */; };
 		046CF1D424C07F3F00F5798A /* WCTMoveLearnDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF1D324C07F3F00F5798A /* WCTMoveLearnDemoTests.swift */; };
@@ -21,8 +22,8 @@
 		046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21A24C0A21000F5798A /* WCTTabBar.swift */; };
 		046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22424C0A9D200F5798A /* WCTConst.swift */; };
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
-		10BB7EF68CD1AAF363790E58 /* Pods_WCTMoveLearnDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF1BEEA2C3A10FFE7D7C6E1 /* Pods_WCTMoveLearnDemoUITests.framework */; };
-		6140DAD969D7E084DE7245B0 /* Pods_WCTMoveLearnDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */; };
+		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
+		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
 		82AD0A45442AC2A05BD98493 /* Pods_WCTMoveLearnDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040E3AA024C5F4B1009498D6 /* mydata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mydata.json; sourceTree = "<group>"; };
 		046CF1B924C07F3D00F5798A /* WCTMoveLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTMoveLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046CF1C524C07F3F00F5798A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046CF1C824C07F3F00F5798A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,15 +66,13 @@
 		046CF21A24C0A21000F5798A /* WCTTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabBar.swift; sourceTree = "<group>"; };
 		046CF22424C0A9D200F5798A /* WCTConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTConst.swift; sourceTree = "<group>"; };
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		0B59B1D9FDA3989B0F2970AA /* Pods-WCTMoveLearnDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoTests/Pods-WCTMoveLearnDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
+		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
 		1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55984C9837E1B655B5427CB4 /* Pods-WCTMoveLearnDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoUITests/Pods-WCTMoveLearnDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DF1BEEA2C3A10FFE7D7C6E1 /* Pods_WCTMoveLearnDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		688A3C7425286299079B6194 /* Pods-WCTMoveLearnDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo.release.xcconfig"; sourceTree = "<group>"; };
-		9210363CBCEF8C89C3ECEF7D /* Pods-WCTMoveLearnDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoUITests/Pods-WCTMoveLearnDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6161716C5E81BC5F684F2B8 /* Pods-WCTMoveLearnDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		CB80D18CA524273E524BD41F /* Pods-WCTMoveLearnDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCTMoveLearnDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCTMoveLearnDemoTests/Pods-WCTMoveLearnDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6140DAD969D7E084DE7245B0 /* Pods_WCTMoveLearnDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10BB7EF68CD1AAF363790E58 /* Pods_WCTMoveLearnDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +291,7 @@
 		046CF21224C0A21000F5798A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +306,8 @@
 		046CF21424C0A21000F5798A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04CD9D6A24C2AC74006BF773 /* Source */,
+				04CD9D6524C1F78D006BF773 /* Tools */,
 				046CF22624C0AA9600F5798A /* Extension */,
 				046CF21524C0A21000F5798A /* Controller */,
 				046CF21824C0A21000F5798A /* Model */,
@@ -347,6 +348,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		04CD9D6524C1F78D006BF773 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */,
+				040E3AA024C5F4B1009498D6 /* mydata.json */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		04CD9D6A24C2AC74006BF773 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		3EE81065D2FAF7035B764F8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,10 +379,6 @@
 			children = (
 				C6161716C5E81BC5F684F2B8 /* Pods-WCTMoveLearnDemo.debug.xcconfig */,
 				688A3C7425286299079B6194 /* Pods-WCTMoveLearnDemo.release.xcconfig */,
-				0B59B1D9FDA3989B0F2970AA /* Pods-WCTMoveLearnDemoTests.debug.xcconfig */,
-				CB80D18CA524273E524BD41F /* Pods-WCTMoveLearnDemoTests.release.xcconfig */,
-				55984C9837E1B655B5427CB4 /* Pods-WCTMoveLearnDemoUITests.debug.xcconfig */,
-				9210363CBCEF8C89C3ECEF7D /* Pods-WCTMoveLearnDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -397,12 +410,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046CF1E624C07F3F00F5798A /* Build configuration list for PBXNativeTarget "WCTMoveLearnDemoTests" */;
 			buildPhases = (
-				6879B270BEB7A12CA92D907A /* [CP] Check Pods Manifest.lock */,
 				046CF1CB24C07F3F00F5798A /* Sources */,
 				046CF1CC24C07F3F00F5798A /* Frameworks */,
 				046CF1CD24C07F3F00F5798A /* Resources */,
-				FDF7A9A61A81C302D5A81D2F /* [CP] Embed Pods Frameworks */,
-				0B310BAB3382AB5B9147E308 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -418,12 +428,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046CF1E924C07F3F00F5798A /* Build configuration list for PBXNativeTarget "WCTMoveLearnDemoUITests" */;
 			buildPhases = (
-				5BF1F514A76A8D05EB0C710D /* [CP] Check Pods Manifest.lock */,
 				046CF1D624C07F3F00F5798A /* Sources */,
 				046CF1D724C07F3F00F5798A /* Frameworks */,
 				046CF1D824C07F3F00F5798A /* Resources */,
-				31C000710C997C5A304CDDE2 /* [CP] Embed Pods Frameworks */,
-				E6E0615F8D0B413E3B456338 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -484,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */,
+				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,21 +513,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B310BAB3382AB5B9147E308 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemoTests/Pods-WCTMoveLearnDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		21A8D9D2F01D814D40FA94D5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -532,57 +525,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-WCTMoveLearnDemo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		31C000710C997C5A304CDDE2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemoUITests/Pods-WCTMoveLearnDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5BF1F514A76A8D05EB0C710D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WCTMoveLearnDemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6879B270BEB7A12CA92D907A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WCTMoveLearnDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -604,49 +546,26 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E6E0615F8D0B413E3B456338 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemoUITests/Pods-WCTMoveLearnDemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F1005E213823637D1B3B7213 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FDF7A9A61A81C302D5A81D2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemoTests/Pods-WCTMoveLearnDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -657,6 +576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046CF22024C0A21000F5798A /* WCTMineViewController.swift in Sources */,
+				04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */,
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
@@ -664,6 +584,7 @@
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
 				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
 				046CF21C24C0A21000F5798A /* WCTVideoViewController.swift in Sources */,
+				04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */,
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
 				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
 			);
@@ -866,7 +787,6 @@
 		};
 		046CF1E724C07F3F00F5798A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B59B1D9FDA3989B0F2970AA /* Pods-WCTMoveLearnDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -889,7 +809,6 @@
 		};
 		046CF1E824C07F3F00F5798A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB80D18CA524273E524BD41F /* Pods-WCTMoveLearnDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -912,7 +831,6 @@
 		};
 		046CF1EA24C07F3F00F5798A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55984C9837E1B655B5427CB4 /* Pods-WCTMoveLearnDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -933,7 +851,6 @@
 		};
 		046CF1EB24C07F3F00F5798A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9210363CBCEF8C89C3ECEF7D /* Pods-WCTMoveLearnDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

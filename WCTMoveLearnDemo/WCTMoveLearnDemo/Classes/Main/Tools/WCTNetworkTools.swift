@@ -63,8 +63,10 @@ extension WCTNetworkProtocol {
         
         var model2 = WCTMineCellModel()
         model2.text = "头条商城"
+        model2.gray_text = "邀请好友得200元现金奖励"
         var model3 = WCTMineCellModel()
         model3.text = "京东特供"
+        model3.gray_text = "新人领取188元红包"
         section2.append(model2)
         section2.append(model3)
         

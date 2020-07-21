@@ -24,6 +24,13 @@
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
 		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
 		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
+		04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */; };
+		04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */; };
+		04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */; };
+		04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3C9224C7352B007A4302 /* WCTMineFansCell.xib */; };
+		04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9524C73881007A4302 /* UIView+Extension.swift */; };
+		04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9724C738FF007A4302 /* UITableView+Extension.swift */; };
+		04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9924C73AAC007A4302 /* UICollectionView+Extension.swift */; };
 		82AD0A45442AC2A05BD98493 /* Pods_WCTMoveLearnDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +75,13 @@
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
 		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
+		04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCell.swift; sourceTree = "<group>"; };
+		04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineCell.xib; sourceTree = "<group>"; };
+		04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineFansCell.swift; sourceTree = "<group>"; };
+		04FC3C9224C7352B007A4302 /* WCTMineFansCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineFansCell.xib; sourceTree = "<group>"; };
+		04FC3C9524C73881007A4302 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		04FC3C9724C738FF007A4302 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		04FC3C9924C73AAC007A4302 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF1BEEA2C3A10FFE7D7C6E1 /* Pods_WCTMoveLearnDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +313,10 @@
 		046CF21324C0A21000F5798A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */,
+				04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */,
+				04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */,
+				04FC3C9224C7352B007A4302 /* WCTMineFansCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,6 +362,9 @@
 			isa = PBXGroup;
 			children = (
 				046CF22724C0AAED00F5798A /* UIColor+Extension.swift */,
+				04FC3C9524C73881007A4302 /* UIView+Extension.swift */,
+				04FC3C9724C738FF007A4302 /* UITableView+Extension.swift */,
+				04FC3C9924C73AAC007A4302 /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -493,6 +514,8 @@
 				046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */,
 				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
+				04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */,
+				04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,16 +600,21 @@
 			files = (
 				046CF22024C0A21000F5798A /* WCTMineViewController.swift in Sources */,
 				04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */,
+				04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */,
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
+				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
+				04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */,
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
 				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
+				04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */,
 				046CF21C24C0A21000F5798A /* WCTVideoViewController.swift in Sources */,
 				04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */,
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
 				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
+				04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

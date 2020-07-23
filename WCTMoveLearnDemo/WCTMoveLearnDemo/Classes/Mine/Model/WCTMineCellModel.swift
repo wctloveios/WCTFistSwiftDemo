@@ -22,7 +22,7 @@ struct WCTMineCellModel: HandyJSON {
 
 
 /// 我的关注模型
-struct WCTMineConcern: HandyJSON {
+struct WCTMineFansModel: HandyJSON {
     var name: String = ""
     var url: String = ""
     var total_count: Int?

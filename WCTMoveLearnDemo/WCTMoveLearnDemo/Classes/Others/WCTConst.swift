@@ -17,8 +17,7 @@ let screenWidth = UIScreen.main.bounds.width
 /// 屏幕的高度
 let screenHeight = UIScreen.main.bounds.height
 
+/// 默认的展示icon
+let device_icon_url: String = "https://gtest.aliplus.com/27A429B9B0D949CB8FBA287247E6D8C8/test/a123h0RvLajvfbgm/boneMobile/1.0.140/4f42acbaf776462b61bfbe44b98cfc33/source/assets/app/assets/scene/time.png"
 
-/// 服务器地址
-let BASE_URL = "htttps://is.snssdk.com"
-
-let device_id: String = "6096495334"
+let Kmine_headerView_height: CGFloat = 280

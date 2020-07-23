@@ -11,4 +11,9 @@ target 'WCTMoveLearnDemo' do
   pod 'SwiftyJSON'
   #
   pod 'HandyJSON'
+  # 图片显示框架
+  pod 'Kingfisher'
+  
+  # XIB 功能框架
+  pod 'IBAnimatable'
 end

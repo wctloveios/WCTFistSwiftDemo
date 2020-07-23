@@ -22,7 +22,7 @@ protocol WCTNetworkProtocol {
     static func loadMycellData(completionHandler: @escaping (_ sections: [[WCTMineCellModel]]) -> ())
     
     // 2、我的关注数据
-    static func loadMyConcern()
+    static func loadMyFans(completionHandler: @escaping (_ sections: [WCTMineFansModel]) -> ())
 }
 
 extension WCTNetworkProtocol {
@@ -89,8 +89,27 @@ extension WCTNetworkProtocol {
     }
     
     // 我的关注数据
-    static func loadMyConcern() {
-
+    static func loadMyFans(completionHandler: @escaping (_ sections: [WCTMineFansModel]) -> ()) {
+        // 3、直接mock
+        var sections = [WCTMineFansModel]()
+        
+        var model0 = WCTMineFansModel()
+        model0.name = "兴趣"
+        model0.icon = device_icon_url
+        sections.append(model0)
+        
+        var model1 = WCTMineFansModel()
+        model1.name = "创业邦"
+        model1.icon = device_icon_url
+        sections.append(model1)
+        
+        
+        var model2 = WCTMineFansModel()
+        model2.name = "新浪乐居"
+        model2.icon = device_icon_url
+        sections.append(model2)
+        
+        completionHandler(sections)
     }
 }
 

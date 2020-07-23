@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		040E3AA124C5F4B1009498D6 /* mydata.json in Resources */ = {isa = PBXBuildFile; fileRef = 040E3AA024C5F4B1009498D6 /* mydata.json */; };
+		044EEE2524C9E3420059BB9F /* WCTMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEE2424C9E3420059BB9F /* WCTMineHeaderView.swift */; };
+		044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EEE2624C9E34C0059BB9F /* WCTMineHeaderView.xib */; };
 		046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046CF1C524C07F3F00F5798A /* Assets.xcassets */; };
 		046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046CF1C724C07F3F00F5798A /* LaunchScreen.storyboard */; };
 		046CF1D424C07F3F00F5798A /* WCTMoveLearnDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF1D324C07F3F00F5798A /* WCTMoveLearnDemoTests.swift */; };
@@ -31,6 +33,8 @@
 		04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9524C73881007A4302 /* UIView+Extension.swift */; };
 		04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9724C738FF007A4302 /* UITableView+Extension.swift */; };
 		04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9924C73AAC007A4302 /* UICollectionView+Extension.swift */; };
+		04FC3C9F24C74198007A4302 /* WCTMineFansBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9D24C74198007A4302 /* WCTMineFansBlockCell.swift */; };
+		04FC3CA024C74198007A4302 /* WCTMineFansBlockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3C9E24C74198007A4302 /* WCTMineFansBlockCell.xib */; };
 		82AD0A45442AC2A05BD98493 /* Pods_WCTMoveLearnDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		040E3AA024C5F4B1009498D6 /* mydata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mydata.json; sourceTree = "<group>"; };
+		044EEE2424C9E3420059BB9F /* WCTMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineHeaderView.swift; sourceTree = "<group>"; };
+		044EEE2624C9E34C0059BB9F /* WCTMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineHeaderView.xib; sourceTree = "<group>"; };
 		046CF1B924C07F3D00F5798A /* WCTMoveLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTMoveLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046CF1C524C07F3F00F5798A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		046CF1C824C07F3F00F5798A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		04FC3C9524C73881007A4302 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		04FC3C9724C738FF007A4302 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		04FC3C9924C73AAC007A4302 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		04FC3C9D24C74198007A4302 /* WCTMineFansBlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineFansBlockCell.swift; sourceTree = "<group>"; };
+		04FC3C9E24C74198007A4302 /* WCTMineFansBlockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineFansBlockCell.xib; sourceTree = "<group>"; };
 		1BE20B0908054EAF57507195 /* Pods_WCTMoveLearnDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF1BEEA2C3A10FFE7D7C6E1 /* Pods_WCTMoveLearnDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		612276C5369EB5D846853A4A /* Pods_WCTMoveLearnDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTMoveLearnDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +325,10 @@
 				04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */,
 				04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */,
 				04FC3C9224C7352B007A4302 /* WCTMineFansCell.xib */,
+				04FC3C9D24C74198007A4302 /* WCTMineFansBlockCell.swift */,
+				04FC3C9E24C74198007A4302 /* WCTMineFansBlockCell.xib */,
+				044EEE2424C9E3420059BB9F /* WCTMineHeaderView.swift */,
+				044EEE2624C9E34C0059BB9F /* WCTMineHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -515,6 +527,8 @@
 				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
 				04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */,
+				04FC3CA024C74198007A4302 /* WCTMineFansBlockCell.xib in Resources */,
+				044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */,
 				04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,12 +592,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-WCTMoveLearnDemo/Pods-WCTMoveLearnDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +622,7 @@
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
 				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
 				04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */,
+				04FC3C9F24C74198007A4302 /* WCTMineFansBlockCell.swift in Sources */,
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
@@ -615,6 +634,7 @@
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
 				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
 				04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */,
+				044EEE2524C9E3420059BB9F /* WCTMineHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,10 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -802,10 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -822,11 +836,7 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -844,11 +854,7 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -864,11 +870,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -884,11 +886,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

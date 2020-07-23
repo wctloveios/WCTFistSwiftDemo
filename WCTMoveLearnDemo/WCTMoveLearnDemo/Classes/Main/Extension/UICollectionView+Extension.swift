@@ -9,12 +9,7 @@
 import UIKit
 
 extension UICollectionView {
-    
-    /// T： 代表泛型
-    
-    
     /// 注册 cell 的方法
-    /// - Parameter cell: cell
     func wct_registerCell<T: UICollectionViewCell>(cell: T.Type) where T: RegisterCellOrNib {
         if let nib = T.nib {
             register(nib, forCellWithReuseIdentifier: T.identifier)
@@ -23,10 +18,8 @@ extension UICollectionView {
         }
     }
     
-    
-    /// 从缓存迟取出已经存在的 cell
-    /// - Parameter indexPath: indexPath
-    func wct_dequeueResuableCell<T: UICollectionViewCell>(indexPath: IndexPath) -> T where T:RegisterCellOrNib {
+    /// 从缓存池池出队已经存在的 cell
+    func wct_dequeueReusableCell<T: UICollectionViewCell>(indexPath: IndexPath) -> T where T: RegisterCellOrNib {
         return dequeueReusableCell(withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
 }

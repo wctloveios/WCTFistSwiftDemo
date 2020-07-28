@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class WCTMineViewController: UITableViewController {
+    
+    /// 定义一个本文件可读的内部变量
+    fileprivate let disposeBag = DisposeBag()
     
     // 数组最好指定为具体类型包含零个元素
     var sectionsDataArray = [[WCTMineCellModel]]()
@@ -48,6 +53,15 @@ class WCTMineViewController: UITableViewController {
                 self.tableView.reloadSections(indexSet, with: .automatic)
             }
         }
+        
+        headView.moreBtn.rx.controlEvent(.touchUpInside)
+        .subscribe(onNext: { [weak self] in
+            let storyboard = UIStoryboard(name: String(describing: WCTLoginViewController.self), bundle: nil)
+            let moreLoginVC = storyboard.instantiateViewController(withIdentifier: String(describing: WCTLoginViewController.self)) as! WCTLoginViewController
+            moreLoginVC.modalSize = (width: .full, height: .custom(size: Float(screenHeight - (isIPhoneX ? 44 : 20))))
+            self!.present(moreLoginVC, animated: true, completion: nil)
+        })
+        .disposed(by: disposeBag)
     }
     
     

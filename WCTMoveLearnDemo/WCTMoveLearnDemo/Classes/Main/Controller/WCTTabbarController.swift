@@ -109,4 +109,8 @@ class WCTTabbarController: UITabBarController {
         let navi = WCTNaviViewController(rootViewController: childController)
         addChild(navi)
     }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }

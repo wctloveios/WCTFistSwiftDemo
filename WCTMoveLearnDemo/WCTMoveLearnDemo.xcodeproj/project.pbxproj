@@ -29,6 +29,8 @@
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
 		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
 		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
+		04FBF75024D07AD3008126A3 /* WCTLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */; };
+		04FBF75224D07AD3008126A3 /* WCTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */; };
 		04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */; };
 		04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */; };
 		04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */; };
@@ -87,6 +89,8 @@
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
 		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
+		04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WCTLoginViewController.storyboard; sourceTree = "<group>"; };
+		04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTLoginViewController.swift; sourceTree = "<group>"; };
 		04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCell.swift; sourceTree = "<group>"; };
 		04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineCell.xib; sourceTree = "<group>"; };
 		04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineFansCell.swift; sourceTree = "<group>"; };
@@ -321,6 +325,8 @@
 		046CF21024C0A21000F5798A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */,
+				04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */,
 				046CF21124C0A21000F5798A /* WCTMineViewController.swift */,
 			);
 			path = Controller;
@@ -540,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FBF75024D07AD3008126A3 /* WCTLoginViewController.storyboard in Resources */,
 				046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */,
 				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
@@ -613,6 +620,9 @@
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -622,6 +632,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -640,6 +653,7 @@
 				046CF22024C0A21000F5798A /* WCTMineViewController.swift in Sources */,
 				04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */,
 				04248D3924CDC335002AC94B /* WCTTheme.swift in Sources */,
+				04FBF75224D07AD3008126A3 /* WCTLoginViewController.swift in Sources */,
 				04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */,
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
 				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
@@ -825,10 +839,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -844,10 +855,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -864,11 +872,7 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -886,11 +890,7 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -906,11 +906,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -926,11 +922,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

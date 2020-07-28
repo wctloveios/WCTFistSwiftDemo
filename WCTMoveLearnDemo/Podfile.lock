@@ -5,6 +5,12 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SwiftTheme (0.5.2)
   - SwiftyJSON (5.0.0)
 
@@ -13,6 +19,8 @@ DEPENDENCIES:
   - HandyJSON
   - IBAnimatable
   - Kingfisher
+  - RxCocoa
+  - RxSwift
   - SwiftTheme
   - SwiftyJSON
 
@@ -21,9 +29,12 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 3921fae95ddbffff7e502c833c7b7b1522529665
+PODFILE CHECKSUM: 0dbcc8d3f99e0631f172b44802d9d52daa5f30d6
 
 COCOAPODS: 1.4.0

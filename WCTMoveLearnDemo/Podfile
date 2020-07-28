@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+platform :ios, '10.0'
 
 target 'WCTMoveLearnDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -19,4 +20,8 @@ target 'WCTMoveLearnDemo' do
   
   # 切换t主题框架
   pod 'SwiftTheme'
+  
+  #
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

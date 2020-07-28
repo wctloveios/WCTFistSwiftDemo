@@ -22,3 +22,6 @@ let device_icon_url: String = "https://gtest.aliplus.com/27A429B9B0D949CB8FBA287
 
 /// 夜间模式 key
 let isNight = "isNight"
+
+/// notifi
+let changeTabThemeColor = "dayOrNightButtonClicked"

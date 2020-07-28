@@ -31,6 +31,7 @@ class WCTMineViewController: UITableViewController {
         tableView.tableHeaderView = headView
         tableView.backgroundColor = UIColor.globalBackgroupColor()
         tableView.separatorStyle = .none
+        tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
         
         // 使用扩展方法：cell 同时z遵守协议
         tableView.wct_registerCell(cell: WCTMineCell.self)

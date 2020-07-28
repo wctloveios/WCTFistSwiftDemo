@@ -14,9 +14,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_profile_night" translatesAutoresizingMaskIntoConstraints="NO" id="Noz-d2-Dmj">
-                    <rect key="frame" x="0.0" y="-110" width="375" height="380"/>
+                    <rect key="frame" x="0.0" y="-44" width="375" height="260"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="380" id="TnI-nP-6kq"/>
+                        <constraint firstAttribute="height" constant="260" id="TnI-nP-6kq"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ly8-PV-piI">
@@ -132,7 +132,7 @@
                 <constraint firstItem="ZAA-Vf-eNJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="J92-Oe-bC7"/>
                 <constraint firstItem="Ly8-PV-piI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="MnS-Mb-jEt"/>
                 <constraint firstItem="Ly8-PV-piI" firstAttribute="top" secondItem="ZAA-Vf-eNJ" secondAttribute="bottom" constant="20" id="Xab-wD-kaX"/>
-                <constraint firstItem="Noz-d2-Dmj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-110" id="ihm-Yd-11e"/>
+                <constraint firstItem="Noz-d2-Dmj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-44" id="ihm-Yd-11e"/>
                 <constraint firstItem="HKL-gE-bvT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="9" id="pe6-Sl-W2o"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

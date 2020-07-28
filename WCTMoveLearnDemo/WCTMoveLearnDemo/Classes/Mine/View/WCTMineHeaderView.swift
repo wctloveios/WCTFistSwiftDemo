@@ -27,6 +27,8 @@ class WCTMineHeaderView: UIView, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.theme_backgroundColor = "colors.tableViewBackgroundColor"
+        
         let effectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
         effectX.maximumRelativeValue = 20
         effectX.minimumRelativeValue = -20
@@ -57,7 +59,9 @@ class WCTMineHeaderView: UIView, NibLoadable {
         /// 使用 UserDefaults 保存值
         UserDefaults.standard.set(sender.isSelected, forKey: isNight)
         WCTTheme.switchNight(sender.isSelected)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dayOrNightButtonClicked"), object: sender.isSelected)
+        
+        // 发送修改tabba颜色的通知
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: changeTabThemeColor), object: sender.isSelected)
     }
     
 }

@@ -13,7 +13,8 @@ class WCTTabBar: UITabBar {
     // 默认初始化：补充
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        theme_tintColor = "colors.tabbarTintColor"
+        theme_barTintColor = "colors.cellBackgroundColor"
         addSubview(publishButton)
     }
 
@@ -27,8 +28,8 @@ class WCTTabBar: UITabBar {
      */
     private lazy var publishButton: UIButton = {
         let publishButton = UIButton(type: .custom)
-        publishButton.setBackgroundImage(UIImage(named: "feed_publish_44x44_"), for: .normal)
-        publishButton.setBackgroundImage(UIImage(named: "feed_publish_press_44x44_"), for: .selected)
+        publishButton.theme_setBackgroundImage("images.publishButtonBackgroundImage", forState: .normal)
+        publishButton.theme_setBackgroundImage("images.publishButtonBackgroundSelectedImage", forState: .selected)
         publishButton.sizeToFit()
         return publishButton
     }()

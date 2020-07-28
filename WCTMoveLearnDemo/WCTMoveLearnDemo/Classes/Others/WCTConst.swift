@@ -20,4 +20,5 @@ let screenHeight = UIScreen.main.bounds.height
 /// 默认的展示icon
 let device_icon_url: String = "https://gtest.aliplus.com/27A429B9B0D949CB8FBA287247E6D8C8/test/a123h0RvLajvfbgm/boneMobile/1.0.140/4f42acbaf776462b61bfbe44b98cfc33/source/assets/app/assets/scene/time.png"
 
-let Kmine_headerView_height: CGFloat = 280
+/// 夜间模式 key
+let isNight = "isNight"

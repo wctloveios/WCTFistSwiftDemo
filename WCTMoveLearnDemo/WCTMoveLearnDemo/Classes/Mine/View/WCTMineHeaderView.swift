@@ -8,8 +8,9 @@
 
 import UIKit
 import IBAnimatable
+import SwiftTheme
 
-class WCTMineHeaderView: UIView {
+class WCTMineHeaderView: UIView, NibLoadable {
 
     @IBOutlet weak var sina: UIButton!
     @IBOutlet weak var wechat: UIButton!
@@ -19,8 +20,44 @@ class WCTMineHeaderView: UIView {
     @IBOutlet weak var night: UIButton!
     @IBOutlet weak var collect: UIButton!
     @IBOutlet weak var bgImageV: UIImageView!
-    class func headerView() -> WCTMineHeaderView {
-        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! WCTMineHeaderView
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var moreBtn: AnimatableButton!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        let effectX = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        effectX.maximumRelativeValue = 20
+        effectX.minimumRelativeValue = -20
+        stackView.addMotionEffect(effectX)
+        
+         /// 使用 UserDefaults 取值
+        night.isSelected = UserDefaults.standard.bool(forKey: isNight)
+        /// 设置主题
+        phone.theme_setImage("images.loginMobileButton", forState: .normal)
+        wechat.theme_setImage("images.loginWechatButton", forState: .normal)
+        qq.theme_setImage("images.loginQQButton", forState: .normal)
+        sina.theme_setImage("images.loginSinaButton", forState: .normal)
+        collect.theme_setImage("images.mineFavoriteButton", forState: .normal)
+        history.theme_setImage("images.mineHistoryButton", forState: .normal)
+        night.theme_setImage("images.dayOrNightButton", forState: .normal)
+        night.setTitle("夜间", for: .normal)
+        night.setTitle("日间", for: .selected)
+        moreBtn.theme_backgroundColor = "colors.moreLoginBackgroundColor"
+        moreBtn.theme_setTitleColor("colors.moreLoginTextColor", forState: .normal)
+        collect.theme_setTitleColor("colors.black", forState: .normal)
+        history.theme_setTitleColor("colors.black", forState: .normal)
+        night.theme_setTitleColor("colors.black", forState: .normal)
+        bottomView.theme_backgroundColor = "colors.cellBackgroundColor"
     }
-
+    
+    @IBAction func didClickNightBtn(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        /// 使用 UserDefaults 保存值
+        UserDefaults.standard.set(sender.isSelected, forKey: isNight)
+        WCTTheme.switchNight(sender.isSelected)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dayOrNightButtonClicked"), object: sender.isSelected)
+    }
+    
 }

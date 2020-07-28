@@ -16,4 +16,7 @@ target 'WCTMoveLearnDemo' do
   
   # XIB 功能框架
   pod 'IBAnimatable'
+  
+  # 切换t主题框架
+  pod 'SwiftTheme'
 end

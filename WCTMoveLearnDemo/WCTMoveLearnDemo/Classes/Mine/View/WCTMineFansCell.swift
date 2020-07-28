@@ -10,17 +10,12 @@ import UIKit
 
 class WCTMineFansCell: UITableViewCell, RegisterCellOrNib {
     
-    /// 右边箭头
     @IBOutlet weak var rightImageV: UIImageView!
-    
-    /// 副标题
     @IBOutlet weak var detailLabel: UILabel!
-    
-    /// 标题
     @IBOutlet weak var titleLabel: UILabel!
-
-    /// 关注
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var topView: UIView!
     
     /// 关注 list
     var myFansArray = [WCTMineFansModel]() {
@@ -52,6 +47,15 @@ class WCTMineFansCell: UITableViewCell, RegisterCellOrNib {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.wct_registerCell(cell: WCTMineFansBlockCell.self)
+        
+        /// 设置主题
+        titleLabel.theme_textColor = "colors.black"
+        detailLabel.theme_textColor = "colors.cellRightTextColor"
+        rightImageV.theme_image = "images.cellRightArrow"
+        lineView.theme_backgroundColor = "colors.separatorViewColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        topView.theme_backgroundColor = "colors.cellBackgroundColor"
+        collectionView.theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

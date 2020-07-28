@@ -10,19 +10,20 @@ import UIKit
 
 class WCTMineCell: UITableViewCell, RegisterCellOrNib {
 
-    
-    /// 右边箭头
     @IBOutlet weak var rightImageV: UIImageView!
-    
-    /// 副标题
     @IBOutlet weak var detailLabel: UILabel!
-    
-    /// 标题
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var lineView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        /// 设置主题
+        titleLabel.theme_textColor = "colors.black"
+        detailLabel.theme_textColor = "colors.cellRightTextColor"
+        rightImageV.theme_image = "images.cellRightArrow"
+        lineView.theme_backgroundColor = "colors.separatorViewColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

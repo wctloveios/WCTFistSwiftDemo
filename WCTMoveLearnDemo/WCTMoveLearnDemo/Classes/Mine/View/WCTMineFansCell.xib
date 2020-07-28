@@ -97,8 +97,10 @@
             <connections>
                 <outlet property="collectionView" destination="44g-t7-5R1" id="CKX-RQ-YFK"/>
                 <outlet property="detailLabel" destination="Bpg-Aj-gMo" id="06Q-Fe-Itw"/>
+                <outlet property="lineView" destination="aEC-J4-PTb" id="CBt-tz-dqn"/>
                 <outlet property="rightImageV" destination="Rv2-Mw-zrj" id="iqf-eR-gQ9"/>
                 <outlet property="titleLabel" destination="8sG-eJ-cN5" id="QgY-bI-pTe"/>
+                <outlet property="topView" destination="oSM-FO-2Ey" id="FRW-F9-Qyv"/>
             </connections>
             <point key="canvasLocation" x="157.24637681159422" y="202.23214285714286"/>
         </tableViewCell>

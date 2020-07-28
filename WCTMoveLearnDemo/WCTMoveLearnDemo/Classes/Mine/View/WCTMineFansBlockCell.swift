@@ -10,12 +10,8 @@ import UIKit
 import Kingfisher
 
 class WCTMineFansBlockCell: UICollectionViewCell, RegisterCellOrNib {
-
     
-    /// icon
     @IBOutlet weak var imageV: UIImageView!
-    
-    /// 用户名
     @IBOutlet weak var titleLabel: UILabel!
     
     var fansModel: WCTMineFansModel? {
@@ -28,6 +24,8 @@ class WCTMineFansBlockCell: UICollectionViewCell, RegisterCellOrNib {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        titleLabel.theme_textColor = "colors.black"
     }
 
 }

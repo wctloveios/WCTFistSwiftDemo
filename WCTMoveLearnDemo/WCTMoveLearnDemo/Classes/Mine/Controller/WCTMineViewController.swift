@@ -52,7 +52,7 @@ class WCTMineViewController: UITableViewController {
     
     /// 文件私有、懒加载
     fileprivate lazy var headView: WCTMineHeaderView = {
-        let headView = WCTMineHeaderView.headerView()
+        let headView = WCTMineHeaderView.loadViewFromNib()
         return headView
     }()
     
@@ -117,26 +117,12 @@ extension WCTMineViewController {
     
     // 设置 Heade
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 1 ? 0 : 10
+        return 10
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: screenWidth, height: 10))
-        view.backgroundColor = UIColor.globalBackgroupColor()
+        view.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return view
     }
-    
-    // 点击cell
-    
-//    /// 设置滚动缩放
-//    /// - Parameter scrollView: id <scrollView>
-//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        let offsetY = scrollView.contentOffset.y
-//        if offsetY < 0 {
-//            let totalOffset = Kmine_headerView_height + abs(offsetY)
-//            let f = totalOffset / Kmine_headerView_height
-//            headView.bgImageV.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
-//            print(totalOffset)
-//        }
-//    }
 }

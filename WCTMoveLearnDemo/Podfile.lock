@@ -5,6 +5,7 @@ PODS:
   - Kingfisher (5.14.1):
     - Kingfisher/Core (= 5.14.1)
   - Kingfisher/Core (5.14.1)
+  - SwiftTheme (0.5.2)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - HandyJSON
   - IBAnimatable
   - Kingfisher
+  - SwiftTheme
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -19,8 +21,9 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IBAnimatable: 99dddd4c0625884a301ba3ecbc1615f8a390368e
   Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  SwiftTheme: 8b02c479bb4441b2b6790ac126e961b1b6fb0932
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 1018cc6943fff54b76204c725482a007ab3486db
+PODFILE CHECKSUM: 3921fae95ddbffff7e502c833c7b7b1522529665
 
 COCOAPODS: 1.4.0

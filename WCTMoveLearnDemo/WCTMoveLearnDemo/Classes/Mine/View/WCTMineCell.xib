@@ -26,11 +26,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaR-M6-CoX">
-                        <rect key="frame" x="94" y="34.5" width="200" height="21"/>
+                        <rect key="frame" x="94" y="38" width="200" height="14.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="LtY-hQ-xWW"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -64,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="detailLabel" destination="NaR-M6-CoX" id="4Ph-90-tLa"/>
+                <outlet property="lineView" destination="MBT-Vf-wVn" id="ARg-lx-JC3"/>
                 <outlet property="rightImageV" destination="6Yg-YA-kD3" id="Vc3-eX-JSw"/>
                 <outlet property="titleLabel" destination="AQ3-cV-Adm" id="lfd-UG-hxJ"/>
             </connections>

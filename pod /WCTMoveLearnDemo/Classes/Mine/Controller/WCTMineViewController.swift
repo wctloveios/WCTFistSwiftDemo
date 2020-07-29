@@ -140,4 +140,16 @@ extension WCTMineViewController {
         view.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return view
     }
+    
+    /// 点击事件
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 {
+            if indexPath.row == 2 {
+                // 设置
+                let settingVC = WCTSettingViewController()
+                settingVC.title = "设置"
+                self.navigationController?.pushViewController(settingVC, animated: true)
+            }
+        }
+    }
 }

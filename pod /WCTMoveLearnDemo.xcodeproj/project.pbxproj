@@ -11,6 +11,11 @@
 		04248D3924CDC335002AC94B /* WCTTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04248D3824CDC335002AC94B /* WCTTheme.swift */; };
 		04248D3D24CDC658002AC94B /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04248D3B24CDC658002AC94B /* default_theme.plist */; };
 		04248D3E24CDC658002AC94B /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04248D3C24CDC658002AC94B /* night_theme.plist */; };
+		043D929124D1CC5000D5CE1F /* WCTSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */; };
+		043D929324D1CF3000D5CE1F /* WCTSettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D929224D1CF3000D5CE1F /* WCTSettingModel.swift */; };
+		043D929524D1CFBA00D5CE1F /* WCTSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 043D929424D1CFBA00D5CE1F /* WCTSetting.plist */; };
+		043D929C24D1D5D100D5CE1F /* WCTSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043D929A24D1D5D100D5CE1F /* WCTSettingCell.xib */; };
+		043D929D24D1D5D100D5CE1F /* WCTSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D929B24D1D5D100D5CE1F /* WCTSettingCell.swift */; };
 		044EEE2524C9E3420059BB9F /* WCTMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044EEE2424C9E3420059BB9F /* WCTMineHeaderView.swift */; };
 		044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044EEE2624C9E34C0059BB9F /* WCTMineHeaderView.xib */; };
 		046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046CF1C524C07F3F00F5798A /* Assets.xcassets */; };
@@ -65,6 +70,11 @@
 		04248D3824CDC335002AC94B /* WCTTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTTheme.swift; sourceTree = "<group>"; };
 		04248D3B24CDC658002AC94B /* default_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		04248D3C24CDC658002AC94B /* night_theme.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTSettingViewController.swift; sourceTree = "<group>"; };
+		043D929224D1CF3000D5CE1F /* WCTSettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTSettingModel.swift; sourceTree = "<group>"; };
+		043D929424D1CFBA00D5CE1F /* WCTSetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WCTSetting.plist; sourceTree = "<group>"; };
+		043D929A24D1D5D100D5CE1F /* WCTSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCTSettingCell.xib; sourceTree = "<group>"; };
+		043D929B24D1D5D100D5CE1F /* WCTSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTSettingCell.swift; sourceTree = "<group>"; };
 		044EEE2424C9E3420059BB9F /* WCTMineHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineHeaderView.swift; sourceTree = "<group>"; };
 		044EEE2624C9E34C0059BB9F /* WCTMineHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTMineHeaderView.xib; sourceTree = "<group>"; };
 		046CF1B924C07F3D00F5798A /* WCTMoveLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCTMoveLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +318,7 @@
 				046CF20D24C0A21000F5798A /* AppDelegate.swift */,
 				046CF20E24C0A21000F5798A /* Info.plist */,
 				046CF22424C0A9D200F5798A /* WCTConst.swift */,
+				043D929424D1CFBA00D5CE1F /* WCTSetting.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -328,6 +339,7 @@
 				04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */,
 				04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */,
 				046CF21124C0A21000F5798A /* WCTMineViewController.swift */,
+				043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */,
+				043D929224D1CF3000D5CE1F /* WCTSettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +356,8 @@
 		046CF21324C0A21000F5798A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				043D929B24D1D5D100D5CE1F /* WCTSettingCell.swift */,
+				043D929A24D1D5D100D5CE1F /* WCTSettingCell.xib */,
 				04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */,
 				04FC3C8C24C72ED3007A4302 /* WCTMineCell.xib */,
 				04FC3C9124C7352B007A4302 /* WCTMineFansCell.swift */,
@@ -551,10 +566,12 @@
 				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
 				04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */,
+				043D929524D1CFBA00D5CE1F /* WCTSetting.plist in Resources */,
 				04248D3D24CDC658002AC94B /* default_theme.plist in Resources */,
 				04FC3CA024C74198007A4302 /* WCTMineFansBlockCell.xib in Resources */,
 				04248D3E24CDC658002AC94B /* night_theme.plist in Resources */,
 				044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */,
+				043D929C24D1D5D100D5CE1F /* WCTSettingCell.xib in Resources */,
 				04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,14 +679,17 @@
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
+				043D929324D1CF3000D5CE1F /* WCTSettingModel.swift in Sources */,
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
 				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
 				04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */,
 				046CF21C24C0A21000F5798A /* WCTVideoViewController.swift in Sources */,
+				043D929D24D1D5D100D5CE1F /* WCTSettingCell.swift in Sources */,
 				04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */,
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
 				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
 				04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */,
+				043D929124D1CC5000D5CE1F /* WCTSettingViewController.swift in Sources */,
 				044EEE2524C9E3420059BB9F /* WCTMineHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -839,7 +859,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -855,7 +878,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = "$(SRCROOT)/WCTMoveLearnDemo/Classes/Others/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -872,7 +898,11 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -890,7 +920,11 @@
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -906,7 +940,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -922,7 +960,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VVTLVSMJ6Q;
 				INFOPLIST_FILE = WCTMoveLearnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wctloveios-163.com.WCTMoveLearnDemoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

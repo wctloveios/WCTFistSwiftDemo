@@ -12,8 +12,6 @@ class WCTTabbarController: UITabBarController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        print(tabBar.subviews)
     }
     
     override func viewDidLoad() {

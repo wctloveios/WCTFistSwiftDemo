@@ -77,16 +77,21 @@ class WCTSettingViewController: UITableViewController {
                 setupPlayNoticeAlertController(cell)
             default: break
             }
-//        case 1:
-//            switch indexPath.row {
-//            case 0:  // 离线下载
-//                let offlineDownloadVC = OfflineDownloadController()
-//                offlineDownloadVC.navigationItem.title = "离线下载"
-//                navigationController?.pushViewController(offlineDownloadVC, animated: true)
-//            default: break
-//            }
+        case 1:
+            switch indexPath.row {
+            case 0:  // 离线下载
+                let offlineDownloadVC = WCTDownLoadViewController()
+                offlineDownloadVC.navigationItem.title = "离线下载"
+                navigationController?.pushViewController(offlineDownloadVC, animated: true)
+            default: break
+            }
         default: break
         }
+    }
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
 

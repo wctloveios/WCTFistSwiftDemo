@@ -23,6 +23,9 @@ protocol WCTNetworkProtocol {
     
     // 2、我的关注数据
     static func loadMyFans(completionHandler: @escaping (_ sections: [WCTMineFansModel]) -> ())
+    
+    /// 3、首页title 数据
+    static func loadHomeTitleData(completionHandler: @escaping (_ homeTitleSections: [WCTHomeTitleModel]) -> ())
 }
 
 extension WCTNetworkProtocol {
@@ -110,6 +113,55 @@ extension WCTNetworkProtocol {
         sections.append(model2)
         
         completionHandler(sections)
+    }
+    
+    /// 3、首页title 数据
+    static func loadHomeTitleData(completionHandler: @escaping (_ homeTitleSections: [WCTHomeTitleModel]) -> ()) {
+        var homeTitleSections = [WCTHomeTitleModel]()
+        var model0 = WCTHomeTitleModel()
+        model0.titleStr = "关注"
+        model0.subtitleStr = "关注 desc"
+        model0.selected = true
+        
+        var model1 = WCTHomeTitleModel()
+        model1.titleStr = "NBA"
+        model1.subtitleStr = "NBA desc"
+        model1.selected = false
+        
+        var model2 = WCTHomeTitleModel()
+        model2.titleStr = "世界杯"
+        model2.subtitleStr = "世界杯 desc"
+        model2.selected = true
+        
+        var model3 = WCTHomeTitleModel()
+        model3.titleStr = "视频"
+        model3.subtitleStr = "视频 desc"
+        model3.selected = false
+        
+        var model4 = WCTHomeTitleModel()
+        model4.titleStr = "电影"
+        model4.subtitleStr = "电影 desc"
+        model4.selected = true
+        
+        var model5 = WCTHomeTitleModel()
+        model5.titleStr = "电视剧"
+        model5.subtitleStr = "电视剧 desc"
+        model5.selected = true
+        
+        var model6 = WCTHomeTitleModel()
+        model6.titleStr = "动漫"
+        model6.subtitleStr = "动漫 desc"
+        model6.selected = true
+        
+        homeTitleSections.append(model0)
+        homeTitleSections.append(model1)
+        homeTitleSections.append(model2)
+        homeTitleSections.append(model3)
+        homeTitleSections.append(model4)
+        homeTitleSections.append(model5)
+        homeTitleSections.append(model6)
+        
+        completionHandler(homeTitleSections)
     }
 }
 

@@ -32,8 +32,13 @@
 		046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21A24C0A21000F5798A /* WCTTabBar.swift */; };
 		046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22424C0A9D200F5798A /* WCTConst.swift */; };
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
+		048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E03C724E435910029E83F /* WCTSQLiteManager.swift */; };
 		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
 		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
+		04F7EA0E24D85D28009C649E /* WCTHomeTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA0D24D85D28009C649E /* WCTHomeTitleModel.swift */; };
+		04F7EA1024D85E1A009C649E /* WCTDownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */; };
+		04F7EA1324D86063009C649E /* WCTOfflineDownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */; };
+		04F7EA1424D86063009C649E /* WCTOfflineDownlaodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04F7EA1224D86063009C649E /* WCTOfflineDownlaodCell.xib */; };
 		04FBF75024D07AD3008126A3 /* WCTLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */; };
 		04FBF75224D07AD3008126A3 /* WCTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */; };
 		04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */; };
@@ -97,8 +102,13 @@
 		046CF21A24C0A21000F5798A /* WCTTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabBar.swift; sourceTree = "<group>"; };
 		046CF22424C0A9D200F5798A /* WCTConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTConst.swift; sourceTree = "<group>"; };
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		048E03C724E435910029E83F /* WCTSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTSQLiteManager.swift; sourceTree = "<group>"; };
 		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
 		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
+		04F7EA0D24D85D28009C649E /* WCTHomeTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTHomeTitleModel.swift; sourceTree = "<group>"; };
+		04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTDownLoadViewController.swift; sourceTree = "<group>"; };
+		04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTOfflineDownlaodCell.swift; sourceTree = "<group>"; };
+		04F7EA1224D86063009C649E /* WCTOfflineDownlaodCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCTOfflineDownlaodCell.xib; sourceTree = "<group>"; };
 		04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WCTLoginViewController.storyboard; sourceTree = "<group>"; };
 		04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTLoginViewController.swift; sourceTree = "<group>"; };
 		04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCell.swift; sourceTree = "<group>"; };
@@ -236,6 +246,7 @@
 		046CF20024C0A21000F5798A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				04F7EA0D24D85D28009C649E /* WCTHomeTitleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +351,7 @@
 				04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */,
 				046CF21124C0A21000F5798A /* WCTMineViewController.swift */,
 				043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */,
+				04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +368,8 @@
 		046CF21324C0A21000F5798A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */,
+				04F7EA1224D86063009C649E /* WCTOfflineDownlaodCell.xib */,
 				043D929B24D1D5D100D5CE1F /* WCTSettingCell.swift */,
 				043D929A24D1D5D100D5CE1F /* WCTSettingCell.xib */,
 				04FC3C8B24C72ED3007A4302 /* WCTMineCell.swift */,
@@ -424,6 +438,7 @@
 				04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */,
 				040E3AA024C5F4B1009498D6 /* mydata.json */,
 				04248D3824CDC335002AC94B /* WCTTheme.swift */,
+				048E03C724E435910029E83F /* WCTSQLiteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -571,6 +586,7 @@
 				04FC3CA024C74198007A4302 /* WCTMineFansBlockCell.xib in Resources */,
 				04248D3E24CDC658002AC94B /* night_theme.plist in Resources */,
 				044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */,
+				04F7EA1424D86063009C649E /* WCTOfflineDownlaodCell.xib in Resources */,
 				043D929C24D1D5D100D5CE1F /* WCTSettingCell.xib in Resources */,
 				04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */,
 			);
@@ -640,6 +656,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -652,6 +669,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -667,7 +685,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F7EA1324D86063009C649E /* WCTOfflineDownlaodCell.swift in Sources */,
 				046CF22024C0A21000F5798A /* WCTMineViewController.swift in Sources */,
+				04F7EA1024D85E1A009C649E /* WCTDownLoadViewController.swift in Sources */,
 				04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */,
 				04248D3924CDC335002AC94B /* WCTTheme.swift in Sources */,
 				04FBF75224D07AD3008126A3 /* WCTLoginViewController.swift in Sources */,
@@ -676,10 +696,12 @@
 				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
 				04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */,
 				04FC3C9F24C74198007A4302 /* WCTMineFansBlockCell.swift in Sources */,
+				048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */,
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
 				043D929324D1CF3000D5CE1F /* WCTSettingModel.swift in Sources */,
+				04F7EA0E24D85D28009C649E /* WCTHomeTitleModel.swift in Sources */,
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
 				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
 				04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */,

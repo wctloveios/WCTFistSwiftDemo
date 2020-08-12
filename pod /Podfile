@@ -21,7 +21,10 @@ target 'WCTMoveLearnDemo' do
   # 切换t主题框架
   pod 'SwiftTheme'
   
-  #
+  # Event 相关组件
   pod 'RxSwift'
   pod 'RxCocoa'
+  
+  # 数据库
+  pod 'SQLite.swift'
 end

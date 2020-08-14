@@ -8,6 +8,13 @@
 
 import UIKit
 
+/// delegate step 1: 申明代理
+protocol WCTMineSectionCellDelegate: class {
+    
+    /// delegate step 2: 创建代理方法
+    func didClickWCTMineSectionCell(_ cell: WCTMineFansCell, mineCellModel: WCTMineFansModel)
+}
+
 class WCTMineFansCell: UITableViewCell, RegisterCellOrNib {
     
     @IBOutlet weak var rightImageV: UIImageView!
@@ -16,6 +23,8 @@ class WCTMineFansCell: UITableViewCell, RegisterCellOrNib {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var topView: UIView!
+    
+    weak var delegate: WCTMineSectionCellDelegate?
     
     /// 关注 list
     var myFansArray = [WCTMineFansModel]() {
@@ -36,8 +45,6 @@ class WCTMineFansCell: UITableViewCell, RegisterCellOrNib {
             detailLabel?.text = myCellModel?.gray_text
         }
     }
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,6 +82,13 @@ extension WCTMineFansCell: UICollectionViewDelegate, UICollectionViewDataSource 
         let cell = collectionView.wct_dequeueReusableCell(indexPath: indexPath) as WCTMineFansBlockCell
         cell.fansModel = myFansArray[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let fansModel = myFansArray[indexPath.item]
+        
+        /// delegate step 3: 响应代理resopen
+        delegate?.didClickWCTMineSectionCell(self, mineCellModel: fansModel)
     }
 }
 

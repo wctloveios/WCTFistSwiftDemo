@@ -110,6 +110,9 @@ extension WCTMineViewController {
                 cell.myFansArray = fansDataArray
             }
             
+            /// delegate step 4: 设置代理
+            cell.delegate = self
+            
             return cell
         }
         
@@ -151,5 +154,13 @@ extension WCTMineViewController {
                 self.navigationController?.pushViewController(settingVC, animated: true)
             }
         }
+    }
+}
+
+/// delegate step 5: 实现代理方法
+extension WCTMineViewController: WCTMineSectionCellDelegate {
+    func didClickWCTMineSectionCell(_ cell: WCTMineFansCell, mineCellModel: WCTMineFansModel) {
+        let datailVC = WCTUserDetailViewController()
+        self.navigationController?.pushViewController(datailVC, animated: true)
     }
 }

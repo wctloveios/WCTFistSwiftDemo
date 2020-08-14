@@ -32,6 +32,7 @@
 		046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21A24C0A21000F5798A /* WCTTabBar.swift */; };
 		046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22424C0A9D200F5798A /* WCTConst.swift */; };
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
+		04754C5A24E6C80100867DE8 /* WCTUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04754C5924E6C80100867DE8 /* WCTUserDetailViewController.swift */; };
 		048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E03C724E435910029E83F /* WCTSQLiteManager.swift */; };
 		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
 		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
@@ -102,6 +103,7 @@
 		046CF21A24C0A21000F5798A /* WCTTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabBar.swift; sourceTree = "<group>"; };
 		046CF22424C0A9D200F5798A /* WCTConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTConst.swift; sourceTree = "<group>"; };
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		04754C5924E6C80100867DE8 /* WCTUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTUserDetailViewController.swift; sourceTree = "<group>"; };
 		048E03C724E435910029E83F /* WCTSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTSQLiteManager.swift; sourceTree = "<group>"; };
 		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
 		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				046CF21124C0A21000F5798A /* WCTMineViewController.swift */,
 				043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */,
 				04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */,
+				04754C5924E6C80100867DE8 /* WCTUserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */,
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
 				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
+				04754C5A24E6C80100867DE8 /* WCTUserDetailViewController.swift in Sources */,
 				04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */,
 				04FC3C9F24C74198007A4302 /* WCTMineFansBlockCell.swift in Sources */,
 				048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */,

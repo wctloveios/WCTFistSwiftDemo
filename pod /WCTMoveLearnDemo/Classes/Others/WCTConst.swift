@@ -29,3 +29,6 @@ let changeTabThemeColor = "dayOrNightButtonClicked"
 
 /// 是否是iPhone X
 let isIPhoneX: Bool = screenHeight >= 812 ? true : false
+
+
+let MyPresentationControllerDismiss = "MyPresentationControllerDismiss"

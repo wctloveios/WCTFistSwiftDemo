@@ -163,6 +163,72 @@ extension WCTNetworkProtocol {
         
         completionHandler(homeTitleSections)
     }
+    
+    /*
+     
+     flatMap : 不可为空
+     map ： 可为空
+     
+    /// 我的界面 cell 的数据
+    static func loadMyCellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) -> ()) {
+        let url = BASE_URL + "/user/tab/tabs/?"
+        let params = ["device_id": device_id]
+        
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            guard response.result.isSuccess else {
+                // 网络错误的提示信息
+                return
+            }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else {
+                    return
+                }
+                if let data = json["data"].dictionary {
+                    if let sections = data["sections"]?.arrayObject {
+     
+                        // 使用flatMap 替换 两层 for循环
+                        completionHandler(sections.flatMap({ item in
+                            (item as! [Any]).flatMap({ row in
+                                MyCellModel.deserialize(from: row as? NSDictionary)
+                            })
+                        }))
+                    }
+                }
+            }
+        }
+    }
+     
+     /// 获取用户详情的动态列表数据
+     static func loadUserDetailDongtaiList(user_id: Int, completionHandler: @escaping (_ dongtais: [UserDetailDongtai]) -> ()) {
+         
+         let url = BASE_URL + "/dongtai/list/v15/?"
+         let params = ["user_id": user_id]
+         
+         Alamofire.request(url, parameters: params).responseJSON { (response) in
+             guard response.result.isSuccess else {
+                 // 网络错误的提示信息
+                 return
+             }
+             if let value = response.result.value {
+                 let json = JSON(value)
+                 guard json["message"] == "success" else {
+                     return
+                 }
+                 if let data = json["data"].dictionary {
+                     if let datas = data["data"]?.arrayObject {
+     
+                         // 使用flatMap 替换 一层 for循环
+                         completionHandler(datas.flatMap({
+                             UserDetailDongtai.deserialize(from: $0 as? NSDictionary)
+                         }))
+                     }
+                 }
+             }
+         }
+     }
+ */
+    
 }
 
 struct WCTNetworkTool: WCTNetworkProtocol {

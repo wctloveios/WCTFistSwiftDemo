@@ -160,7 +160,7 @@ extension WCTMineViewController {
 /// delegate step 5: 实现代理方法
 extension WCTMineViewController: WCTMineSectionCellDelegate {
     func didClickWCTMineSectionCell(_ cell: WCTMineFansCell, mineCellModel: WCTMineFansModel) {
-        let datailVC = WCTUserDetailViewController()
+        let datailVC = UserDetailViewController()
         self.navigationController?.pushViewController(datailVC, animated: true)
     }
 }

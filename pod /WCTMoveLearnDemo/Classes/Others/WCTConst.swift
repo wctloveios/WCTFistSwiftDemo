@@ -26,9 +26,21 @@ let isNight = "isNight"
 /// notifi
 let changeTabThemeColor = "dayOrNightButtonClicked"
 
-
 /// 是否是iPhone X
-let isIPhoneX: Bool = screenHeight >= 812 ? true : false
+let isIPhoneX: Bool = UIApplication.shared.windows.first?.safeAreaInsets.bottom == 0 ? false : true
 
-
+/// 自定义菜单
 let MyPresentationControllerDismiss = "MyPresentationControllerDismiss"
+/// 导航栏点击关注
+let NavigationBarConcernButtonClicked = "NavigationBarConcernButtonClicked"
+let UserDetailHeaderViewButtonClicked = "UserDetailHeaderViewButtonClicked"
+
+/// tab 宽度
+let topTabButtonWidth: CGFloat = screenWidth * 0.2
+
+/// 关注的用户详情界面 topTab 的指示条的宽度 和 高度
+let topTabindicatorWidth: CGFloat = 40
+let topTabindicatorHeight: CGFloat = 2
+
+let kMyHeaderViewHeight: CGFloat = 280
+let kUserDetailHeaderBGImageViewHeight: CGFloat = 146

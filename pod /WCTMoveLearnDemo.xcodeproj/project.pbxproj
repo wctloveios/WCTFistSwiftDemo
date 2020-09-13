@@ -32,13 +32,28 @@
 		046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF21A24C0A21000F5798A /* WCTTabBar.swift */; };
 		046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22424C0A9D200F5798A /* WCTConst.swift */; };
 		046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046CF22724C0AAED00F5798A /* UIColor+Extension.swift */; };
-		04754C5D24E6E4B700867DE8 /* WCTUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04754C5B24E6E4B700867DE8 /* WCTUserDetailViewController.swift */; };
-		04754C5E24E6E4B700867DE8 /* WCTUserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04754C5C24E6E4B700867DE8 /* WCTUserDetailViewController.xib */; };
 		04754C6124E6E53E00867DE8 /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04754C5F24E6E53D00867DE8 /* UserDetailHeaderView.swift */; };
 		04754C6224E6E53E00867DE8 /* UserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04754C6024E6E53E00867DE8 /* UserDetailHeaderView.xib */; };
+		0488DA2324ED7B6D006A8162 /* UserDetailDongTaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA2124ED7B6D006A8162 /* UserDetailDongTaiCell.swift */; };
+		0488DA2424ED7B6D006A8162 /* UserDetailDongTaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DA2224ED7B6D006A8162 /* UserDetailDongTaiCell.xib */; };
+		0488DA2724ED7D11006A8162 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA2524ED7D10006A8162 /* UserDetailViewController.swift */; };
+		0488DA2824ED7D11006A8162 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DA2624ED7D11006A8162 /* UserDetailViewController.xib */; };
+		0488DA2A24ED7DBF006A8162 /* UserDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA2924ED7DBF006A8162 /* UserDetailBottomView.swift */; };
+		0488DA2D24ED7F03006A8162 /* NavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DA2B24ED7F02006A8162 /* NavigationBarView.xib */; };
+		0488DA2E24ED7F03006A8162 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA2C24ED7F02006A8162 /* NavigationBarView.swift */; };
+		0488DA3124ED8322006A8162 /* RelationRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA2F24ED8321006A8162 /* RelationRecommendView.swift */; };
+		0488DA3224ED8322006A8162 /* RelationRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DA3024ED8321006A8162 /* RelationRecommendView.xib */; };
+		0488DA3524ED8347006A8162 /* RelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0488DA3324ED8347006A8162 /* RelationRecommendCell.xib */; };
+		0488DA3624ED8347006A8162 /* RelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DA3424ED8347006A8162 /* RelationRecommendCell.swift */; };
 		048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E03C724E435910029E83F /* WCTSQLiteManager.swift */; };
+		04AD7F5E250DF5F90086366C /* WCTScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD7F5C250DF5F90086366C /* WCTScrollCell.swift */; };
+		04AD7F5F250DF5F90086366C /* WCTScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04AD7F5D250DF5F90086366C /* WCTScrollCell.xib */; };
 		04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */; };
 		04CD9D6924C297CE006BF773 /* WCTMineCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */; };
+		04D2BFA8250A69A400E0258B /* WCTScrollHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2BFA7250A69A400E0258B /* WCTScrollHeaderView.swift */; };
+		04D2BFAA250A69AF00E0258B /* WCTScrollHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D2BFA9250A69AF00E0258B /* WCTScrollHeaderView.xib */; };
+		04D2BFAD250A73F700E0258B /* WCTScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2BFAB250A73F700E0258B /* WCTScrollViewController.swift */; };
+		04D2BFAE250A73F700E0258B /* WCTScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D2BFAC250A73F700E0258B /* WCTScrollViewController.xib */; };
 		04F7EA0E24D85D28009C649E /* WCTHomeTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA0D24D85D28009C649E /* WCTHomeTitleModel.swift */; };
 		04F7EA1024D85E1A009C649E /* WCTDownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */; };
 		04F7EA1324D86063009C649E /* WCTOfflineDownlaodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */; };
@@ -108,13 +123,28 @@
 		046CF21A24C0A21000F5798A /* WCTTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTTabBar.swift; sourceTree = "<group>"; };
 		046CF22424C0A9D200F5798A /* WCTConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTConst.swift; sourceTree = "<group>"; };
 		046CF22724C0AAED00F5798A /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		04754C5B24E6E4B700867DE8 /* WCTUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTUserDetailViewController.swift; sourceTree = "<group>"; };
-		04754C5C24E6E4B700867DE8 /* WCTUserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTUserDetailViewController.xib; sourceTree = "<group>"; };
 		04754C5F24E6E53D00867DE8 /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailHeaderView.swift; sourceTree = "<group>"; };
 		04754C6024E6E53E00867DE8 /* UserDetailHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailHeaderView.xib; sourceTree = "<group>"; };
+		0488DA2124ED7B6D006A8162 /* UserDetailDongTaiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailDongTaiCell.swift; sourceTree = "<group>"; };
+		0488DA2224ED7B6D006A8162 /* UserDetailDongTaiCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailDongTaiCell.xib; sourceTree = "<group>"; };
+		0488DA2524ED7D10006A8162 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		0488DA2624ED7D11006A8162 /* UserDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
+		0488DA2924ED7DBF006A8162 /* UserDetailBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailBottomView.swift; sourceTree = "<group>"; };
+		0488DA2B24ED7F02006A8162 /* NavigationBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarView.xib; sourceTree = "<group>"; };
+		0488DA2C24ED7F02006A8162 /* NavigationBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		0488DA2F24ED8321006A8162 /* RelationRecommendView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationRecommendView.swift; sourceTree = "<group>"; };
+		0488DA3024ED8321006A8162 /* RelationRecommendView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelationRecommendView.xib; sourceTree = "<group>"; };
+		0488DA3324ED8347006A8162 /* RelationRecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelationRecommendCell.xib; sourceTree = "<group>"; };
+		0488DA3424ED8347006A8162 /* RelationRecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationRecommendCell.swift; sourceTree = "<group>"; };
 		048E03C724E435910029E83F /* WCTSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTSQLiteManager.swift; sourceTree = "<group>"; };
+		04AD7F5C250DF5F90086366C /* WCTScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTScrollCell.swift; sourceTree = "<group>"; };
+		04AD7F5D250DF5F90086366C /* WCTScrollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTScrollCell.xib; sourceTree = "<group>"; };
 		04CD9D6624C2000D006BF773 /* WCTNetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTNetworkTools.swift; sourceTree = "<group>"; };
 		04CD9D6824C297CE006BF773 /* WCTMineCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTMineCellModel.swift; sourceTree = "<group>"; };
+		04D2BFA7250A69A400E0258B /* WCTScrollHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTScrollHeaderView.swift; sourceTree = "<group>"; };
+		04D2BFA9250A69AF00E0258B /* WCTScrollHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTScrollHeaderView.xib; sourceTree = "<group>"; };
+		04D2BFAB250A73F700E0258B /* WCTScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTScrollViewController.swift; sourceTree = "<group>"; };
+		04D2BFAC250A73F700E0258B /* WCTScrollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCTScrollViewController.xib; sourceTree = "<group>"; };
 		04F7EA0D24D85D28009C649E /* WCTHomeTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTHomeTitleModel.swift; sourceTree = "<group>"; };
 		04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCTDownLoadViewController.swift; sourceTree = "<group>"; };
 		04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCTOfflineDownlaodCell.swift; sourceTree = "<group>"; };
@@ -250,6 +280,8 @@
 		046CF1FE24C0A21000F5798A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04D2BFAB250A73F700E0258B /* WCTScrollViewController.swift */,
+				04D2BFAC250A73F700E0258B /* WCTScrollViewController.xib */,
 				046CF1FF24C0A21000F5798A /* WCTHomeViewController.swift */,
 			);
 			path = Controller;
@@ -266,6 +298,10 @@
 		046CF20124C0A21000F5798A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04D2BFA7250A69A400E0258B /* WCTScrollHeaderView.swift */,
+				04D2BFA9250A69AF00E0258B /* WCTScrollHeaderView.xib */,
+				04AD7F5C250DF5F90086366C /* WCTScrollCell.swift */,
+				04AD7F5D250DF5F90086366C /* WCTScrollCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,14 +395,14 @@
 		046CF21024C0A21000F5798A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0488DA2524ED7D10006A8162 /* UserDetailViewController.swift */,
+				0488DA2624ED7D11006A8162 /* UserDetailViewController.xib */,
 				04FC4AC624EADE0200AB9243 /* MyPresentationController.swift */,
 				04FBF74D24D07AD3008126A3 /* WCTLoginViewController.storyboard */,
 				04FBF74F24D07AD3008126A3 /* WCTLoginViewController.swift */,
 				046CF21124C0A21000F5798A /* WCTMineViewController.swift */,
 				043D929024D1CC5000D5CE1F /* WCTSettingViewController.swift */,
 				04F7EA0F24D85E1A009C649E /* WCTDownLoadViewController.swift */,
-				04754C5B24E6E4B700867DE8 /* WCTUserDetailViewController.swift */,
-				04754C5C24E6E4B700867DE8 /* WCTUserDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +420,15 @@
 		046CF21324C0A21000F5798A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0488DA3424ED8347006A8162 /* RelationRecommendCell.swift */,
+				0488DA3324ED8347006A8162 /* RelationRecommendCell.xib */,
+				0488DA2F24ED8321006A8162 /* RelationRecommendView.swift */,
+				0488DA3024ED8321006A8162 /* RelationRecommendView.xib */,
+				0488DA2C24ED7F02006A8162 /* NavigationBarView.swift */,
+				0488DA2B24ED7F02006A8162 /* NavigationBarView.xib */,
+				0488DA2924ED7DBF006A8162 /* UserDetailBottomView.swift */,
+				0488DA2124ED7B6D006A8162 /* UserDetailDongTaiCell.swift */,
+				0488DA2224ED7B6D006A8162 /* UserDetailDongTaiCell.xib */,
 				04754C5F24E6E53D00867DE8 /* UserDetailHeaderView.swift */,
 				04754C6024E6E53E00867DE8 /* UserDetailHeaderView.xib */,
 				04F7EA1124D86063009C649E /* WCTOfflineDownlaodCell.swift */,
@@ -596,18 +641,25 @@
 			files = (
 				04754C6224E6E53E00867DE8 /* UserDetailHeaderView.xib in Resources */,
 				04FBF75024D07AD3008126A3 /* WCTLoginViewController.storyboard in Resources */,
+				0488DA2424ED7B6D006A8162 /* UserDetailDongTaiCell.xib in Resources */,
 				046CF1C924C07F3F00F5798A /* LaunchScreen.storyboard in Resources */,
 				040E3AA124C5F4B1009498D6 /* mydata.json in Resources */,
 				046CF1C624C07F3F00F5798A /* Assets.xcassets in Resources */,
 				04FC3C8E24C72ED3007A4302 /* WCTMineCell.xib in Resources */,
+				0488DA2824ED7D11006A8162 /* UserDetailViewController.xib in Resources */,
 				043D929524D1CFBA00D5CE1F /* WCTSetting.plist in Resources */,
+				04AD7F5F250DF5F90086366C /* WCTScrollCell.xib in Resources */,
+				0488DA3224ED8322006A8162 /* RelationRecommendView.xib in Resources */,
 				04248D3D24CDC658002AC94B /* default_theme.plist in Resources */,
+				0488DA3524ED8347006A8162 /* RelationRecommendCell.xib in Resources */,
+				04D2BFAA250A69AF00E0258B /* WCTScrollHeaderView.xib in Resources */,
 				04FC3CA024C74198007A4302 /* WCTMineFansBlockCell.xib in Resources */,
 				04248D3E24CDC658002AC94B /* night_theme.plist in Resources */,
-				04754C5E24E6E4B700867DE8 /* WCTUserDetailViewController.xib in Resources */,
+				04D2BFAE250A73F700E0258B /* WCTScrollViewController.xib in Resources */,
 				044EEE2724C9E34C0059BB9F /* WCTMineHeaderView.xib in Resources */,
 				04F7EA1424D86063009C649E /* WCTOfflineDownlaodCell.xib in Resources */,
 				043D929C24D1D5D100D5CE1F /* WCTSettingCell.xib in Resources */,
+				0488DA2D24ED7F03006A8162 /* NavigationBarView.xib in Resources */,
 				04FC3C9424C7352B007A4302 /* WCTMineFansCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0488DA2724ED7D11006A8162 /* UserDetailViewController.swift in Sources */,
 				04F7EA1324D86063009C649E /* WCTOfflineDownlaodCell.swift in Sources */,
 				046CF22024C0A21000F5798A /* WCTMineViewController.swift in Sources */,
 				04F7EA1024D85E1A009C649E /* WCTDownLoadViewController.swift in Sources */,
@@ -713,25 +766,32 @@
 				04FBF75224D07AD3008126A3 /* WCTLoginViewController.swift in Sources */,
 				04FC3C9A24C73AAC007A4302 /* UICollectionView+Extension.swift in Sources */,
 				046CF21E24C0A21000F5798A /* AppDelegate.swift in Sources */,
+				0488DA3124ED8322006A8162 /* RelationRecommendView.swift in Sources */,
+				0488DA2A24ED7DBF006A8162 /* UserDetailBottomView.swift in Sources */,
 				04FC3C9624C73881007A4302 /* UIView+Extension.swift in Sources */,
-				04754C5D24E6E4B700867DE8 /* WCTUserDetailViewController.swift in Sources */,
 				04FC3C8D24C72ED3007A4302 /* WCTMineCell.swift in Sources */,
+				0488DA2324ED7B6D006A8162 /* UserDetailDongTaiCell.swift in Sources */,
 				04FC3C9F24C74198007A4302 /* WCTMineFansBlockCell.swift in Sources */,
 				048E03C824E435910029E83F /* WCTSQLiteManager.swift in Sources */,
 				046CF21D24C0A21000F5798A /* WCTHuoShanViewController.swift in Sources */,
 				046CF22224C0A21000F5798A /* WCTTabbarController.swift in Sources */,
+				04D2BFAD250A73F700E0258B /* WCTScrollViewController.swift in Sources */,
+				04AD7F5E250DF5F90086366C /* WCTScrollCell.swift in Sources */,
 				046CF22324C0A21000F5798A /* WCTTabBar.swift in Sources */,
 				043D929324D1CF3000D5CE1F /* WCTSettingModel.swift in Sources */,
+				0488DA2E24ED7F03006A8162 /* NavigationBarView.swift in Sources */,
 				04F7EA0E24D85D28009C649E /* WCTHomeTitleModel.swift in Sources */,
 				046CF21B24C0A21000F5798A /* WCTHomeViewController.swift in Sources */,
 				046CF22524C0A9D200F5798A /* WCTConst.swift in Sources */,
 				04FC3C9324C7352B007A4302 /* WCTMineFansCell.swift in Sources */,
 				046CF21C24C0A21000F5798A /* WCTVideoViewController.swift in Sources */,
 				04FC4AC924EADE8C00AB9243 /* PopoverAnimator.swift in Sources */,
+				0488DA3624ED8347006A8162 /* RelationRecommendCell.swift in Sources */,
 				04FC4AC724EADE0200AB9243 /* MyPresentationController.swift in Sources */,
 				043D929D24D1D5D100D5CE1F /* WCTSettingCell.swift in Sources */,
 				04CD9D6724C2000E006BF773 /* WCTNetworkTools.swift in Sources */,
 				046CF22124C0A21000F5798A /* WCTNaviViewController.swift in Sources */,
+				04D2BFA8250A69A400E0258B /* WCTScrollHeaderView.swift in Sources */,
 				046CF22824C0AAED00F5798A /* UIColor+Extension.swift in Sources */,
 				04FC3C9824C738FF007A4302 /* UITableView+Extension.swift in Sources */,
 				04754C6124E6E53E00867DE8 /* UserDetailHeaderView.swift in Sources */,

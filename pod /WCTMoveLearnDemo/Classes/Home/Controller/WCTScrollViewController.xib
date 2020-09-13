@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WCTScrollViewController" customModule="WCTMoveLearnDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="qMo-EL-Qu7" id="tVu-6m-k1Q"/>
+                <outlet property="bottomViewBottom" destination="5hw-99-Rt4" id="JOc-fF-DVq"/>
+                <outlet property="bottomViewHeight" destination="48K-DW-es2" id="eO0-Yf-k7s"/>
+                <outlet property="scrollView" destination="6tr-Ot-2oO" id="icC-eT-sHn"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6tr-Ot-2oO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMo-EL-Qu7">
+                    <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="48K-DW-es2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qMo-EL-Qu7" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="5hw-99-Rt4"/>
+                <constraint firstItem="6tr-Ot-2oO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IWW-n7-x5j"/>
+                <constraint firstItem="6tr-Ot-2oO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O1f-BD-PzF"/>
+                <constraint firstItem="qMo-EL-Qu7" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Zze-8V-OG7"/>
+                <constraint firstItem="qMo-EL-Qu7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kO9-Iy-GFV"/>
+                <constraint firstItem="qMo-EL-Qu7" firstAttribute="top" secondItem="6tr-Ot-2oO" secondAttribute="bottom" id="vfy-jj-7t9"/>
+                <constraint firstAttribute="trailing" secondItem="6tr-Ot-2oO" secondAttribute="trailing" id="zYE-fx-hnC"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="141"/>
+        </view>
+    </objects>
+</document>
